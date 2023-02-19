@@ -7,10 +7,15 @@ type MainSectionProps = {
 const Skills = (props: MainSectionProps) => {
   const { innerRef } = props;
 
+  const skills = {
+    "Python": ["General"],
+    "JavaScript": ["General"]
+  }
+
   return (
-    <section ref={innerRef} className="flex flex-col items-center justify-center w-full h-screen bg-slate-100 text-slate-800">
+    <section ref={innerRef} className="flex flex-col items-center justify-center w-full h-screen">
       <h1 className="text-6xl font-extrabold">Skills</h1>
-      <div className="grid grid-cols-3">
+      <div className="grid grid-cols-4">
         <div>
           <h2 className="text-3xl">General</h2>
           <ul>
@@ -20,7 +25,6 @@ const Skills = (props: MainSectionProps) => {
             <li>C++</li>
             <li>C</li>
             <li>Groovy</li>
-            <li></li>
           </ul>
         </div>
         <div>
@@ -28,9 +32,16 @@ const Skills = (props: MainSectionProps) => {
           <ul>
             <li>React</li>
             <li>Typescript</li>
-            <li>Django</li>
             <li>HTML</li>
             <li>CSS</li>
+          </ul>
+        </div>
+        <div>
+          <h2 className="text-3xl">Backend</h2>
+          <ul>
+            <li>Django</li>
+            <li>Node JS</li>
+            <li>Firebase</li>
           </ul>
         </div>
         <div>

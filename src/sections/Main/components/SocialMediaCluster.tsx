@@ -1,6 +1,6 @@
 import { ForwardRefExoticComponent } from "react";
 import { motion } from "framer-motion";
-import { GithubLogo, IconProps, LinkedinLogo } from "phosphor-react";
+import { Envelope, EnvelopeOpen, GithubLogo, IconProps, LinkedinLogo } from "phosphor-react";
 
 type SocialMediaIconProps = {
   Icon: ForwardRefExoticComponent<
@@ -35,10 +35,12 @@ const SocialMediaIcon = (props: SocialMediaIconProps) => {
 export const SocialMediaCluster = () => {
   const GITHUB_URL = "https://github.com/proctorinc";
   const LINKEDIN_URL = "https://linkedin.com/in/matthew-proctor";
+  const EMAIL_URL = "mailto:matthewalanproctor@gmail.com?subject=Hi%20Matt%21%20Let%27s%20connect";
 
   const icons = [
     { icon: GithubLogo, url: GITHUB_URL },
     { icon: LinkedinLogo, url: LINKEDIN_URL },
+    { icon: EnvelopeOpen, url: EMAIL_URL }
   ];
 
   return (

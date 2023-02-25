@@ -1,12 +1,11 @@
 import { useRef } from "react";
 
-import Footer from "./components/Footer";
+import { Footer, Navbar } from "./components";
 import { Main } from "./sections/Main";
-import Skills from "./sections/Skills";
-import Experience from "./sections/Experience";
-import Navbar from "./components/Navbar";
-import { Projects } from "./sections/Projects/Projects";
-import Contact from "./sections/Contact";
+import { Skills } from "./sections/Skills/Skills";
+import { Experience } from "./sections/Experience";
+import { Projects } from "./sections/Projects";
+import { Contact } from "./sections/Contact";
 
 function App() {
   const homeRef = useRef<HTMLDivElement>(null);

@@ -1,13 +1,13 @@
 import { RefObject } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Bar } from "@visx/shape";
-import { SocialMediaCluster } from "./Main/components";
+import { SocialMediaCluster } from "../Main/components";
 
 type ContactSectionProps = {
   innerRef: RefObject<HTMLDivElement>;
 };
 
-const Contact = (props: ContactSectionProps) => {
+export const Contact = (props: ContactSectionProps) => {
   const { innerRef } = props;
   const { scrollY } = useScroll({
     target: innerRef,
@@ -59,5 +59,3 @@ const Contact = (props: ContactSectionProps) => {
     </section>
   );
 };
-
-export default Contact;

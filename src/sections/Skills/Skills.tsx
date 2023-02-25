@@ -5,7 +5,7 @@ type MainSectionProps = {
   innerRef: RefObject<HTMLDivElement>;
 };
 
-const Skills = (props: MainSectionProps) => {
+export const Skills = (props: MainSectionProps) => {
   const { innerRef } = props;
 
   const { scrollYProgress } = useScroll({
@@ -158,5 +158,3 @@ const Skills = (props: MainSectionProps) => {
     </section>
   );
 };
-
-export default Skills;

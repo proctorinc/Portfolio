@@ -5,7 +5,7 @@ type MainSectionProps = {
   innerRef: RefObject<HTMLDivElement>;
 };
 
-const Experience = (props: MainSectionProps) => {
+export const Experience = (props: MainSectionProps) => {
   const { innerRef } = props;
   const { scrollY } = useScroll({
     target: innerRef,
@@ -106,5 +106,3 @@ const Experience = (props: MainSectionProps) => {
     </section>
   );
 };
-
-export default Experience;

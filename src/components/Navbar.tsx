@@ -14,7 +14,7 @@ type NavButtonProps = {
   onClick: MouseEventHandler;
 };
 
-const Navbar = (props: NavbarProps) => {
+export const Navbar = (props: NavbarProps) => {
   const { homeRef, skillsRef, experienceRef, projectsRef, contactRef } = props;
 
   const NavButton = (props: NavButtonProps) => {
@@ -102,5 +102,3 @@ const Navbar = (props: NavbarProps) => {
     </nav>
   );
 };
-
-export default Navbar;

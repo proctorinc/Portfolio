@@ -1,26 +1,27 @@
-import { useRef } from "react"
-import Footer from "./components/Footer"
-import { Main } from "./sections/Main"
-import Skills from "./sections/Skills"
-import Experience from "./sections/Experience"
-import Navbar from "./components/Navbar"
-import Projects from "./sections/Projects"
-import Contact from "./sections/Contact"
+import { useRef } from "react";
+
+import Footer from "./components/Footer";
+import { Main } from "./sections/Main";
+import Skills from "./sections/Skills";
+import Experience from "./sections/Experience";
+import Navbar from "./components/Navbar";
+import { Projects } from "./sections/Projects/Projects";
+import Contact from "./sections/Contact";
 
 function App() {
-  const homeRef = useRef<HTMLDivElement>(null)
-  const skillsRef = useRef<HTMLDivElement>(null)
-  const experienceRef = useRef<HTMLDivElement>(null)
-  const projectsRef = useRef<HTMLDivElement>(null)
-  const contactRef = useRef<HTMLDivElement>(null)
+  const homeRef = useRef<HTMLDivElement>(null);
+  const skillsRef = useRef<HTMLDivElement>(null);
+  const experienceRef = useRef<HTMLDivElement>(null);
+  const projectsRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
 
   const navbarProps = {
     homeRef,
     skillsRef,
     experienceRef,
     projectsRef,
-    contactRef
-  }
+    contactRef,
+  };
 
   return (
     <>
@@ -32,7 +33,7 @@ function App() {
       <Contact innerRef={contactRef} />
       <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

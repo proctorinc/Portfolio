@@ -1,10 +1,8 @@
-import { PatternLines } from "@visx/pattern"
-import { Bar } from "@visx/shape"
-import { motion, MotionValue } from "framer-motion"
+import { motion, MotionValue } from "framer-motion";
 
 type BackgroundProps = {
-  scrollModifier: MotionValue<string>
-}
+  scrollModifier: MotionValue<number>;
+};
 
 export const Background = (props: BackgroundProps) => {
   const { scrollModifier } = props;
@@ -22,25 +20,8 @@ export const Background = (props: BackgroundProps) => {
           delay: 1.5,
           duration: 1.75,
           ease: "easeIn",
-        }
+        },
       }}
-    >
-      <svg className="w-full h-full">
-        <PatternLines
-          id="lines"
-          stroke="rgb(255, 255, 255, 0.03)"
-          strokeWidth={2}
-          strokeDasharray={6}
-          width={60}
-          height={60}
-          orientation={["vertical", "horizontal"]}
-        />
-        <Bar
-          fill={`url(#lines)`}
-          width="100%"
-          height="100%"
-        />
-      </svg>
-    </motion.div>
-  )
-}
+    ></motion.div>
+  );
+};

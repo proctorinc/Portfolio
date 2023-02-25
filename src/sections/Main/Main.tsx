@@ -54,12 +54,12 @@ export const Main = (props: MainSectionProps) => {
   return (
     <section
       ref={innerRef}
-      className="relative flex flex-col items-center justify-center w-full bg-cover p-28 overflow-clip"
+      className="relative flex w-full flex-col items-center justify-center overflow-clip bg-cover p-28"
     >
       <Background scrollModifier={scrollY} />
       <motion.div
         ref={contentRef}
-        className="grid grid-cols-2 w-full h-screen pb-40"
+        className="grid h-screen w-full grid-cols-2 pb-40"
         style={{ y: scrollY }}
       >
         <motion.div className="flex flex-col justify-center">

@@ -35,21 +35,21 @@ const Experience = (props: MainSectionProps) => {
   return (
     <section
       ref={innerRef}
-      className="relative flex flex-col items-center justify-center w-full gradient-dark-to-light shadow-inner-2xl shadow-slate-900 pt-64 pb-96"
+      className="gradient-dark-to-light relative flex w-full flex-col items-center justify-center pt-64 pb-96 shadow-inner-2xl shadow-slate-900"
     >
       <h1 className="text-6xl font-extrabold">Experience</h1>
       <div className="flex w-full pt-20 pb-96">
-        <div className="flex justify-end items-end w-1/4 px-10">
-          <div className="relative flex flex-col items-center justify-around border-2 border-slate-600 rounded-full w-3 h-screen bg-slate-400/20">
+        <div className="flex w-1/4 items-end justify-end px-10">
+          <div className="relative flex h-screen w-3 flex-col items-center justify-around rounded-full border-2 border-slate-600 bg-slate-400/20">
             {jobs.map((_, i) => (
               <div
                 key={i}
-                className="border-2 border-slate-600 rounded-full w-6 h-6 bg-slate-400/20"
+                className="h-6 w-6 rounded-full border-2 border-slate-600 bg-slate-400/20"
               />
             ))}
           </div>
         </div>
-        <div className="flex flex-col justify-around w-3/4 h-screen">
+        <div className="flex h-screen w-3/4 flex-col justify-around">
           {jobs.map((job, i) => (
             <motion.div
               key={i}
@@ -80,7 +80,7 @@ const Experience = (props: MainSectionProps) => {
       </div>
       <div className="absolute bottom-0 h-96 w-full">
         <svg
-          className="-mt-96 flex-no-shrink fill-current w-full"
+          className="flex-no-shrink -mt-96 w-full fill-current"
           viewBox="0 0 900 600"
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink"

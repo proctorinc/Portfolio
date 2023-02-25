@@ -9,7 +9,7 @@ export const Background = (props: BackgroundProps) => {
 
   return (
     <motion.div
-      className="absolute gradient-background w-full h-full bg-cover bg-no-repeat #bg-[url('/images/space-background.jpeg')] -z-20"
+      className="gradient-background #bg-[url('/images/space-background.jpeg')] absolute -z-20 h-full w-full bg-cover bg-no-repeat"
       style={{ y: scrollModifier }}
       initial={{
         opacity: 0,

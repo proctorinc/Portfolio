@@ -18,11 +18,11 @@ const Contact = (props: ContactSectionProps) => {
   return (
     <section
       ref={innerRef}
-      className="relative flex flex-col items-center justify-center w-full gradient-light-to-dark pt-64"
+      className="gradient-light-to-dark relative flex w-full flex-col items-center justify-center pt-64"
     >
       <div className="absolute top-0 h-96 w-full">
         <svg
-          className="-mt-[500px] flex-no-shrink fill-current w-full"
+          className="flex-no-shrink -mt-[500px] w-full fill-current"
           viewBox="0 0 900 600"
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -37,10 +37,10 @@ const Contact = (props: ContactSectionProps) => {
           ></motion.path>
         </svg>
       </div>
-      <div className="h-screen flex justify-center items-center">
-        <div className="relative border-2 border-slate-600 rounded-xl bg-slate-500/20">
-          <div className="absolute z-10 w-full h-full">
-            <svg className="w-full h-full">
+      <div className="flex h-screen items-center justify-center">
+        <div className="relative rounded-xl border-2 border-slate-600 bg-slate-500/20">
+          <div className="absolute z-10 h-full w-full">
+            <svg className="h-full w-full">
               <Bar fill={`url(#smallerlines)`} width="100%" height="100%" />
             </svg>
           </div>

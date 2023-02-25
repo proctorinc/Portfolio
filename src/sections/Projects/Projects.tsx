@@ -112,20 +112,20 @@ export const Projects = (props: ProjectsSectionProps) => {
   return (
     <section
       ref={innerRef}
-      className="flex flex-col items-center justify-center w-full pt-40 pb-64"
+      className="flex w-full flex-col items-center justify-center pt-40 pb-64"
     >
-      <div className="absolute w-full h-full">
+      <div className="absolute h-full w-full">
         <Bar fill={`url(#lines)`} width="100%" height="100%" />
       </div>
       <h1 className="text-6xl font-extrabold">Projects</h1>
       {projects.map((project) => (
         <div
           key={project.image_url}
-          className="w-full px-20 py-20 flex items-center"
+          className="flex w-full items-center px-20 py-20"
         >
           <div className="w-2/5">
             <motion.div
-              className="relative flex justify-center items-end h-96 w-full overflow-clip"
+              className="relative flex h-96 w-full items-end justify-center overflow-clip"
               initial={{
                 opacity: 0,
                 scale: 0.8,
@@ -141,14 +141,14 @@ export const Projects = (props: ProjectsSectionProps) => {
               }}
               viewport={{ once: true }}
             >
-              <div className="absolute bottom-0 w-full h-3/4 border-2 border-slate-600 rounded-xl bg-slate-500/20">
-                <svg className="w-full h-full">
+              <div className="absolute bottom-0 h-3/4 w-full rounded-xl border-2 border-slate-600 bg-slate-500/20">
+                <svg className="h-full w-full">
                   <Bar fill={`url(#smallerlines)`} width="100%" height="100%" />
                 </svg>
               </div>
-              <div className="z-50 absolute bottom-0 w-3/4 h-2 border-b-2 border-slate-600"></div>
+              <div className="absolute bottom-0 z-50 h-2 w-3/4 border-b-2 border-slate-600"></div>
               <motion.div
-                className="flex justify-center relative rounded-t-md h-80 w-full"
+                className="relative flex h-80 w-full justify-center rounded-t-md"
                 initial={{
                   scale: 1,
                   y: 0,
@@ -162,15 +162,15 @@ export const Projects = (props: ProjectsSectionProps) => {
                   },
                 }}
               >
-                <div className="absolute z-30 bottom-0 w-[141px] h-fit rounded-2xl pt-4 bg-slate-100 shadow-slate-900 shadow-2xl">
+                <div className="absolute bottom-0 z-30 h-fit w-[141px] rounded-2xl bg-slate-100 pt-4 shadow-2xl shadow-slate-900">
                   <motion.img
-                    className="w-full h-full object-contain"
+                    className="h-full w-full object-contain"
                     src={`/images/${project.image_url}`}
                     alt={project.image_url}
                   />
                 </div>
                 <motion.img
-                  className="absolute z-40 bottom-0 w-full h-full object-contain"
+                  className="absolute bottom-0 z-40 h-full w-full object-contain"
                   style={{ y: "40px" }}
                   src="/images/phone-frame-2.png"
                   alt="phone frame"
@@ -178,10 +178,10 @@ export const Projects = (props: ProjectsSectionProps) => {
               </motion.div>
             </motion.div>
           </div>
-          <div className="relative flex flex-col gap-3 w-3/5 pl-20 pt-24">
+          <div className="relative flex w-3/5 flex-col gap-3 pl-20 pt-24">
             <div className="flex flex-col">
               <h2 className="text-5xl font-bold">{project.title}</h2>
-              <h3 className="text-3xl font-extralight text-slate-400 py-1">
+              <h3 className="py-1 text-3xl font-extralight text-slate-400">
                 {project.subtitle}
               </h3>
             </div>
@@ -191,7 +191,7 @@ export const Projects = (props: ProjectsSectionProps) => {
             </p>
             <div className="flex gap-3">
               <motion.div
-                className="flex gap-1 items-center w-fit py-2 px-3 rounded-md text-xs border border-slate-700 text-slate-400 hover:border-transparent hover:bg-gradient-to-r hover:from-blue-500/50 hover:to-[#1252a5]/50 hover:text-slate-50"
+                className="flex w-fit items-center gap-1 rounded-md border border-slate-700 py-2 px-3 text-xs text-slate-400 hover:border-transparent hover:bg-gradient-to-r hover:from-blue-500/50 hover:to-[#1252a5]/50 hover:text-slate-50"
                 initial={{
                   scale: 1,
                 }}
@@ -209,7 +209,7 @@ export const Projects = (props: ProjectsSectionProps) => {
               </motion.div>
               {project?.app_url && (
                 <motion.div
-                  className="flex gap-1 items-center w-fit py-2 px-3 rounded-md text-xs border border-slate-700 text-slate-400 hover:border-transparent hover:bg-gradient-to-r hover:from-blue-500/50 hover:to-[#1252a5]/50 hover:text-slate-50"
+                  className="flex w-fit items-center gap-1 rounded-md border border-slate-700 py-2 px-3 text-xs text-slate-400 hover:border-transparent hover:bg-gradient-to-r hover:from-blue-500/50 hover:to-[#1252a5]/50 hover:text-slate-50"
                   initial={{
                     scale: 1,
                   }}

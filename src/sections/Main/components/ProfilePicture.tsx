@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export const ProfilePicture = () => {
   return (
     <motion.div
-      className="border-2 border-slate-600 rounded-xl w-80 h-80 bg-slate-500/20"
+      className="h-80 w-80 rounded-xl border-2 border-slate-600 bg-slate-500/20"
       initial={{
         scale: 0,
       }}
@@ -19,7 +19,7 @@ export const ProfilePicture = () => {
         },
       }}
     >
-      <svg className="w-full h-full">
+      <svg className="h-full w-full">
         <PatternLines
           id="smallerlines"
           stroke="rgb(255, 255, 255, 0.01)"

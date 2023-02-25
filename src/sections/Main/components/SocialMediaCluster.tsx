@@ -14,7 +14,7 @@ const SocialMediaIcon = (props: SocialMediaIconProps) => {
 
   return (
     <motion.i
-      className="z-30 flex gap-1 items-center w-fit rounded-full p-1 text-xs text-slate-400 hover:text-slate-200"
+      className="z-30 flex w-fit items-center gap-1 rounded-full p-1 text-xs text-slate-400 hover:text-slate-200"
       initial={{
         scale: 1,
       }}
@@ -42,7 +42,7 @@ export const SocialMediaCluster = () => {
   ];
 
   return (
-    <motion.div className="flex justify-center gap-3 text-slate-500 w-full">
+    <motion.div className="flex w-full justify-center gap-3 text-slate-500">
       {icons.map((item) => (
         <SocialMediaIcon key={item.url} Icon={item.icon} url={item.url} />
       ))}

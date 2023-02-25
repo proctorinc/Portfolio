@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 
 export const SubTitle = () => {
-  const [index, setIndex] = useState(0)
-  const [animationComplete, setAnimationComplete] = useState(false)
+  const [index, setIndex] = useState(0);
+  const [animationComplete, setAnimationComplete] = useState(false);
 
   const subHeaders = [
     "Security minded, full stack developer",
@@ -12,20 +12,26 @@ export const SubTitle = () => {
     "Scripter, automator, and improver",
     "Clean code enthusiast",
     "Guy who loves to code",
-  ]
+  ];
 
   useEffect(() => {
     if (animationComplete) {
-      const interval = setInterval(() => setIndex((previous) => previous === subHeaders.length - 1 ? 0 : previous + 1), 2000);
+      const interval = setInterval(
+        () =>
+          setIndex((previous) =>
+            previous === subHeaders.length - 1 ? 0 : previous + 1
+          ),
+        2000
+      );
       return () => {
         clearInterval(interval);
       };
     }
-  }, [animationComplete])
+  }, [animationComplete]);
 
   return (
     <motion.div
-      className="relative flex text-3xl text-slate-500 font-extralight w-fit"
+      className="relative flex w-fit text-3xl font-extralight text-slate-500"
       initial={{
         opacity: 0,
         translateY: -50,
@@ -38,7 +44,7 @@ export const SubTitle = () => {
           duration: 0.25,
           type: "spring",
           stiffness: 45,
-        }
+        },
       }}
       onAnimationComplete={() => setAnimationComplete(true)}
     >
@@ -51,11 +57,11 @@ export const SubTitle = () => {
           opacity: 1,
           transition: {
             duration: 1,
-          }
+          },
         }}
       >
         {subHeaders[index]}
       </motion.h2>
     </motion.div>
-  )
-}
+  );
+};

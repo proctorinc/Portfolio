@@ -47,7 +47,7 @@ const Skills = (props: MainSectionProps) => {
   return (
     <section
       ref={innerRef}
-      className="relative flex flex-col items-center justify-center w-full h-screen my-64 overflow-x-clip"
+      className="relative my-64 flex h-screen w-full flex-col items-center justify-center overflow-x-clip"
     >
       <motion.div
         className="absolute top-0"
@@ -57,7 +57,7 @@ const Skills = (props: MainSectionProps) => {
         }}
       >
         <svg
-          className="w-80 h-80"
+          className="h-80 w-80"
           id="blob-one"
           viewBox="0 0 900 600"
           xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +83,7 @@ const Skills = (props: MainSectionProps) => {
         style={{ x: scrollProgress, rotate: rotateCouterClockwise, scale: 2.1 }}
       >
         <svg
-          className="w-full h-full"
+          className="h-full w-full"
           id="blob-two"
           viewBox="0 0 900 600"
           xmlns="http://www.w3.org/2000/svg"

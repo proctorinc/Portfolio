@@ -22,7 +22,7 @@ const Navbar = (props: NavbarProps) => {
 
     return (
       <motion.button
-        className="hover:bg-gradient-to-r hover:from-blue-500/50 hover:to-[#1252a5]/50 hover:text-slate-50 px-3 rounded-md text-slate-200"
+        className="rounded-md px-3 text-slate-200 hover:bg-gradient-to-r hover:from-blue-500/50 hover:to-[#1252a5]/50 hover:text-slate-50"
         onClick={onClick}
         whileHover={{
           scale: 1.2,
@@ -38,7 +38,7 @@ const Navbar = (props: NavbarProps) => {
   };
 
   return (
-    <nav className="sticky flex justify-center gap-2 w-full flex top-0 z-50 h-16 -mb-16 backdrop-blur-md p-3">
+    <nav className="sticky top-0 z-50 -mb-16 flex flex h-16 w-full justify-center gap-2 p-3 backdrop-blur-md">
       <NavButton
         onClick={() => {
           if (homeRef.current) {

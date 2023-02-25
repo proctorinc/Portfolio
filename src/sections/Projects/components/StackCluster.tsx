@@ -12,7 +12,7 @@ const StackItem = (props: StackItemProps) => {
   const { name } = props;
   return (
     <motion.div
-      className="text-slate-300 hover:bg-slate-400/50 rounded-md bg-slate-400/20 py-1 px-2"
+      className="rounded-md bg-slate-400/20 py-1 px-2 text-slate-300 hover:bg-slate-400/50"
       initial={{
         scale: 1,
       }}

@@ -1,55 +1,51 @@
-import { ForwardRefExoticComponent } from "react"
-import { motion } from "framer-motion"
-import { GithubLogo, IconProps, LinkedinLogo } from "phosphor-react"
+import { ForwardRefExoticComponent } from "react";
+import { motion } from "framer-motion";
+import { GithubLogo, IconProps, LinkedinLogo } from "phosphor-react";
 
 type SocialMediaIconProps = {
-  Icon: ForwardRefExoticComponent<IconProps & React.RefAttributes<SVGSVGElement>>,
-  url: string,
-}
+  Icon: ForwardRefExoticComponent<
+    IconProps & React.RefAttributes<SVGSVGElement>
+  >;
+  url: string;
+};
 
 const SocialMediaIcon = (props: SocialMediaIconProps) => {
   const { Icon, url } = props;
 
   return (
     <motion.i
+      className="z-30 flex gap-1 items-center w-fit rounded-full p-1 text-xs text-slate-400 hover:text-slate-200"
+      initial={{
+        scale: 1,
+      }}
       whileHover={{
-        scale: 1.5,
+        scale: 1.3,
         transition: {
-          duration: 0.25
-        }
+          duration: 0.25,
+        },
       }}
       whileTap={{ scale: 0.95 }}
-      onClick={() => window.location.href = url}
+      onClick={() => (window.location.href = url)}
     >
-      <Icon weight="fill" size={25} />
+      <Icon weight="fill" size={30} />
     </motion.i>
-  )
-}
+  );
+};
 
 export const SocialMediaCluster = () => {
-  const GITHUB_URL = "https://github.com/proctorinc"
-  const LINKEDIN_URL = "https://linkedin.com/in/matthew-proctor"
+  const GITHUB_URL = "https://github.com/proctorinc";
+  const LINKEDIN_URL = "https://linkedin.com/in/matthew-proctor";
 
   const icons = [
-    { icon: GithubLogo, url: GITHUB_URL},
-    { icon: LinkedinLogo, url: LINKEDIN_URL}
-  ]
-  
+    { icon: GithubLogo, url: GITHUB_URL },
+    { icon: LinkedinLogo, url: LINKEDIN_URL },
+  ];
+
   return (
-    <motion.div className="flex gap-1 text-slate-500 py-2"
-      initial={{
-        opacity: 0,
-      }}
-      animate={{
-        opacity: 1,
-        transition: {
-          delay: 1.5,
-          duration: 1,
-          ease: "easeIn"
-        }
-      }}
-    >
-      {icons.map((item) => <SocialMediaIcon Icon={item.icon} url={item.url} />)}
+    <motion.div className="flex justify-center gap-3 text-slate-500 w-full">
+      {icons.map((item) => (
+        <SocialMediaIcon key={item.url} Icon={item.icon} url={item.url} />
+      ))}
     </motion.div>
-  )
-}
+  );
+};

@@ -1,8 +1,9 @@
 import { RefObject } from "react";
 import { useScroll } from "framer-motion";
 
-import { SmallWaveTransition, SocialMediaCluster } from "./components";
+import { SocialMediaCluster } from "./components";
 import { Card, GridBackground } from "../../components";
+import { SmallWaveTransition } from "../../components/Transitions"
 
 type ContactSectionProps = {
   innerRef: RefObject<HTMLDivElement>;

@@ -5,8 +5,8 @@ import {
   ProfilePicture,
   SubTitle,
   Title,
-  WaveTransition,
 } from "./components";
+import { WaveTransition } from "../../components/Transitions";
 
 type MainSectionProps = {
   innerRef: RefObject<HTMLDivElement>;

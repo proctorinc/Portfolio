@@ -3,12 +3,10 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import {
   Background,
   ProfilePicture,
-  SocialMediaCluster,
   SubTitle,
   Title,
   WaveTransition,
 } from "./components";
-import "./main.css";
 
 type MainSectionProps = {
   innerRef: RefObject<HTMLDivElement>;

@@ -1,1 +1,19 @@
-.gradient-background { background: radial-gradient(100% 100% at 2% 6%, #0f172a -3%, transparent),radial-gradient(100% 100% at 97% 92%, #05172a 0%, transparent),radial-gradient(100% 100% at 2% 93%, #1252a5 -8%, transparent),radial-gradient(100% 100% at 96% 6%, #1252a5 -27%, transparent);  } 
+.gradient-background {
+  background: radial-gradient(100% 100% at 2% 6%, #0f172a -3%, transparent),
+    radial-gradient(100% 100% at 97% 92%, #05172a 0%, transparent),
+    radial-gradient(100% 100% at 2% 93%, #1252a5 -8%, transparent),
+    radial-gradient(100% 100% at 96% 6%, #1252a5 -27%, transparent);
+}
+
+.gradient-light-to-dark {
+  background: radial-gradient(100% 100% at 6% 84%, #0f172a -9%, transparent),
+    radial-gradient(100% 100% at 89% 84%, #0f172a -9%, transparent),
+    radial-gradient(100% 100% at 49% 38%, #1252a5 -20%, transparent), #0f172a;
+}
+
+.gradient-dark-to-light {
+  background: radial-gradient(100% 100% at 48% 6%, #0f172a -35%, transparent),
+    radial-gradient(100% 100% at 7% 16%, #0f172a -9%, transparent),
+    radial-gradient(100% 100% at 89% 15%, #0f172a -9%, transparent),
+    radial-gradient(100% 100% at 48% 92%, #1252a5 50%, transparent), #0f172a;
+}

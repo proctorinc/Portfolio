@@ -60,14 +60,13 @@ export const Main = (props: MainSectionProps) => {
         className="grid h-screen w-full grid-cols-2 pb-40"
         style={{ y: scrollY }}
       >
-        <motion.div className="flex flex-col justify-center">
+        <div className="flex flex-col justify-center">
           <Title />
           <SubTitle />
-          {/* <SocialMediaCluster /> */}
-        </motion.div>
-        <motion.div className="flex items-center justify-center">
+        </div>
+        <div className="flex items-center justify-center">
           <ProfilePicture />
-        </motion.div>
+        </div>
       </motion.div>
       <WaveTransition
         waveOneSpeed={waveOneSpeed}

@@ -3,6 +3,10 @@ import { useScroll } from "framer-motion";
 import { BlobAnimation } from "./components";
 import { ScaleAnimation } from "./components/ScaleAnimation";
 
+import SKILLS from "../../data/skills.json"
+import { RadialGradient } from "@visx/gradient";
+import { Bar, Circle } from "@visx/shape";
+
 type MainSectionProps = {
   innerRef: RefObject<HTMLDivElement>;
 };
@@ -15,15 +19,9 @@ export const Skills = (props: MainSectionProps) => {
     offset: ["start end", "end start"],
   });
 
-  const skills = [
-    { type: "General", values: ["Python", "JavaScript", "Java", "C++", "C", "Groovy"] },
-    { type: "Web", values: ["React", "TypeScript", "HTML", "CSS", "BootStrap", "Styled Components", "TailwindCSS"] },
-    { type: "Backend", values: ["NodeJS", "ExpressJS", "Express Sessions", "Passport JS", "JWT", "Django", "Firebase"] },
-    { type: "Database", values: ["SQL", "PostgreSQL", "Firestore", "MongoDB", "Mongoose", "SQLite"]}
-  ]
-
   return (
     <section
+      id="skills"
       ref={innerRef}
       className="relative my-64 flex h-screen w-full flex-col items-center justify-center overflow-x-clip"
     >
@@ -31,7 +29,7 @@ export const Skills = (props: MainSectionProps) => {
       <ScaleAnimation scrollModifier={scrollYProgress}>
         <h1 className="text-6xl font-extrabold">Skills</h1>
         <div className="grid grid-cols-4 p-10">
-          {skills.map((column) => (
+          {SKILLS.map((column) => (
             <div>
               <h2 className="text-3xl">{column.type}</h2>
               <ul>

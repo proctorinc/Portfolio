@@ -1,8 +1,10 @@
 import { RefObject } from "react";
 import { motion } from "framer-motion";
-import { StackCluster } from "./components";
 import { Bar } from "@visx/shape";
-import { ArrowSquareOut, Code, PlayCircle } from "phosphor-react";
+import { ArrowSquareOut, Code } from "phosphor-react";
+
+import { StackCluster } from "./components";
+import PROJECTS from "../../data/projects.json"
 
 type ProjectsSectionProps = {
   innerRef: RefObject<HTMLDivElement>;
@@ -11,114 +13,17 @@ type ProjectsSectionProps = {
 export const Projects = (props: ProjectsSectionProps) => {
   const { innerRef } = props;
 
-  // const { scrollYProgress } = useScroll({
-  //   target: innerRef,
-  //   offset: ["start start", "end start"]
-  // })
-
-  const projects = [
-    {
-      title: "Dink",
-      subtitle: "Fullstack financial budgeting app",
-      image_url: "dink-image.png",
-      git_url: "https://github.com/proctorinc/Dink",
-      stack: [
-        "React",
-        "Vite",
-        "Tailwind CSS",
-        "react-router",
-        "react-query",
-        "Framer Motion",
-        "Plaid API",
-        "NodeJS",
-        "Express",
-        "REST",
-        "MongoDB",
-        "Mongoose",
-        "JWT",
-        "Phosphor Icons",
-        "Vitest",
-        "MSW",
-        "RTL",
-      ],
-      description:
-        "Dink is an all-in-one budgeting app that helps you keep track of your short term and long term financial goals. It synchronizes your bank account data live using the Plaid API to connect bank accounts and manage account transactions. You can create monthly budgets to track income and expenses. While also keeping track of your savings and allocating them to specific goals",
-    },
-    {
-      title: "StudFinder",
-      subtitle: "A date matching app for trade professionals",
-      image_url: "studfinder-image.png",
-      git_url: "https://github.com/proctorinc/StudFinder",
-      app_url: "https://findyourstud.web.app",
-      stack: [
-        "React",
-        "Vite",
-        "CSS Modules",
-        "React",
-        "Random user API",
-        "Vitest",
-        "MSW",
-        "RTL",
-      ],
-      description:
-        "A simple, fun dating app that lets you rate other potential matches. Uses an API to randomly generate user profiles for you to rate with a random user image. Give each profile a rating from 1-5. Use the stud finder to try and find a stud!",
-    },
-    {
-      title: "The Daily Gerth",
-      subtitle: "Daily social media for a cat named 'Gerth'",
-      image_url: "thedailygerth-image.png",
-      git_url: "https://github.com/proctorinc/TheDailyGerth",
-      app_url: "https://thedailygerth.web.app",
-      stack: [
-        "React",
-        "Next JS",
-        "Tailwind CSS",
-        "DaisyUI",
-        "Phosphor Icons",
-        "Firebase",
-        "Firestore",
-      ],
-      description:
-        "Social media app that posts one picture for all users to see and rate. Once you rate the daily image you can see what other users rated as well. Uses Firestore snapshots so that ratings and other data updates in realtime. Users can view each other's profiles and see their favorite pictures and top ratings.",
-    },
-    {
-      title: "Bugfixpy",
-      subtitle: "Python command line tool for fixing bugs in Git repositories",
-      image_url: "Bug Fix Project Image",
-      git_url: "https://github.com/proctorinc/bugfixpy",
-      stack: [
-        "Python",
-        "Command Line",
-        "Git",
-        "GitHub",
-        "Jira API",
-        "CMS API",
-        "VS Code",
-      ],
-      description:
-        "Command line program that automates Github commands and Jira commands to automate a bug fixing process. This program clones repositories, opens VSCode and tracks changes in multiple branches, commits changes, and automatically cherry-picks commits if necessary. The program then transitions the related Jira ticket using the Jira API and comments commit message. This program improved the speed of bug fixes from 1 hour to 15 minutes on average.",
-    },
-    {
-      title: "Mobile Notes App",
-      subtitle: "Google Keep notes app clone",
-      image_url: "Notes App Project Image",
-      git_url: "https://github.com/proctorinc/NotesApp",
-      stack: ["React Native", "Expo", "SQLite"],
-      description:
-        "Modified Google Keep clone that works on Android and IOS. Saves notes to local SQLite database. Has feature to search through all notes.",
-    },
-  ];
-
   return (
     <section
+      id="projects"
       ref={innerRef}
-      className="flex w-full flex-col items-center justify-center pt-40 pb-64"
+      className="flex w-full flex-col items-center justify-center pt-20 pb-64"
     >
       <div className="absolute h-full w-full">
         <Bar fill={`url(#lines)`} width="100%" height="100%" />
       </div>
       <h1 className="text-6xl font-extrabold">Projects</h1>
-      {projects.map((project) => (
+      {PROJECTS.map((project) => (
         <div
           key={project.image_url}
           className="flex w-full items-center px-20 py-20"

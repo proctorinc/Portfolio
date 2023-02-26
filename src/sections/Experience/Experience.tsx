@@ -1,6 +1,8 @@
 import { RefObject } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
+import JOBS from "../../data/jobs.json"
+
 type MainSectionProps = {
   innerRef: RefObject<HTMLDivElement>;
 };
@@ -13,27 +15,9 @@ export const Experience = (props: MainSectionProps) => {
   });
   const scrollProgress = useTransform(scrollY, [0, 4000], [-1000, -30]);
 
-  const jobs = [
-    {
-      title: "Bachelor's Computer Science,",
-      subtitle: "Cyber Security Concentration",
-      company: "George Fox University",
-      dateRange: "August 2017-May 2021",
-    },
-    {
-      title: "Cyber Security Intern",
-      company: "Swan Island Networks",
-      dateRange: "May 2021-July 2021",
-    },
-    {
-      title: "Technical Support Engineer",
-      company: "Secure Code Warrior",
-      dateRange: "September 2021-Current",
-    },
-  ];
-
   return (
     <section
+      id="experience"
       ref={innerRef}
       className="gradient-dark-to-light relative flex w-full flex-col items-center justify-center pt-64 pb-96 shadow-inner-2xl shadow-slate-900"
     >
@@ -41,7 +25,7 @@ export const Experience = (props: MainSectionProps) => {
       <div className="flex w-full pt-20 pb-96">
         <div className="flex w-1/4 items-end justify-end px-10">
           <div className="relative flex h-screen w-3 flex-col items-center justify-around rounded-full border-2 border-slate-600 bg-slate-400/20">
-            {jobs.map((_, i) => (
+            {JOBS.map((_, i) => (
               <div
                 key={i}
                 className="h-6 w-6 rounded-full border-2 border-slate-600 bg-slate-400/20"
@@ -50,7 +34,7 @@ export const Experience = (props: MainSectionProps) => {
           </div>
         </div>
         <div className="flex h-screen w-3/4 flex-col justify-around">
-          {jobs.map((job, i) => (
+          {JOBS.map((job, i) => (
             <motion.div
               key={i}
               initial={{

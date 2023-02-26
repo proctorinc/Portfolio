@@ -1,0 +1,41 @@
+[
+  {
+    "type": "General",
+    "values": ["Python", "JavaScript", "Java", "C++", "C", "Groovy"]
+  },
+  {
+    "type": "Web",
+    "values": [
+      "React",
+      "TypeScript",
+      "HTML",
+      "CSS",
+      "BootStrap",
+      "Styled Components",
+      "TailwindCSS"
+    ]
+  },
+  {
+    "type": "Backend",
+    "values": [
+      "NodeJS",
+      "ExpressJS",
+      "Express Sessions",
+      "Passport JS",
+      "JWT",
+      "Django",
+      "Firebase"
+    ]
+  },
+  {
+    "type": "Database",
+    "values": [
+      "SQL",
+      "PostgreSQL",
+      "Firestore",
+      "MongoDB",
+      "Mongoose",
+      "SQLite"
+    ]
+  }
+]

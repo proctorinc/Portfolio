@@ -51,6 +51,7 @@ export const Main = (props: MainSectionProps) => {
 
   return (
     <section
+      id="home"
       ref={innerRef}
       className="relative flex w-full flex-col items-center justify-center overflow-clip bg-cover p-28"
     >

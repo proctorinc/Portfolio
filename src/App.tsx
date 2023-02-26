@@ -23,7 +23,7 @@ function App() {
   };
 
   return (
-    <>
+    <div className="relative overflow-clip">
       <Navbar {...navbarProps} />
       <Main innerRef={homeRef} />
       <Skills innerRef={skillsRef} />
@@ -31,7 +31,7 @@ function App() {
       <Projects innerRef={projectsRef} />
       <Contact innerRef={contactRef} />
       <Footer />
-    </>
+    </div>
   );
 }
 

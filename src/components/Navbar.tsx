@@ -38,7 +38,7 @@ export const Navbar = (props: NavbarProps) => {
   };
 
   return (
-    <nav className="sticky top-0 z-50 -mb-16 flex flex h-16 w-full justify-center gap-2 p-3 backdrop-blur-md">
+    <nav className="sticky top-0 z-50 -mb-16 flex flex h-16 w-full justify-center gap-2 p-3 backdrop-blur-sm">
       <NavButton
         onClick={() => {
           if (homeRef.current) {

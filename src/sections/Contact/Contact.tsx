@@ -2,7 +2,7 @@ import { RefObject } from "react";
 import { useScroll, motion } from "framer-motion";
 
 import { SocialMediaCluster } from "./components";
-import { SmallWaveTransition } from "../../components/Transitions"
+import { SmallWaveTransition } from "../../components/Transitions";
 
 type ContactSectionProps = {
   innerRef: RefObject<HTMLDivElement>;
@@ -32,11 +32,13 @@ export const Contact = (props: ContactSectionProps) => {
             opacity: 1,
             transition: {
               duration: 1,
-              ease: "easeIn"
-            }
-          }}  
+              ease: "easeIn",
+            },
+          }}
         >
-          <h1 className="text-7xl font-extrabold py-5">Matt Proctor</h1>
+          <h1 className="text-5xl font-extrabold sm:py-5 sm:text-7xl">
+            Matt Proctor
+          </h1>
           <h2 className="text-xl font-extralight text-slate-300">
             matthewalanproctor@gmail.com
           </h2>

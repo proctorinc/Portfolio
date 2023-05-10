@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export const ProfilePicture = () => {
   return (
     <motion.div
-      className="h-80 w-80 rounded-xl border-2 border-slate-600 bg-slate-500/20"
+      className="h-64 w-64 rounded-xl border-2 border-slate-600 bg-slate-500/20 sm:h-80 sm:w-80"
       initial={{
         scale: 0,
       }}

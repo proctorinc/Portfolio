@@ -3,7 +3,7 @@ import { useScroll } from "framer-motion";
 import { BlobAnimation } from "./components";
 import { ScaleAnimation } from "./components/ScaleAnimation";
 
-import SKILLS from "../../data/skills.json"
+import SKILLS from "../../data/skills.json";
 import { RadialGradient } from "@visx/gradient";
 import { Bar, Circle } from "@visx/shape";
 
@@ -30,11 +30,11 @@ export const Skills = (props: MainSectionProps) => {
         <h1 className="text-6xl font-extrabold">Skills</h1>
         <div className="grid grid-cols-4 p-10">
           {SKILLS.map((column) => (
-            <div>
+            <div key={column.type}>
               <h2 className="text-3xl">{column.type}</h2>
               <ul>
                 {column.values.map((value) => (
-                  <li>{value}</li>
+                  <li key={value}>{value}</li>
                 ))}
               </ul>
             </div>

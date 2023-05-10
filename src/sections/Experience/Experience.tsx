@@ -1,7 +1,7 @@
 import { RefObject } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-import JOBS from "../../data/jobs.json"
+import JOBS from "../../data/jobs.json";
 
 type MainSectionProps = {
   innerRef: RefObject<HTMLDivElement>;
@@ -13,13 +13,13 @@ export const Experience = (props: MainSectionProps) => {
     target: innerRef,
     offset: ["start center", "end start"],
   });
-  const scrollProgress = useTransform(scrollY, [0, 4000], [-1000, -30]);
+  const scrollProgress = useTransform(scrollY, [0, 100], ["100%", "0%"]);
 
   return (
     <section
       id="experience"
       ref={innerRef}
-      className="gradient-dark-to-light relative flex w-full flex-col items-center justify-center pt-64 pb-96 shadow-inner-2xl shadow-slate-900"
+      className="gradient-dark-to-light relative flex w-full flex-col items-center justify-center pt-64 pb-80 shadow-inner-2xl shadow-slate-900"
     >
       <h1 className="text-6xl font-extrabold">Experience</h1>
       <div className="flex w-full pt-20 pb-96">
@@ -62,9 +62,9 @@ export const Experience = (props: MainSectionProps) => {
           ))}
         </div>
       </div>
-      <div className="absolute bottom-0 h-96 w-full">
+      <div className="absolute bottom-0 w-full">
         <svg
-          className="flex-no-shrink -mt-96 w-full fill-current"
+          className="flex-no-shrink bottom-0 w-full fill-current"
           viewBox="0 0 900 600"
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -75,16 +75,17 @@ export const Experience = (props: MainSectionProps) => {
             fill="#0f172a"
             strokeLinecap="round"
             strokeLinejoin="miter"
-            style={{ y: scrollProgress }}
+            // style={{ y: scrollProgress }}
           ></motion.path>
-          <motion.rect
-            style={{ y: scrollProgress }}
+          {/* <motion.rect
             x="0"
             y="600"
             width="900"
             height="2000"
-            fill="#0f172a"
-          />
+            fill="#fff" //0f172a"
+            className="-mt-48"
+            // style={{ y: scrollProgress }}
+          /> */}
         </svg>
       </div>
     </section>

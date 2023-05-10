@@ -15,14 +15,14 @@ export const Projects = (props: ProjectsSectionProps) => {
     <section
       id="projects"
       ref={innerRef}
-      className="flex w-full flex-col items-center justify-center pt-20 pb-64"
+      className="flex w-full flex-col items-center justify-center bg-slate-900 pt-20 pb-64"
     >
       <div className="absolute h-full w-full">
         <Bar fill={`url(#lines)`} width="100%" height="100%" />
       </div>
       <h1 className="text-6xl font-extrabold">Projects</h1>
       {PROJECTS.map((projectData, i) => (
-        <Project data={projectData} index={i} />
+        <Project key={i} data={projectData} index={i} />
       ))}
     </section>
   );

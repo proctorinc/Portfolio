@@ -1,11 +1,6 @@
 import { RefObject, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import {
-  Background,
-  ProfilePicture,
-  SubTitle,
-  Title,
-} from "./components";
+import { Background, ProfilePicture, SubTitle, Title } from "./components";
 import { WaveTransition } from "../../components/Transitions";
 
 type MainSectionProps = {
@@ -53,15 +48,15 @@ export const Main = (props: MainSectionProps) => {
     <section
       id="home"
       ref={innerRef}
-      className="relative flex w-full flex-col items-center justify-center overflow-clip bg-cover p-28"
+      className="relative flex w-full flex-col items-center justify-center overflow-clip bg-cover py-28 px-5 sm:px-20"
     >
       <Background scrollModifier={scrollY} />
       <motion.div
         ref={contentRef}
-        className="grid h-screen w-full grid-cols-2 pb-40"
+        className="grid h-screen w-full grid-cols-1 pb-40 sm:grid-cols-2"
         style={{ y: scrollY }}
       >
-        <div className="flex flex-col justify-center">
+        <div className="sm:items-left flex w-full flex-col items-center justify-center">
           <Title />
           <SubTitle />
         </div>

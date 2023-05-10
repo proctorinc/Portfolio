@@ -48,7 +48,7 @@ export const Main = (props: MainSectionProps) => {
     <section
       id="home"
       ref={innerRef}
-      className="relative flex w-full flex-col items-center justify-center overflow-clip bg-cover py-28 px-5 sm:px-20"
+      className="relative flex w-full flex-col items-center justify-center overflow-clip bg-cover px-5 sm:py-28 sm:px-20"
     >
       <Background scrollModifier={scrollY} />
       <motion.div
@@ -56,11 +56,11 @@ export const Main = (props: MainSectionProps) => {
         className="grid h-screen w-full grid-cols-1 pb-40 sm:grid-cols-2"
         style={{ y: scrollY }}
       >
-        <div className="sm:items-left flex w-full flex-col items-center justify-center">
+        <div className="sm:items-left flex h-fit w-full flex-col items-center justify-center sm:h-full">
           <Title />
           <SubTitle />
         </div>
-        <div className="flex items-center justify-center">
+        <div className="order-first flex items-center justify-center sm:order-last">
           <ProfilePicture />
         </div>
       </motion.div>

@@ -23,7 +23,7 @@ export const Experience = (props: MainSectionProps) => {
     >
       <h1 className="text-6xl font-extrabold">Experience</h1>
       <div className="flex w-full pt-20 pb-96">
-        <div className="flex w-1/4 items-end justify-end px-10">
+        <div className="flex w-1/5 items-end justify-end px-10 sm:w-1/4">
           <div className="relative flex h-screen w-3 flex-col items-center justify-around rounded-full border-2 border-slate-600 bg-slate-400/20">
             {JOBS.map((_, i) => (
               <div
@@ -33,13 +33,13 @@ export const Experience = (props: MainSectionProps) => {
             ))}
           </div>
         </div>
-        <div className="flex h-screen w-3/4 flex-col justify-around">
+        <div className="flex h-screen w-4/5 flex-col justify-around sm:w-3/4">
           {JOBS.map((job, i) => (
             <motion.div
               key={i}
               initial={{
                 scale: 0,
-                x: -500,
+                x: -100,
               }}
               whileInView={{
                 scale: 1,
@@ -50,14 +50,18 @@ export const Experience = (props: MainSectionProps) => {
               }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl font-bold">{job.title}</h2>
+              <h2 className="text-xl font-bold sm:text-4xl">{job.title}</h2>
               {job?.subtitle && (
-                <h2 className="text-3xl font-bold">{job.subtitle}</h2>
+                <h2 className="text-xl font-bold sm:text-3xl">
+                  {job.subtitle}
+                </h2>
               )}
-              <h3 className="text-2xl font-extralight text-slate-400">
+              <h3 className="text-lg italic text-slate-400 sm:text-2xl">
                 {job.company}
               </h3>
-              <p className="text-md text-slate-600">{job.dateRange}</p>
+              <p className="text-md font-light text-slate-500">
+                {job.dateRange}
+              </p>
             </motion.div>
           ))}
         </div>

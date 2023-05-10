@@ -1,5 +1,6 @@
-import { MouseEventHandler, RefObject, useState } from "react";
+import { MouseEventHandler, ReactNode, RefObject, useState } from "react";
 import { motion } from "framer-motion";
+import { Desktop, Hamburger, List } from "phosphor-react";
 
 type NavbarProps = {
   homeRef: RefObject<HTMLDivElement>;
@@ -10,8 +11,9 @@ type NavbarProps = {
 };
 
 type NavButtonProps = {
-  children: String;
+  children: ReactNode;
   onClick: MouseEventHandler;
+  className?: string;
 };
 
 export const Navbar = (props: NavbarProps) => {
@@ -19,11 +21,13 @@ export const Navbar = (props: NavbarProps) => {
   const [open, setOpen] = useState(false);
 
   const NavButton = (props: NavButtonProps) => {
-    const { children, onClick } = props;
+    const { children, onClick, className } = props;
 
     return (
       <motion.button
-        className="w-full rounded-md px-3 py-4 text-slate-200 hover:bg-gradient-to-r hover:from-blue-500/50 hover:to-[#1252a5]/50 hover:text-slate-50 sm:w-fit sm:py-1"
+        className={`flex w-full items-center justify-center gap-2 rounded-md px-3 py-4 text-slate-200 hover:bg-gradient-to-r hover:from-blue-500/50 hover:to-[#1252a5]/50 hover:text-slate-50 sm:w-fit sm:py-1 ${
+          className ?? ""
+        }`}
         onClick={onClick}
         whileHover={{
           scale: 1.2,
@@ -46,7 +50,12 @@ export const Navbar = (props: NavbarProps) => {
           : "-mb-20 backdrop-blur-sm"
       } min-h-16 sticky top-0 z-50 flex w-full flex-col justify-end gap-2 rounded-b-xl p-3 sm:flex-row sm:justify-center`}
     >
-      <NavButton onClick={() => setOpen((prev) => !prev)}>Menu</NavButton>
+      <NavButton
+        className="justify-between"
+        onClick={() => setOpen((prev) => !prev)}
+      >
+        <List weight="fill" size={20} />
+      </NavButton>
       <div className="hidden sm:flex">
         <NavButton
           onClick={() => {

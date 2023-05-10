@@ -14,7 +14,7 @@ export const Project = (props: ProjectProps) => {
   return (
     <div
       key={project.image_url}
-      className="flex w-full flex-col items-center px-5 py-20 sm:flex-row sm:gap-20 sm:px-20"
+      className="flex w-full flex-col items-center px-5 py-20 sm:flex-row sm:gap-5 sm:px-20"
     >
       <div className={`${ordering} w-full sm:order-last sm:w-2/5`}>
         <ProjectImage src={project.image_url} />

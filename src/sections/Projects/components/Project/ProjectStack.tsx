@@ -12,18 +12,18 @@ const StackItem = (props: StackItemProps) => {
   const { name } = props;
   return (
     <motion.div
-      className="rounded-md bg-slate-400/20 py-1 px-2 text-slate-300 hover:bg-slate-400/50"
+      className="select-none rounded-md bg-slate-400/20 py-1 px-2 text-slate-300 hover:bg-slate-400/50"
       initial={{
         scale: 1,
       }}
       whileHover={{
-        scale: 1.1,
+        scale: 1.2,
         transition: {
-          duration: 0.25,
+          duration: 0.2,
         },
       }}
     >
-      {name}
+      <span>{name}</span>
     </motion.div>
   );
 };

@@ -66,7 +66,7 @@ export const Experience = (props: MainSectionProps) => {
           ))}
         </div>
       </div>
-      <div className="absolute bottom-0 w-full">
+      <div className="absolute -bottom-2 w-full">
         <svg
           className="flex-no-shrink bottom-0 w-full fill-current"
           viewBox="0 0 900 600"

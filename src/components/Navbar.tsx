@@ -51,10 +51,10 @@ export const Navbar = (props: NavbarProps) => {
       } min-h-16 sticky top-0 z-50 flex w-full flex-col justify-end gap-2 rounded-b-xl p-3 sm:flex-row sm:justify-center`}
     >
       <NavButton
-        className="justify-between"
+        className="justify-between sm:hidden"
         onClick={() => setOpen((prev) => !prev)}
       >
-        <List weight="fill" size={20} />
+        <List weight="fill" size={25} />
       </NavButton>
       <div className="hidden sm:flex">
         <NavButton

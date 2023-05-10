@@ -64,13 +64,13 @@ export const Main = (props: MainSectionProps) => {
           <ProfilePicture />
         </div>
       </motion.div>
-      <WaveTransition
+      {/* <WaveTransition
         waveOneSpeed={waveOneSpeed}
         waveTwoSpeed={waveTwoSpeed}
         waveThreeSpeed={waveThreeSpeed}
         waveFourSpeed={waveFourSpeed}
         waveFiveSpeed={waveFiveSpeed}
-      />
+      /> */}
     </section>
   );
 };

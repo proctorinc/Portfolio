@@ -13,8 +13,8 @@ export const ProjectDetails = (props: ProjectDetailsProps) => {
   return (
     <>
       <div className="flex flex-col">
-        <h2 className="text-5xl font-bold">{project.title}</h2>
-        <h3 className="py-1 text-3xl font-extralight text-slate-400">
+        <h2 className="text-3xl font-bold sm:text-5xl">{project.title}</h2>
+        <h3 className="py-1 text-2xl font-extralight text-slate-400 sm:text-3xl">
           {project.subtitle}
         </h3>
       </div>

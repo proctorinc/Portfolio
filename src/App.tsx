@@ -25,12 +25,14 @@ function App() {
   return (
     <div className="relative overflow-clip">
       <Navbar {...navbarProps} />
-      <Main innerRef={homeRef} />
-      <Skills innerRef={skillsRef} />
-      <Experience innerRef={experienceRef} />
-      <Projects innerRef={projectsRef} />
-      <Contact innerRef={contactRef} />
-      <Footer />
+      <div className="relative">
+        <Main innerRef={homeRef} />
+        <Skills innerRef={skillsRef} />
+        <Experience innerRef={experienceRef} />
+        <Projects innerRef={projectsRef} />
+        <Contact innerRef={contactRef} />
+        <Footer />
+      </div>
     </div>
   );
 }

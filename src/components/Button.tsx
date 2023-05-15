@@ -1,9 +1,9 @@
-import { MouseEventHandler } from "react";
+import { MouseEventHandler, ReactNode } from "react";
 import { motion } from "framer-motion";
 
 type ButtonProps = {
-  onClick: MouseEventHandler<HTMLButtonElement>;
-  children: string | JSX.Element | JSX.Element[];
+  onClick?: MouseEventHandler<HTMLButtonElement>;
+  children: ReactNode;
 };
 
 export const Button = (props: ButtonProps) => {

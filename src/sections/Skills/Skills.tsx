@@ -23,20 +23,22 @@ export const Skills = (props: MainSectionProps) => {
     <section
       id="skills"
       ref={innerRef}
-      className="relative my-64 flex h-screen w-full flex-col items-center justify-center overflow-x-clip"
+      className="relative flex h-screen w-full flex-col items-center justify-center overflow-x-clip bg-slate-900 py-64"
     >
       <BlobAnimation scrollModifier={scrollYProgress} />
       <ScaleAnimation scrollModifier={scrollYProgress}>
         <h1 className="text-6xl font-extrabold">Skills</h1>
-        <div className="grid grid-cols-4 p-10">
+        <div className="grid grid-cols-1 gap-5 p-10 sm:grid-cols-4">
           {SKILLS.map((column) => (
             <div key={column.type}>
-              <h2 className="text-3xl">{column.type}</h2>
-              <ul>
+              <h2 className="text-3xl font-bold">{column.type}</h2>
+              <ol className="grid grid-cols-2 pt-3 sm:grid-cols-1">
                 {column.values.map((value) => (
-                  <li key={value}>{value}</li>
+                  <li className="pr-5 font-light text-slate-400" key={value}>
+                    {value}
+                  </li>
                 ))}
-              </ul>
+              </ol>
             </div>
           ))}
         </div>

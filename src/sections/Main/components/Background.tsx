@@ -1,16 +1,9 @@
 import { motion, MotionValue } from "framer-motion";
 
-type BackgroundProps = {
-  scrollModifier: MotionValue<number>;
-};
-
-export const Background = (props: BackgroundProps) => {
-  const { scrollModifier } = props;
-
+export const Background = () => {
   return (
     <motion.div
       className="gradient-background #bg-[url('/images/space-background.jpeg')] absolute -z-20 h-full w-full bg-cover bg-no-repeat"
-      style={{ y: scrollModifier }}
       initial={{
         opacity: 0,
       }}

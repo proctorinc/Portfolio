@@ -45,32 +45,30 @@ export const Main = (props: MainSectionProps) => {
   );
 
   return (
-    <section
-      id="home"
-      ref={innerRef}
-      className="relative flex w-full flex-col items-center justify-center overflow-clip bg-cover px-5 sm:py-28 sm:px-20"
-    >
-      <Background scrollModifier={scrollY} />
-      <motion.div
-        ref={contentRef}
-        className="grid h-screen w-full grid-cols-1 pb-40 sm:grid-cols-2"
-        style={{ y: scrollY }}
-      >
-        <div className="sm:items-left flex h-fit w-full flex-col items-center justify-center sm:h-full">
-          <Title />
-          <SubTitle />
-        </div>
-        <div className="order-first flex items-center justify-center sm:order-last">
-          <ProfilePicture />
-        </div>
-      </motion.div>
-      {/* <WaveTransition
+    <section id="home" ref={innerRef} className="-mt-20">
+      <div className="fixed -z-10 flex h-screen w-full flex-col items-center justify-center overflow-clip bg-cover px-5 sm:py-28 sm:px-20">
+        <Background />
+        <motion.div
+          ref={contentRef}
+          className="grid h-screen w-full grid-cols-1 pb-40 md:grid-cols-2"
+        >
+          <div className="sm:items-left flex h-fit w-full flex-col items-center justify-center sm:h-full">
+            <Title />
+            <SubTitle />
+          </div>
+          <div className="flex items-center justify-center">
+            <ProfilePicture />
+          </div>
+        </motion.div>
+        {/* <WaveTransition
         waveOneSpeed={waveOneSpeed}
         waveTwoSpeed={waveTwoSpeed}
         waveThreeSpeed={waveThreeSpeed}
         waveFourSpeed={waveFourSpeed}
         waveFiveSpeed={waveFiveSpeed}
       /> */}
+      </div>
+      <div className="h-screen w-full"></div>
     </section>
   );
 };

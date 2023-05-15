@@ -1,6 +1,6 @@
 import { MouseEventHandler, ReactNode, RefObject, useState } from "react";
 import { motion } from "framer-motion";
-import { Desktop, Hamburger, List } from "phosphor-react";
+import { Desktop, Hamburger, List, X } from "phosphor-react";
 
 type NavbarProps = {
   homeRef: RefObject<HTMLDivElement>;
@@ -45,14 +45,12 @@ export const Navbar = (props: NavbarProps) => {
   return (
     <nav
       className={`${
-        open
-          ? "-mb-[368px] bg-slate-900/50 backdrop-blur-md"
-          : "-mb-20 backdrop-blur-sm"
-      } min-h-16 sticky top-0 z-50 flex w-full flex-col justify-end gap-2 rounded-b-xl p-3 sm:flex-row sm:justify-center`}
+        open ? "" : "backdrop-blur-sm"
+      } min-h-16 sticky top-0 z-50 flex w-full flex-col justify-end gap-2 p-3 sm:flex-row sm:justify-center`}
     >
       <NavButton
         className="justify-between sm:hidden"
-        onClick={() => setOpen((prev) => !prev)}
+        onClick={() => setOpen(true)}
       >
         <List weight="fill" size={25} />
       </NavButton>
@@ -119,72 +117,85 @@ export const Navbar = (props: NavbarProps) => {
         </NavButton>
       </div>
       {open && (
-        <div>
+        <div className="absolute top-0 left-0 z-50 flex h-screen w-full flex-col items-center bg-slate-900/50 px-3 py-3 backdrop-blur-lg sm:hidden">
           <NavButton
-            onClick={() => {
-              if (homeRef.current) {
-                homeRef.current.scrollIntoView({
-                  behavior: "smooth",
-                  block: "start",
-                });
-                setOpen(false);
-              }
-            }}
+            className="justify-between sm:hidden"
+            onClick={() => setOpen(false)}
           >
-            Home
+            <X weight="fill" size={25} />
           </NavButton>
-          <NavButton
-            onClick={() => {
-              if (skillsRef.current) {
-                skillsRef.current.scrollIntoView({
-                  behavior: "smooth",
-                  block: "start",
-                });
-                setOpen(false);
-              }
-            }}
-          >
-            Skills
-          </NavButton>
-          <NavButton
-            onClick={() => {
-              if (experienceRef.current) {
-                experienceRef.current.scrollIntoView({
-                  behavior: "smooth",
-                  block: "start",
-                });
-                setOpen(false);
-              }
-            }}
-          >
-            Experience
-          </NavButton>
-          <NavButton
-            onClick={() => {
-              if (projectsRef.current) {
-                projectsRef.current.scrollIntoView({
-                  behavior: "smooth",
-                  block: "start",
-                });
-                setOpen(false);
-              }
-            }}
-          >
-            Projects
-          </NavButton>
-          <NavButton
-            onClick={() => {
-              if (contactRef.current) {
-                contactRef.current.scrollIntoView({
-                  behavior: "smooth",
-                  block: "end",
-                });
-                setOpen(false);
-              }
-            }}
-          >
-            Contact
-          </NavButton>
+          <div className="flex h-full w-full flex-col items-center justify-center px-3 pb-20">
+            <NavButton
+              className="text-xl"
+              onClick={() => {
+                if (homeRef.current) {
+                  homeRef.current.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
+                  setOpen(false);
+                }
+              }}
+            >
+              Home
+            </NavButton>
+            <NavButton
+              className="text-xl"
+              onClick={() => {
+                if (skillsRef.current) {
+                  skillsRef.current.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
+                  setOpen(false);
+                }
+              }}
+            >
+              Skills
+            </NavButton>
+            <NavButton
+              className="text-xl"
+              onClick={() => {
+                if (experienceRef.current) {
+                  experienceRef.current.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
+                  setOpen(false);
+                }
+              }}
+            >
+              Experience
+            </NavButton>
+            <NavButton
+              className="text-xl"
+              onClick={() => {
+                if (projectsRef.current) {
+                  projectsRef.current.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
+                  setOpen(false);
+                }
+              }}
+            >
+              Projects
+            </NavButton>
+            <NavButton
+              className="text-xl"
+              onClick={() => {
+                if (contactRef.current) {
+                  contactRef.current.scrollIntoView({
+                    behavior: "smooth",
+                    block: "end",
+                  });
+                  setOpen(false);
+                }
+              }}
+            >
+              Contact
+            </NavButton>
+          </div>
         </div>
       )}
     </nav>

@@ -31,7 +31,7 @@ export const Title = () => {
             style={{ display: "inline-block" }}
             className={`${
               character === " " && "px-2"
-            } bg-gradient-to-r from-slate-200 to-slate-200 bg-clip-text text-5xl font-extrabold text-transparent sm:text-4xl md:text-7xl`}
+            } bg-gradient-to-r from-slate-200 to-slate-200 bg-clip-text text-5xl font-extrabold text-transparent lg:text-7xl`}
             variants={characterAnimations}
           >
             {character}

@@ -2,6 +2,8 @@ import { RefObject } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 import JOBS from "../../data/jobs.json";
+import { Button } from "../../components";
+import { Question } from "phosphor-react";
 
 type MainSectionProps = {
   innerRef: RefObject<HTMLDivElement>;
@@ -18,10 +20,11 @@ export const Experience = (props: MainSectionProps) => {
   return (
     <section
       id="experience"
-      ref={innerRef}
       className="gradient-dark-to-light relative flex w-full flex-col items-center justify-center pt-64 pb-80 shadow-inner-2xl shadow-slate-900"
     >
-      <h1 className="text-6xl font-extrabold">Experience</h1>
+      <h1 ref={innerRef} className="pt-28 text-6xl font-extrabold">
+        Experience
+      </h1>
       <div className="flex w-full pt-20 pb-96">
         <div className="flex w-1/5 items-end justify-end px-10 sm:w-1/4">
           <div className="relative flex h-screen w-3 flex-col items-center justify-around rounded-full border-2 border-slate-600 bg-slate-400/20">
@@ -33,7 +36,7 @@ export const Experience = (props: MainSectionProps) => {
             ))}
           </div>
         </div>
-        <div className="flex h-screen w-4/5 flex-col justify-around sm:w-3/4">
+        <div className="flex w-4/5 flex-col justify-around sm:w-3/4">
           {JOBS.map((job, i) => (
             <motion.div
               key={i}
@@ -48,7 +51,6 @@ export const Experience = (props: MainSectionProps) => {
                   duration: 1,
                 },
               }}
-              viewport={{ once: true }}
             >
               <h2 className="text-xl font-bold sm:text-4xl">{job.title}</h2>
               {job?.subtitle && (
@@ -62,6 +64,16 @@ export const Experience = (props: MainSectionProps) => {
               <p className="text-md font-light text-slate-500">
                 {job.dateRange}
               </p>
+              <div className="pt-4">
+                <Button
+                  onClick={() =>
+                    alert("Please download Resume for this information")
+                  }
+                >
+                  <Question weight="fill" size={15} />
+                  <span>Learn more</span>
+                </Button>
+              </div>
             </motion.div>
           ))}
         </div>

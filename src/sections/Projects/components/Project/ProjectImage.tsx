@@ -23,7 +23,6 @@ export const ProjectImage = (props: ProjectImageProps) => {
           duration: 0.5,
         },
       }}
-      viewport={{ once: true }}
     >
       <div className="absolute bottom-0 h-3/4 w-full rounded-xl border-2 border-slate-600 bg-slate-500/20">
         <svg className="h-full w-full">

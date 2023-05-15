@@ -19,9 +19,7 @@ export const Project = (props: ProjectProps) => {
       <div className={`${ordering} w-full sm:order-last sm:w-2/5`}>
         <ProjectImage src={project.image_url} />
       </div>
-      <div className="relative flex w-full flex-col gap-3 pt-5 sm:w-3/5 sm:pt-24">
-        <ProjectDetails data={project} />
-      </div>
+      <ProjectDetails data={project} />
     </div>
   );
 };

@@ -2,6 +2,7 @@ import { ArrowSquareOut, Code } from "phosphor-react";
 import { Button } from "../../../../components";
 import { ProjectType } from "../../types";
 import { ProjectStack } from "./ProjectStack";
+import { motion } from "framer-motion";
 
 type ProjectDetailsProps = {
   data: ProjectType;
@@ -11,10 +12,24 @@ export const ProjectDetails = (props: ProjectDetailsProps) => {
   const { data: project } = props;
 
   return (
-    <>
+    <motion.div
+      className="relative flex w-full flex-col gap-3 pt-5 sm:w-3/5 sm:pt-24"
+      initial={{
+        opacity: 0,
+        y: 20,
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 0.25,
+          ease: "easeIn",
+        },
+      }}
+    >
       <div className="flex flex-col">
         <h2 className="text-3xl font-bold sm:text-5xl">{project.title}</h2>
-        <h3 className="py-1 text-2xl font-extralight text-slate-400 sm:text-3xl">
+        <h3 className="py-1 text-xl font-extralight text-slate-400 sm:text-3xl">
           {project.subtitle}
         </h3>
       </div>
@@ -36,6 +51,6 @@ export const ProjectDetails = (props: ProjectDetailsProps) => {
           </Button>
         )}
       </div>
-    </>
+    </motion.div>
   );
 };

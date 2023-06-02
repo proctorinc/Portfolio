@@ -48,14 +48,14 @@ export const ProjectImage = (props: ProjectImageProps) => {
         <div className="absolute bottom-0 z-30 h-fit w-[141px] rounded-2xl bg-slate-100 pt-4 shadow-2xl shadow-slate-900">
           <motion.img
             className="h-full w-full object-contain"
-            src={`/images/${src}`}
+            src={`/static/images/${src}`}
             alt={src}
           />
         </div>
         <motion.img
           className="absolute bottom-0 z-40 h-full w-full object-contain"
           style={{ y: "40px" }}
-          src="/images/phone-frame-2.png"
+          src="/static/images/phone-frame-2.png"
           alt="phone frame"
         />
       </motion.div>

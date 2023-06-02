@@ -52,10 +52,10 @@ export const Contact = (props: ContactSectionProps) => {
             <Button>
               <Download weight="fill" size={15} />
               <a
-                href="./public/matt_proctor_resume.pdf"
+                href="/static/files/matt_proctor_resume.pdf"
                 download="matt_proctor_resume.pdf"
               >
-                Download Resume
+                Resume
               </a>
             </Button>
           </div>

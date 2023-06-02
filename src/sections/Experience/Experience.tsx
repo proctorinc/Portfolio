@@ -91,17 +91,7 @@ export const Experience = (props: MainSectionProps) => {
             fill="#0f172a"
             strokeLinecap="round"
             strokeLinejoin="miter"
-            // style={{ y: scrollProgress }}
           ></motion.path>
-          {/* <motion.rect
-            x="0"
-            y="600"
-            width="900"
-            height="2000"
-            fill="#fff" //0f172a"
-            className="-mt-48"
-            // style={{ y: scrollProgress }}
-          /> */}
         </svg>
       </div>
     </section>

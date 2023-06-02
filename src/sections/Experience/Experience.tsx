@@ -64,16 +64,6 @@ export const Experience = (props: MainSectionProps) => {
               <p className="text-md font-light text-slate-500">
                 {job.dateRange}
               </p>
-              <div className="pt-4">
-                <Button
-                  onClick={() =>
-                    alert("Please download Resume for this information")
-                  }
-                >
-                  <Question weight="fill" size={15} />
-                  <span>Learn more</span>
-                </Button>
-              </div>
             </motion.div>
           ))}
         </div>

@@ -4,6 +4,7 @@ import { BlobAnimation } from "./components";
 import { ScaleAnimation } from "./components/ScaleAnimation";
 
 import SKILLS from "../../data/skills.json";
+import { Tag } from "../../components/Tag";
 
 type MainSectionProps = {
   innerRef: RefObject<HTMLDivElement>;
@@ -11,11 +12,6 @@ type MainSectionProps = {
 
 export const Skills = (props: MainSectionProps) => {
   const { innerRef } = props;
-
-  const { scrollYProgress } = useScroll({
-    target: innerRef,
-    offset: ["start end", "end start"],
-  });
 
   return (
     <section
@@ -39,8 +35,8 @@ export const Skills = (props: MainSectionProps) => {
           ></motion.path>
         </svg>
       </div>
-      <h1 className="text-6xl font-extrabold">Skills</h1>
-      <div className="grid grid-cols-1 gap-5 p-10 sm:grid-cols-3">
+      <h1 className="pt-28 text-6xl font-extrabold">Skills</h1>
+      <div className="grid grid-cols-1 gap-16 p-10 sm:grid-cols-2">
         {SKILLS.map((column) => (
           <motion.div
             key={column.type}
@@ -57,14 +53,14 @@ export const Skills = (props: MainSectionProps) => {
               },
             }}
           >
-            <h2 className="text-3xl font-bold">{column.type}</h2>
-            <ol className="grid grid-cols-2 pt-3 sm:grid-cols-1">
+            <h2 className="py-2 text-3xl font-bold">{column.type}</h2>
+            <div className="flex w-full flex-wrap gap-1 sm:w-64 lg:w-96">
               {column.values.map((value) => (
-                <li className="pr-5 font-light text-slate-400" key={value}>
+                <Tag key={value} className="text-sm">
                   {value}
-                </li>
+                </Tag>
               ))}
-            </ol>
+            </div>
           </motion.div>
         ))}
       </div>

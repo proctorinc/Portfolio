@@ -93,9 +93,9 @@
       "SSO (Google, Azure, Okta IDPs)",
       "SAML",
       "LaunchDarkly",
-      "Windows Active Directory",
+      "Orchestrator",
       "Docker",
-      "Orchestrator"
+      "Windows Active Directory"
     ]
   }
 ]

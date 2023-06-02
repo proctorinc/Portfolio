@@ -46,8 +46,8 @@ export const Main = (props: MainSectionProps) => {
 
   return (
     <section id="home" ref={innerRef} className="-mt-20">
-      <div className="fixed -z-10 flex h-screen w-full flex-col items-center justify-center overflow-clip bg-cover px-5 sm:py-28 sm:px-20">
-        <Background />
+      <Background />
+      <div className="fixed -z-10 flex h-screen w-full flex-col items-center justify-center overflow-clip bg-cover px-5 pt-40 sm:px-20">
         <motion.div
           ref={contentRef}
           className="grid h-screen w-full grid-cols-1 pb-40 md:grid-cols-2"
@@ -60,13 +60,6 @@ export const Main = (props: MainSectionProps) => {
             <ProfilePicture />
           </div>
         </motion.div>
-        {/* <WaveTransition
-        waveOneSpeed={waveOneSpeed}
-        waveTwoSpeed={waveTwoSpeed}
-        waveThreeSpeed={waveThreeSpeed}
-        waveFourSpeed={waveFourSpeed}
-        waveFiveSpeed={waveFiveSpeed}
-      /> */}
       </div>
       <div className="h-screen w-full"></div>
     </section>

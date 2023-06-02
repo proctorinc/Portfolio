@@ -52,7 +52,7 @@ export const Main = (props: MainSectionProps) => {
           ref={contentRef}
           className="grid h-screen w-full grid-cols-1 pb-40 md:grid-cols-2"
         >
-          <div className="sm:items-left flex h-fit w-full flex-col items-center justify-center sm:h-full">
+          <div className="sm:items-left flex h-fit w-full flex-col items-center justify-center gap-2 sm:h-full">
             <Title />
             <SubTitle />
           </div>

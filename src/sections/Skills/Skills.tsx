@@ -21,7 +21,7 @@ export const Skills = (props: MainSectionProps) => {
     <section
       id="skills"
       ref={innerRef}
-      className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-x-clip bg-slate-900"
+      className="relative mt-[65vw] flex min-h-screen w-full flex-col items-center justify-center overflow-x-clip bg-slate-900"
     >
       <div className="absolute -top-[65vw] -z-10 w-full">
         <svg

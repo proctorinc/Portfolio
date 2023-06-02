@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export const ProfilePicture = () => {
   return (
     <motion.div
-      className="relative h-80 w-64 rounded-xl border-2 border-slate-600 bg-slate-500/20 lg:h-80 lg:w-80"
+      className="relative h-80 w-64 overflow-hidden rounded-xl border-2 border-slate-600 bg-slate-500/20 shadow-xl lg:h-80 lg:w-80"
       initial={{
         scale: 0,
       }}
@@ -30,8 +30,8 @@ export const ProfilePicture = () => {
         />
         <Bar fill={`url(#smallerlines)`} width="100%" height="100%" />
       </svg>
-      <img
-        className="absolute rounded-3xl object-cover p-5"
+      <motion.img
+        className="absolute rounded-3xl object-cover"
         src="/static/images/profile-picture.png"
       />
     </motion.div>

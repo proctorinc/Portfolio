@@ -31,8 +31,8 @@ export const ProfilePicture = () => {
         <Bar fill={`url(#smallerlines)`} width="100%" height="100%" />
       </svg>
       <img
-        className="absolute rounded-2xl object-cover p-5"
-        src="/static/images/profile-picture.jpg"
+        className="absolute rounded-3xl object-cover p-5"
+        src="/static/images/profile-picture.png"
       />
     </motion.div>
   );

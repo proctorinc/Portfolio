@@ -23,7 +23,7 @@ export const Skills = (props: MainSectionProps) => {
       ref={innerRef}
       className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-x-clip bg-slate-900"
     >
-      <div className="absolute -top-56 w-full">
+      <div className="absolute -top-[65vw] -z-10 w-full">
         <svg
           className="flex-no-shrink bottom-0 w-full fill-current"
           viewBox="0 0 900 600"
@@ -39,24 +39,35 @@ export const Skills = (props: MainSectionProps) => {
           ></motion.path>
         </svg>
       </div>
-      <BlobAnimation scrollModifier={scrollYProgress} />
-      <ScaleAnimation scrollModifier={scrollYProgress}>
-        <h1 className="text-6xl font-extrabold">Skills</h1>
-        <div className="grid grid-cols-1 gap-5 p-10 sm:grid-cols-4">
-          {SKILLS.map((column) => (
-            <div key={column.type}>
-              <h2 className="text-3xl font-bold">{column.type}</h2>
-              <ol className="grid grid-cols-2 pt-3 sm:grid-cols-1">
-                {column.values.map((value) => (
-                  <li className="pr-5 font-light text-slate-400" key={value}>
-                    {value}
-                  </li>
-                ))}
-              </ol>
-            </div>
-          ))}
-        </div>
-      </ScaleAnimation>
+      <h1 className="text-6xl font-extrabold">Skills</h1>
+      <div className="grid grid-cols-1 gap-5 p-10 sm:grid-cols-3">
+        {SKILLS.map((column) => (
+          <motion.div
+            key={column.type}
+            initial={{
+              opacity: 0,
+              scale: 0.5,
+            }}
+            whileInView={{
+              opacity: 1,
+              scale: 1,
+              transition: {
+                duration: 0.5,
+                ease: "easeIn",
+              },
+            }}
+          >
+            <h2 className="text-3xl font-bold">{column.type}</h2>
+            <ol className="grid grid-cols-2 pt-3 sm:grid-cols-1">
+              {column.values.map((value) => (
+                <li className="pr-5 font-light text-slate-400" key={value}>
+                  {value}
+                </li>
+              ))}
+            </ol>
+          </motion.div>
+        ))}
+      </div>
     </section>
   );
 };

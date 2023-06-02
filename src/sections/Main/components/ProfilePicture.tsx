@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export const ProfilePicture = () => {
   return (
     <motion.div
-      className="h-52 w-52 rounded-xl border-2 border-slate-600 bg-slate-500/20 lg:h-80 lg:w-80"
+      className="relative h-80 w-64 rounded-xl border-2 border-slate-600 bg-slate-500/20 lg:h-80 lg:w-80"
       initial={{
         scale: 0,
       }}
@@ -19,7 +19,7 @@ export const ProfilePicture = () => {
         },
       }}
     >
-      <svg className="h-full w-full">
+      <svg className="absolute h-full w-full">
         <PatternLines
           id="smallerlines"
           stroke="rgb(255, 255, 255, 0.01)"
@@ -30,7 +30,10 @@ export const ProfilePicture = () => {
         />
         <Bar fill={`url(#smallerlines)`} width="100%" height="100%" />
       </svg>
-      {/* Add profile picture here */}
+      <img
+        className="absolute rounded-2xl object-cover p-5"
+        src="/static/images/profile-picture.jpg"
+      />
     </motion.div>
   );
 };

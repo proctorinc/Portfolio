@@ -15,5 +15,87 @@
       "ARM Assembly",
       "SH/BSH/ZSH"
     ]
+  },
+  {
+    "type": "Frontend",
+    "values": [
+      "React",
+      "React Native",
+      "Next JS",
+      "Vite",
+      "CRA",
+      "React Query",
+      "Django",
+      "JQuery",
+      "Tailwind CSS",
+      "CSS Modules",
+      "Figma"
+    ]
+  },
+  {
+    "type": "Backend",
+    "values": ["Node JS", "Express JS", "tRPC", "Passport JS", "Django REST"]
+  },
+  {
+    "type": "Databases",
+    "values": [
+      "SQL",
+      "MySQL",
+      "PostgreSQL",
+      "Prisma",
+      "Firestore",
+      "MongoDB",
+      "MongoDB Atlas",
+      "Sqlite",
+      "PlanetScale"
+    ]
+  },
+  {
+    "type": "Testing Tools",
+    "values": [
+      "React Testing Library",
+      "Jest",
+      "Vitest",
+      "Mock Service Worker",
+      "Storybook",
+      "Playwright"
+    ]
+  },
+  {
+    "type": "Security Testing Tools",
+    "values": [
+      "Burp Suite",
+      "Metasploit",
+      "ZAP",
+      "Nmap",
+      "Wireshark",
+      "DirBuster",
+      "Autopsy",
+      "Foxy Proxy",
+      "HashCat"
+    ]
+  },
+  {
+    "type": "Operating Systems",
+    "values": ["Windows 98-11", "MacOS", "Unix", "Kali/Ubuntu/Manjaro Linux"]
+  },
+  {
+    "type": "Misc Tools",
+    "values": [
+      "Vercel",
+      "Firebase",
+      "NextAuth",
+      "Github",
+      "GitLab",
+      "Jira",
+      "Zendesk",
+      "Trello",
+      "SSO (Google, Azure, Okta IDPs)",
+      "SAML",
+      "LaunchDarkly",
+      "Windows Active Directory",
+      "Docker",
+      "Orchestrator"
+    ]
   }
 ]

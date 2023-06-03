@@ -48,12 +48,14 @@ export const Navbar = (props: NavbarProps) => {
         open ? "" : "backdrop-blur-sm"
       } min-h-16 sticky top-0 z-50 flex w-full flex-col justify-end gap-2 p-3 sm:flex-row sm:justify-center`}
     >
-      <NavButton
-        className="justify-between sm:hidden"
-        onClick={() => setOpen(true)}
-      >
-        <List weight="fill" size={25} />
-      </NavButton>
+      <div className="flex w-full justify-start sm:hidden">
+        <NavButton
+          className="w-12 justify-between sm:hidden"
+          onClick={() => setOpen(true)}
+        >
+          <List weight="fill" size={25} />
+        </NavButton>
+      </div>
       <div className="hidden sm:flex">
         <NavButton
           onClick={() => {
@@ -118,13 +120,15 @@ export const Navbar = (props: NavbarProps) => {
       </div>
       {open && (
         <div className="absolute top-0 left-0 z-50 flex h-screen w-full flex-col items-center bg-slate-900/50 px-3 py-3 backdrop-blur-lg sm:hidden">
-          <NavButton
-            className="justify-between sm:hidden"
-            onClick={() => setOpen(false)}
-          >
-            <X weight="fill" size={25} />
-          </NavButton>
-          <div className="flex h-full w-full flex-col items-center justify-center px-3 pb-20">
+          <div className="flex w-full justify-start">
+            <NavButton
+              className="w-12 justify-between sm:hidden"
+              onClick={() => setOpen(false)}
+            >
+              <X weight="fill" size={25} />
+            </NavButton>
+          </div>
+          <div className="flex h-full w-full flex-col items-center justify-center px-14 pb-20">
             <NavButton
               className="text-xl"
               onClick={() => {

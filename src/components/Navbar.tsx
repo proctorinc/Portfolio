@@ -43,11 +43,7 @@ export const Navbar = (props: NavbarProps) => {
   };
 
   return (
-    <nav
-      className={`${
-        open ? "" : "backdrop-blur-sm"
-      } min-h-16 sticky top-0 z-50 flex w-full flex-col justify-end gap-2 p-3 sm:flex-row sm:justify-center`}
-    >
+    <nav className="min-h-16 sticky top-0 z-50 flex w-full flex-col justify-end gap-2 p-3 sm:flex-row sm:justify-center">
       <div className="flex w-full justify-start sm:hidden">
         <NavButton
           className="w-12 justify-between sm:hidden"
@@ -56,7 +52,7 @@ export const Navbar = (props: NavbarProps) => {
           <List weight="fill" size={25} />
         </NavButton>
       </div>
-      <div className="hidden sm:flex">
+      <div className="hidden gap-3 rounded-xl p-2 backdrop-blur-md sm:flex">
         <NavButton
           onClick={() => {
             if (homeRef.current) {

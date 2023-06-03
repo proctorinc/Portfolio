@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 export const Background = () => {
   return (
     <motion.div
-      className="gradient-background #bg-[url('/static/images/space-background.jpeg')] absolute -z-20 h-full w-full bg-cover bg-no-repeat"
+      className="gradient-background #bg-[url('/static/images/space-background.jpeg')] absolute -z-20 -mt-40 h-full w-full bg-cover bg-no-repeat"
       initial={{
         opacity: 0,
       }}

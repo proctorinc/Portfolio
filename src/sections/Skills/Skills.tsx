@@ -35,7 +35,7 @@ export const Skills = (props: MainSectionProps) => {
           ></motion.path>
         </svg>
       </div>
-      <h1 className="pt-28 text-6xl font-extrabold">Skills</h1>
+      <h1 className="py-28 text-6xl font-extrabold">Skills</h1>
       <div className="grid grid-cols-1 gap-16 p-10 sm:grid-cols-2">
         {SKILLS.map((column) => (
           <motion.div

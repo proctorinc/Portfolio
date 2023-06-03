@@ -3,16 +3,19 @@
     "title": "Bachelor's Computer Science,",
     "subtitle": "Cyber Security Concentration",
     "company": "George Fox University",
-    "dateRange": "August 2017-May 2021"
+    "dateRange": "August 2017-May 2021",
+    "image": "gfu-logo.png"
   },
   {
     "title": "Cyber Security Intern",
     "company": "Swan Island Networks",
-    "dateRange": "May 2021-July 2021"
+    "dateRange": "May 2021-July 2021",
+    "image": "swan-logo.png"
   },
   {
     "title": "Technical Support Engineer",
     "company": "Secure Code Warrior",
-    "dateRange": "September 2021-Current"
+    "dateRange": "September 2021-Current",
+    "image": "scw-logo.png"
   }
 ]

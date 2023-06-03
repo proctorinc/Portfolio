@@ -11,7 +11,7 @@ export const Tag = (props: TagProps) => {
 
   return (
     <motion.div
-      className={`w-fit select-none rounded-md bg-slate-400/20 py-1 px-2 text-xs text-slate-300 hover:bg-slate-400/50 ${className}`}
+      className={`w-fit select-none rounded-md bg-slate-400/20 py-1 px-2 text-sm text-slate-300 hover:bg-slate-400/50 sm:text-xs ${className}`}
       initial={{
         scale: 1,
       }}

@@ -29,9 +29,11 @@ export const Contact = (props: ContactSectionProps) => {
           className="relative flex flex-col gap-2 text-center"
           initial={{
             opacity: 0,
+            scale: 0.95,
           }}
           whileInView={{
             opacity: 1,
+            scale: 1,
             transition: {
               duration: 1,
               ease: "easeIn",

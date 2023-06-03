@@ -4,6 +4,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import JOBS from "../../data/jobs.json";
 import { Button } from "../../components";
 import { Question } from "phosphor-react";
+import { PatternLines } from "@visx/pattern";
+import { Bar } from "@visx/shape";
 
 type MainSectionProps = {
   innerRef: RefObject<HTMLDivElement>;
@@ -11,11 +13,6 @@ type MainSectionProps = {
 
 export const Experience = (props: MainSectionProps) => {
   const { innerRef } = props;
-  const { scrollY } = useScroll({
-    target: innerRef,
-    offset: ["start center", "end start"],
-  });
-  const scrollProgress = useTransform(scrollY, [0, 100], ["100%", "0%"]);
 
   return (
     <section
@@ -25,7 +22,7 @@ export const Experience = (props: MainSectionProps) => {
       <h1 ref={innerRef} className="pt-28 text-6xl font-extrabold">
         Experience
       </h1>
-      <div className="flex w-full pt-20 pb-96">
+      <div className="flex w-full pt-20 pb-96 pr-5">
         <div className="flex w-1/5 items-end justify-end px-10 sm:w-1/4">
           <div className="relative flex h-screen w-3 flex-col items-center justify-around rounded-full border-2 border-slate-600 bg-slate-400/20">
             {JOBS.map((_, i) => (
@@ -40,30 +37,51 @@ export const Experience = (props: MainSectionProps) => {
           {JOBS.map((job, i) => (
             <motion.div
               key={i}
+              className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-5"
               initial={{
-                scale: 0,
-                x: -100,
+                scale: 0.5,
               }}
               whileInView={{
                 scale: 1,
-                x: 0,
                 transition: {
                   duration: 1,
                 },
               }}
+              viewport={{ once: true }}
             >
-              <h2 className="text-xl font-bold sm:text-3xl">{job.title}</h2>
-              {job?.subtitle && (
-                <h2 className="text-xl font-bold sm:text-2xl">
-                  {job.subtitle}
-                </h2>
-              )}
-              <h3 className="text-lg italic text-slate-400 sm:text-2xl">
-                {job.company}
-              </h3>
-              <p className="text-md font-semibold text-slate-500">
-                {job.dateRange}
-              </p>
+              <div className="relative flex h-28 w-full items-center justify-center rounded-xl border-2 border-slate-600 bg-slate-500/20 shadow-xl sm:w-28">
+                <svg className="absolute h-full w-full">
+                  <PatternLines
+                    id="smallerlines"
+                    stroke="rgb(255, 255, 255, 0.01)"
+                    strokeWidth={2}
+                    width={50}
+                    height={50}
+                    orientation={["vertical", "horizontal"]}
+                  />
+                  <Bar fill={`url(#smallerlines)`} width="100%" height="100%" />
+                </svg>
+                <div className="absolute p-5">
+                  <img
+                    className="aspect-square max-h-24 rounded-full bg-white object-contain p-1"
+                    src={`/static/images/${job.image}`}
+                  />
+                </div>
+              </div>
+              <div className="flex flex-col">
+                <h2 className="text-xl font-bold sm:text-3xl">{job.title}</h2>
+                {job?.subtitle && (
+                  <h2 className="text-xl font-bold sm:text-2xl">
+                    {job.subtitle}
+                  </h2>
+                )}
+                <h3 className="text-lg italic text-slate-400 sm:text-2xl">
+                  {job.company}
+                </h3>
+                <p className="text-md font-semibold text-slate-500">
+                  {job.dateRange}
+                </p>
+              </div>
             </motion.div>
           ))}
         </div>

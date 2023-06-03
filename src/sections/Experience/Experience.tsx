@@ -52,16 +52,16 @@ export const Experience = (props: MainSectionProps) => {
                 },
               }}
             >
-              <h2 className="text-xl font-bold sm:text-4xl">{job.title}</h2>
+              <h2 className="text-xl font-bold sm:text-3xl">{job.title}</h2>
               {job?.subtitle && (
-                <h2 className="text-xl font-bold sm:text-3xl">
+                <h2 className="text-xl font-bold sm:text-2xl">
                   {job.subtitle}
                 </h2>
               )}
               <h3 className="text-lg italic text-slate-400 sm:text-2xl">
                 {job.company}
               </h3>
-              <p className="text-md font-light text-slate-500">
+              <p className="text-md font-semibold text-slate-500">
                 {job.dateRange}
               </p>
             </motion.div>

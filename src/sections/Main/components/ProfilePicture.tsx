@@ -30,7 +30,7 @@ export const ProfilePicture = () => {
         />
         <Bar fill={`url(#smallerlines)`} width="100%" height="100%" />
       </svg>
-      <motion.img
+      <img
         className="absolute -top-5 rounded-xl object-cover"
         src="/static/images/profile-picture.png"
       />

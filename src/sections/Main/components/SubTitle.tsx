@@ -31,7 +31,7 @@ export const SubTitle = () => {
 
   return (
     <motion.div
-      className="relative flex w-fit text-center text-2xl font-extralight text-slate-500 md:text-3xl"
+      className="relative flex h-20 w-fit text-center text-2xl font-extralight text-slate-500 md:text-3xl"
       initial={{
         opacity: 0,
         translateY: -50,

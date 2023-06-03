@@ -13,16 +13,15 @@ export const ProjectImage = (props: ProjectImageProps) => {
       initial={{
         opacity: 0,
         scale: 0.8,
-        x: -100,
       }}
       whileInView={{
         opacity: 1,
         scale: 1,
-        x: 0,
         transition: {
           duration: 0.5,
         },
       }}
+      viewport={{ once: true }}
     >
       <div className="absolute bottom-0 h-3/4 w-full rounded-xl border-2 border-slate-600 bg-slate-500/20">
         <svg className="h-full w-full">

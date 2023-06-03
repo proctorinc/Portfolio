@@ -26,6 +26,7 @@ export const ProjectDetails = (props: ProjectDetailsProps) => {
           ease: "easeIn",
         },
       }}
+      viewport={{ once: true }}
     >
       <div className="flex flex-col">
         <h2 className="text-3xl font-bold sm:text-5xl">{project.title}</h2>

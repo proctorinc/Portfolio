@@ -1,6 +1,7 @@
 [
   {
     "type": "Languages",
+    "icon": "translate",
     "values": [
       "TypeScript",
       "JavaScript",
@@ -18,6 +19,7 @@
   },
   {
     "type": "Frontend",
+    "icon": "desktop",
     "values": [
       "React",
       "React Native",
@@ -34,10 +36,12 @@
   },
   {
     "type": "Backend",
+    "icon": "hard-drives",
     "values": ["Node JS", "Express JS", "tRPC", "Passport JS", "Django REST"]
   },
   {
     "type": "Databases",
+    "icon": "database",
     "values": [
       "SQL",
       "MySQL",
@@ -52,6 +56,7 @@
   },
   {
     "type": "Testing Tools",
+    "icon": "test-tube",
     "values": [
       "React Testing Library",
       "Jest",
@@ -62,7 +67,8 @@
     ]
   },
   {
-    "type": "Security Testing Tools",
+    "type": "Security Tools",
+    "icon": "vault",
     "values": [
       "Burp Suite",
       "Metasploit",
@@ -77,10 +83,12 @@
   },
   {
     "type": "Operating Systems",
+    "icon": "windows-logo",
     "values": ["Windows 98-11", "MacOS", "Unix", "Kali/Ubuntu/Manjaro Linux"]
   },
   {
     "type": "Misc Tools",
+    "icon": "wrench",
     "values": [
       "Vercel",
       "Firebase",

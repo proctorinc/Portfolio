@@ -83,7 +83,7 @@ export const Navbar = (props: NavbarProps) => {
             }
           }}
         >
-          About
+          About Me
         </NavButton>
         <NavButton
           onClick={() => {
@@ -171,7 +171,7 @@ export const Navbar = (props: NavbarProps) => {
                 }
               }}
             >
-              About
+              About Me
             </NavButton>
             <NavButton
               className="text-xl"

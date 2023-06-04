@@ -7,9 +7,11 @@ export const ProfilePicture = () => {
     <motion.div
       className="relative h-80 w-64 rounded-xl border-2 border-slate-600 bg-slate-500/20 shadow-xl lg:h-[405px] lg:w-80"
       initial={{
-        scale: 0,
+        opacity: 0,
+        scale: 0.5,
       }}
       animate={{
+        opacity: 1,
         scale: 1,
         transition: {
           delay: 2,

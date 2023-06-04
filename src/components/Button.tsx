@@ -3,14 +3,17 @@ import { motion } from "framer-motion";
 
 type ButtonProps = {
   onClick?: MouseEventHandler<HTMLButtonElement>;
-  children: ReactNode;
+  children?: ReactNode;
+  className?: string;
 };
 
 export const Button = (props: ButtonProps) => {
-  const { onClick, children } = props;
+  const { onClick, children, className } = props;
   return (
     <motion.button
-      className="flex w-fit items-center gap-1 rounded-md border border-slate-700 py-2 px-3 text-xs text-slate-400 hover:border-transparent hover:bg-gradient-to-r hover:from-blue-500/50 hover:to-[#1252a5]/50 hover:text-slate-50"
+      className={`flex w-fit items-center gap-1 rounded-md border border-slate-700 py-2 px-3 text-xs text-slate-400 hover:border-transparent hover:bg-gradient-to-r hover:from-blue-500/50 hover:to-[#1252a5]/50 hover:text-slate-50 ${
+        className ?? ""
+      }`}
       initial={{
         scale: 1,
       }}

@@ -49,7 +49,7 @@ export const Experience = (props: MainSectionProps) => {
               }}
               viewport={{ once: true }}
             >
-              <div className="relative flex h-28 w-full items-center justify-center rounded-xl border-2 border-slate-600 bg-slate-500/20 shadow-xl sm:w-28">
+              <div className="relative flex h-28 w-28 items-center justify-center rounded-xl border-2 border-slate-600 bg-slate-500/20 shadow-xl">
                 <svg className="absolute h-full w-full">
                   <PatternLines
                     id="smallerlines"

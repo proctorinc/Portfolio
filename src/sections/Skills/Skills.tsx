@@ -17,7 +17,7 @@ export const Skills = (props: SkillsSectionProps) => {
       ref={innerRef}
       className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-x-clip bg-slate-900"
     >
-      <div className="shadow-b-2 absolute -top-[55vw] h-full w-full">
+      <div className="shadow-b-2 absolute -top-[55vw] z-10 h-full w-full">
         <svg
           id="visual"
           className="flex-no-shrink bottom-0 z-50 h-[80vw] w-full fill-current"
@@ -33,7 +33,7 @@ export const Skills = (props: SkillsSectionProps) => {
         </svg>
       </div>
       <h1 className="py-32 text-6xl font-extrabold">Skills</h1>
-      <div className="grid grid-cols-1 gap-16 p-10 sm:grid-cols-2">
+      <div className="z-20 grid grid-cols-1 gap-16 p-10 sm:grid-cols-2">
         {SKILLS.map((column) => {
           const Icon = formatToIcon(column.icon);
           return (

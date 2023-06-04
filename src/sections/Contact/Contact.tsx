@@ -51,7 +51,7 @@ export const Contact = (props: ContactSectionProps) => {
           </h2>
           <SocialMediaCluster />
           <div className="absolute -bottom-20 flex w-full justify-center">
-            <Button>
+            <Button className="animate-pulse">
               <Download weight="fill" size={15} />
               <a
                 href="/static/files/matt_proctor_resume.pdf"

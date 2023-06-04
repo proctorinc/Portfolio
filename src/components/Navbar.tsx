@@ -1,9 +1,10 @@
 import { MouseEventHandler, ReactNode, RefObject, useState } from "react";
 import { motion } from "framer-motion";
-import { Desktop, Hamburger, List, X } from "phosphor-react";
+import { List, X } from "phosphor-react";
 
 type NavbarProps = {
   homeRef: RefObject<HTMLDivElement>;
+  aboutRef: RefObject<HTMLDivElement>;
   skillsRef: RefObject<HTMLDivElement>;
   experienceRef: RefObject<HTMLDivElement>;
   projectsRef: RefObject<HTMLDivElement>;
@@ -17,7 +18,14 @@ type NavButtonProps = {
 };
 
 export const Navbar = (props: NavbarProps) => {
-  const { homeRef, skillsRef, experienceRef, projectsRef, contactRef } = props;
+  const {
+    homeRef,
+    aboutRef,
+    skillsRef,
+    experienceRef,
+    projectsRef,
+    contactRef,
+  } = props;
   const [open, setOpen] = useState(false);
 
   const NavButton = (props: NavButtonProps) => {
@@ -64,6 +72,18 @@ export const Navbar = (props: NavbarProps) => {
           }}
         >
           Home
+        </NavButton>
+        <NavButton
+          onClick={() => {
+            if (aboutRef.current) {
+              aboutRef.current.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }
+          }}
+        >
+          About
         </NavButton>
         <NavButton
           onClick={() => {
@@ -138,6 +158,20 @@ export const Navbar = (props: NavbarProps) => {
               }}
             >
               Home
+            </NavButton>
+            <NavButton
+              className="text-xl"
+              onClick={() => {
+                if (aboutRef.current) {
+                  aboutRef.current.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
+                  setOpen(false);
+                }
+              }}
+            >
+              About
             </NavButton>
             <NavButton
               className="text-xl"

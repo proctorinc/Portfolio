@@ -6,9 +6,11 @@ import { Skills } from "./sections/Skills/Skills";
 import { Experience } from "./sections/Experience";
 import { Projects } from "./sections/Projects";
 import { Contact } from "./sections/Contact";
+import { About } from "./sections/About";
 
 function App() {
   const homeRef = useRef<HTMLDivElement>(null);
+  const aboutRef = useRef<HTMLDivElement>(null);
   const skillsRef = useRef<HTMLDivElement>(null);
   const experienceRef = useRef<HTMLDivElement>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
@@ -16,6 +18,7 @@ function App() {
 
   const navbarProps = {
     homeRef,
+    aboutRef,
     skillsRef,
     experienceRef,
     projectsRef,
@@ -27,8 +30,9 @@ function App() {
       <Navbar {...navbarProps} />
       <div className="relative">
         <Main innerRef={homeRef} />
+        <About innerRef={aboutRef} />
         <Skills innerRef={skillsRef} />
-        <Experience innerRef={experienceRef} />
+        <Experience innerRef={experienceRef} contactRef={contactRef} />
         <Projects innerRef={projectsRef} />
         <Contact innerRef={contactRef} />
         <Footer />

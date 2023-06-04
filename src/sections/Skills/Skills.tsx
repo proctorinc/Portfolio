@@ -33,7 +33,7 @@ export const Skills = (props: SkillsSectionProps) => {
         </svg>
       </div>
       <h1 className="py-32 text-6xl font-extrabold">Skills</h1>
-      <div className="z-20 grid grid-cols-1 gap-16 p-10 sm:grid-cols-2">
+      <div className="z-20  grid max-w-[1000px] grid-cols-1 gap-16 p-10 sm:grid-cols-2">
         {SKILLS.map((column) => {
           const Icon = formatToIcon(column.icon);
           return (
@@ -57,7 +57,7 @@ export const Skills = (props: SkillsSectionProps) => {
                 <Icon weight="fill" size={25} />
                 <h2 className="py-3 text-3xl font-bold">{column.type}</h2>
               </div>
-              <div className="flex w-full flex-wrap gap-1 sm:w-64 lg:w-96">
+              <div className="flex w-full flex-wrap gap-1">
                 {column.values.map((value) => (
                   <Tag key={value}>{value}</Tag>
                 ))}

@@ -37,10 +37,6 @@ export const ProjectDetails = (props: ProjectDetailsProps) => {
       <ProjectStack stack={project.stack} />
       <p className="text-md font-light text-slate-200">{project.description}</p>
       <div className="flex gap-3">
-        <Button onClick={() => (window.location.href = project.git_url)}>
-          <Code weight="fill" size={15} />
-          <span>View code</span>
-        </Button>
         {project?.app_url && (
           <Button
             onClick={() =>
@@ -49,6 +45,12 @@ export const ProjectDetails = (props: ProjectDetailsProps) => {
           >
             <ArrowSquareOut weight="fill" size={15} />
             <span>Visit App</span>
+          </Button>
+        )}
+        {project?.git_url && (
+          <Button onClick={() => (window.location.href = project.git_url)}>
+            <Code weight="fill" size={15} />
+            <span>View code</span>
           </Button>
         )}
       </div>

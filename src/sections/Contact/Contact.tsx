@@ -1,4 +1,4 @@
-import { RefObject } from "react";
+import { RefObject, useRef } from "react";
 import { useScroll, motion } from "framer-motion";
 
 import { SocialMediaCluster } from "./components";
@@ -12,19 +12,23 @@ type ContactSectionProps = {
 
 export const Contact = (props: ContactSectionProps) => {
   const { innerRef } = props;
-  const { scrollY } = useScroll({
+  const contentRef = useRef(null);
+  const { scrollYProgress } = useScroll({
     target: innerRef,
-    offset: ["end start", "end end"],
+    offset: ["start start", "start end"],
   });
 
   return (
     <section
       id="contact"
       ref={innerRef}
-      className="gradient-light-to-dark relative flex w-full flex-col items-center justify-center pt-64"
+      className="gradient-light-to-dark relative flex w-full flex-col items-center justify-center pt-[800px] sm:pt-[1250px]"
     >
-      <SmallWaveTransition scrollModifier={scrollY} />
-      <div className="flex h-screen items-center justify-center">
+      <SmallWaveTransition scrollModifier={scrollYProgress} />
+      <div
+        ref={contentRef}
+        className="flex h-screen items-center justify-center"
+      >
         <motion.div
           className="relative flex flex-col gap-2 text-center"
           initial={{

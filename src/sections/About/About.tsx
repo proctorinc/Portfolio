@@ -10,36 +10,20 @@ type AboutSectionProps = {
 export const About = (props: AboutSectionProps) => {
   const { innerRef } = props;
   const contentRef = useRef(null);
-  const { scrollYProgress: scrollProgressFromTop } = useScroll({
+  const { scrollYProgress } = useScroll({
     target: contentRef,
     offset: ["start start", "start end"],
   });
 
-  const waveOneSpeed = useTransform(
-    scrollProgressFromTop,
-    [1, 0],
-    ["0px", "-325px"]
-  );
-  const waveTwoSpeed = useTransform(
-    scrollProgressFromTop,
-    [1, 0],
-    ["0px", "-215px"]
-  );
+  const waveOneSpeed = useTransform(scrollYProgress, [1, 0], ["0px", "-325px"]);
+  const waveTwoSpeed = useTransform(scrollYProgress, [1, 0], ["0px", "-215px"]);
   const waveThreeSpeed = useTransform(
-    scrollProgressFromTop,
+    scrollYProgress,
     [1, 0],
     ["0px", "-120px"]
   );
-  const waveFourSpeed = useTransform(
-    scrollProgressFromTop,
-    [1, 0],
-    ["0px", "-80px"]
-  );
-  const waveFiveSpeed = useTransform(
-    scrollProgressFromTop,
-    [1, 0],
-    ["0px", "-50px"]
-  );
+  const waveFourSpeed = useTransform(scrollYProgress, [1, 0], ["0px", "-80px"]);
+  const waveFiveSpeed = useTransform(scrollYProgress, [1, 0], ["0px", "-50px"]);
 
   return (
     <section
@@ -87,7 +71,7 @@ export const About = (props: AboutSectionProps) => {
         </svg>
       </div>
       <h1 className="pt-32 text-6xl font-extrabold sm:pb-16">Hi, I'm Matt</h1>
-      <div className="grid w-full grid-cols-1 items-center gap-10 p-10 lg:w-3/4 lg:grid-cols-2 lg:gap-16">
+      <div className="grid w-full  max-w-[1000px] grid-cols-1 items-center gap-10 p-10 lg:w-3/4 lg:grid-cols-2 lg:gap-16">
         <div className="flex flex-col gap-5 text-lg font-light text-slate-300">
           <motion.p
             initial={{

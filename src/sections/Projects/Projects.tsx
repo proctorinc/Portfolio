@@ -13,7 +13,7 @@ export const Projects = (props: ProjectsSectionProps) => {
   return (
     <section
       id="projects"
-      className="flex w-full flex-col items-center justify-center gap-20 bg-slate-900 pt-20 pb-64"
+      className="flex w-full flex-col items-center justify-center gap-20 bg-[#121f39] pt-20"
     >
       <h1 ref={innerRef} className="pt-28 text-6xl font-extrabold">
         Projects

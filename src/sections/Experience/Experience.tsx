@@ -23,9 +23,9 @@ export const Experience = (props: MainSectionProps) => {
       <h1 ref={innerRef} className="pt-28 text-6xl font-extrabold">
         Experience
       </h1>
-      <div className="flex w-full pt-20 pb-96 pr-5">
+      <div className="flex w-full pt-20 pr-5 sm:pb-96">
         <div className="flex w-1/5 items-end justify-end px-10 sm:w-1/4">
-          <div className="relative flex h-[1500px] w-3 flex-col items-center justify-around rounded-full border-2 border-slate-600 bg-slate-400/20 shadow-xl">
+          <div className="relative flex h-[1250px] w-3 flex-col items-center justify-around rounded-full border-2 border-slate-600 bg-slate-400/20 shadow-xl">
             {JOBS.map((_, i) => (
               <div
                 key={i}

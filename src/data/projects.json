@@ -1,9 +1,28 @@
 [
   {
-    "title": "Dink",
+    "title": "Dink 2.0",
     "subtitle": "Fullstack financial budgeting app",
-    "image_url": "dink-image.png",
+    "image_url": "",
     "git_url": "https://github.com/proctorinc/Dink",
+    "app_url": "https://dink-proctorinc.vercel.app",
+    "stack": [
+      "TypeScript",
+      "Next JS",
+      "Next Auth",
+      "tRPC",
+      "Prisma",
+      "PlanetScale",
+      "MySQL",
+      "Plaid API",
+      "Tailwind CSS"
+    ],
+    "description": "Dink is an all-in-one budgeting app that helps you keep track of your short term and long term financial goals. It synchronizes your bank account data live using the Plaid API to connect bank accounts and manage account transactions. You can create monthly budgets to track income and expenses. While also keeping track of your savings and allocating them to specific goals"
+  },
+  {
+    "title": "Dink 1.0",
+    "subtitle": "Personal financial budget tracker",
+    "image_url": "dink-image.png",
+    "git_url": "https://github.com/proctorinc/Dink1.0",
     "stack": [
       "React",
       "Vite",
@@ -23,11 +42,27 @@
       "MSW",
       "RTL"
     ],
-    "description": "Dink is an all-in-one budgeting app that helps you keep track of your short term and long term financial goals. It synchronizes your bank account data live using the Plaid API to connect bank accounts and manage account transactions. You can create monthly budgets to track income and expenses. While also keeping track of your savings and allocating them to specific goals"
+    "description": "The original inspiration for Dink2.0, started as a personal budget tracker for myself. With the goal of tracking all spending with an emphasis on savings. Dink1.0 was a great learning ground for a large-scale application that helped teach organization and filestructure for a large app."
+  },
+  {
+    "title": "Bugfixpy",
+    "subtitle": "Python command line tool for fixing bugs in Git repositories",
+    "image_url": "Bug Fix Project Image",
+    "git_url": "https://github.com/proctorinc/bugfixpy",
+    "stack": [
+      "Python",
+      "Command Line",
+      "Git",
+      "GitHub",
+      "Jira API",
+      "CMS API",
+      "VS Code"
+    ],
+    "description": "Command line program that automates Github commands and Jira commands to automate a bug fixing process. This program clones repositories, opens VSCode and tracks changes in multiple branches, commits changes, and automatically cherry-picks commits if necessary. The program then transitions the related Jira ticket using the Jira API and comments commit message. This program improved the speed of bug fixes from 1 hour to 15 minutes on average."
   },
   {
     "title": "StudFinder",
-    "subtitle": "A date matching app for trade professionals",
+    "subtitle": "A dating app for trade professionals",
     "image_url": "studfinder-image.png",
     "git_url": "https://github.com/proctorinc/StudFinder",
     "app_url": "https://findyourstud.web.app",
@@ -59,29 +94,5 @@
       "Firestore"
     ],
     "description": "Social media app that posts one picture for all users to see and rate. Once you rate the daily image you can see what other users rated as well. Uses Firestore snapshots so that ratings and other data updates in realtime. Users can view each other's profiles and see their favorite pictures and top ratings."
-  },
-  {
-    "title": "Bugfixpy",
-    "subtitle": "Python command line tool for fixing bugs in Git repositories",
-    "image_url": "Bug Fix Project Image",
-    "git_url": "https://github.com/proctorinc/bugfixpy",
-    "stack": [
-      "Python",
-      "Command Line",
-      "Git",
-      "GitHub",
-      "Jira API",
-      "CMS API",
-      "VS Code"
-    ],
-    "description": "Command line program that automates Github commands and Jira commands to automate a bug fixing process. This program clones repositories, opens VSCode and tracks changes in multiple branches, commits changes, and automatically cherry-picks commits if necessary. The program then transitions the related Jira ticket using the Jira API and comments commit message. This program improved the speed of bug fixes from 1 hour to 15 minutes on average."
-  },
-  {
-    "title": "Mobile Notes App",
-    "subtitle": "Google Keep notes app clone",
-    "image_url": "Notes App Project Image",
-    "git_url": "https://github.com/proctorinc/NotesApp",
-    "stack": ["React Native", "Expo", "SQLite"],
-    "description": "Modified Google Keep clone that works on Android and IOS. Saves notes to local SQLite database. Has feature to search through all notes."
   }
 ]

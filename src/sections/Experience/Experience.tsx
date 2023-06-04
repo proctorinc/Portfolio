@@ -22,7 +22,7 @@ export const Experience = (props: MainSectionProps) => {
   });
 
   const waveMotion = useTransform(scrollYProgress, [0, 1], ["5vh", "-25vh"]);
-  const boxHeight = useTransform(scrollYProgress, [1, 0], ["25vh", "-5vh"]);
+  const boxHeight = useTransform(scrollYProgress, [1, 0], ["26vh", "-4vh"]);
 
   return (
     <section
@@ -128,11 +128,11 @@ export const Experience = (props: MainSectionProps) => {
         </div>
       </div>
       <motion.div
-        className="absolute bottom-0 z-50 mt-2 w-full bg-[#121f39] sm:-mt-32"
+        className="absolute bottom-0 z-50 -mt-2 w-full bg-[#121f39]"
         style={{ height: boxHeight }}
       />
       <motion.svg
-        className="flex-no-shrink absolute bottom-0 -mt-2 w-full fill-current sm:-mt-32"
+        className="flex-no-shrink absolute bottom-0 -mt-2 w-full fill-current"
         viewBox="0 0 900 600"
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"

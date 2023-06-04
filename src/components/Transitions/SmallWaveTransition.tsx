@@ -11,11 +11,11 @@ export const SmallWaveTransition = (props: SmallWaveTransitionProps) => {
   return (
     <>
       <motion.div
-        className="absolute top-0 z-50 w-full bg-[#121f39] sm:-mt-32"
+        className="absolute top-0 z-50 w-full bg-[#121f39]"
         style={{ height: waveMotion }}
       />
       <motion.svg
-        className="flex-no-shrink absolute top-0 -mt-2 w-full fill-current sm:-mt-32"
+        className="flex-no-shrink absolute top-0 -mt-2 w-full fill-current"
         viewBox="0 390 900 600"
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"

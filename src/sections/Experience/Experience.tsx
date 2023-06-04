@@ -1,18 +1,19 @@
 import { RefObject } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 
 import JOBS from "../../data/jobs.json";
 import { Button } from "../../components";
-import { Question } from "phosphor-react";
 import { PatternLines } from "@visx/pattern";
 import { Bar } from "@visx/shape";
+import { Question } from "phosphor-react";
 
 type MainSectionProps = {
   innerRef: RefObject<HTMLDivElement>;
+  contactRef: RefObject<HTMLDivElement>;
 };
 
 export const Experience = (props: MainSectionProps) => {
-  const { innerRef } = props;
+  const { innerRef, contactRef } = props;
 
   return (
     <section
@@ -24,7 +25,7 @@ export const Experience = (props: MainSectionProps) => {
       </h1>
       <div className="flex w-full pt-20 pb-96 pr-5">
         <div className="flex w-1/5 items-end justify-end px-10 sm:w-1/4">
-          <div className="relative flex h-screen w-3 flex-col items-center justify-around rounded-full border-2 border-slate-600 bg-slate-400/20">
+          <div className="relative flex h-[1500px] w-3 flex-col items-center justify-around rounded-full border-2 border-slate-600 bg-slate-400/20 shadow-xl">
             {JOBS.map((_, i) => (
               <div
                 key={i}
@@ -37,11 +38,13 @@ export const Experience = (props: MainSectionProps) => {
           {JOBS.map((job, i) => (
             <motion.div
               key={i}
-              className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-5"
+              className="-mt-10 flex flex-col gap-3 sm:mt-0 sm:flex-row sm:items-center sm:gap-5"
               initial={{
+                opacity: 0,
                 scale: 0.5,
               }}
               whileInView={{
+                opacity: 1,
                 scale: 1,
                 transition: {
                   duration: 1,
@@ -61,17 +64,31 @@ export const Experience = (props: MainSectionProps) => {
                   />
                   <Bar fill={`url(#smallerlines)`} width="100%" height="100%" />
                 </svg>
-                <div className="absolute p-5">
+                <motion.div
+                  className="absolute p-5"
+                  initial={{
+                    scale: 1,
+                    y: 0,
+                  }}
+                  whileHover={{
+                    scale: 1.3,
+                    y: -10,
+                    transition: {
+                      duration: 0.2,
+                      ease: "easeIn",
+                    },
+                  }}
+                >
                   <img
                     className="aspect-square max-h-24 rounded-full bg-white object-contain p-1"
                     src={`/static/images/${job.image}`}
                   />
-                </div>
+                </motion.div>
               </div>
               <div className="flex flex-col">
                 <h2 className="text-xl font-bold sm:text-3xl">{job.title}</h2>
                 {job?.subtitle && (
-                  <h2 className="text-xl font-bold sm:text-2xl">
+                  <h2 className="text-lg font-bold sm:text-2xl">
                     {job.subtitle}
                   </h2>
                 )}
@@ -81,6 +98,20 @@ export const Experience = (props: MainSectionProps) => {
                 <p className="text-md font-semibold text-slate-500">
                   {job.dateRange}
                 </p>
+                <Button
+                  className="mt-3"
+                  onClick={() => {
+                    if (contactRef.current) {
+                      contactRef.current.scrollIntoView({
+                        behavior: "smooth",
+                        block: "end",
+                      });
+                    }
+                  }}
+                >
+                  <Question weight="fill" size={15} />
+                  <span>View Resume</span>
+                </Button>
               </div>
             </motion.div>
           ))}

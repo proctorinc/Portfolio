@@ -1,5 +1,7 @@
 import { RefObject, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { PatternLines } from "@visx/pattern";
+import { Bar } from "@visx/shape";
 
 type AboutSectionProps = {
   innerRef: RefObject<HTMLDivElement>;
@@ -38,17 +40,12 @@ export const About = (props: AboutSectionProps) => {
     [1, 0],
     ["0px", "-50px"]
   );
-  const waveSixSpeed = useTransform(
-    scrollProgressFromTop,
-    [1, 0],
-    ["0px", "-35px"]
-  );
 
   return (
     <section
       id="skills"
       ref={innerRef}
-      className="relative mt-[65vw] flex min-h-screen w-full flex-col items-center justify-center overflow-x-clip bg-[#121f39] pb-[500px]"
+      className="relative mt-[65vw] flex min-h-screen w-full flex-col items-center justify-center overflow-x-clip bg-[#121f39] pb-96"
     >
       <div
         ref={contentRef}
@@ -89,8 +86,126 @@ export const About = (props: AboutSectionProps) => {
           ></motion.path>
         </svg>
       </div>
-      <h1 className="py-32 text-6xl font-extrabold">About Me</h1>
-      {/* <p className="text-2xl">Hi I'm Matt Proctor,</p> */}
+      <h1 className="pt-32 text-6xl font-extrabold sm:pb-16">Hi, I'm Matt</h1>
+      <div className="grid w-full grid-cols-1 items-center gap-10 p-10 lg:w-3/4 lg:grid-cols-2 lg:gap-16">
+        <div className="flex flex-col gap-5 text-lg font-light text-slate-300">
+          <motion.p
+            initial={{
+              scale: 0.5,
+              opacity: 0,
+            }}
+            whileInView={{
+              scale: 1,
+              opacity: 1,
+              transition: {
+                duration: 1,
+                type: "spring",
+                stiffness: 40,
+              },
+            }}
+            viewport={{ once: true }}
+          >
+            I'm a fullstack developer and polyglot programmer in Beaverton,
+            Oregon.
+          </motion.p>
+          <motion.p
+            initial={{
+              scale: 0.5,
+              opacity: 0,
+            }}
+            whileInView={{
+              scale: 1,
+              opacity: 1,
+              transition: {
+                duration: 1,
+                type: "spring",
+                stiffness: 40,
+              },
+            }}
+            viewport={{ once: true }}
+          >
+            In my freetime I love developing web applications, exploring UI
+            design, and writing clean code. I enjoy building useful tools to
+            learning new languages and frameworks. I love testing my abilities
+            and growing my knowledge.
+          </motion.p>
+          <motion.p
+            initial={{
+              scale: 0.5,
+              opacity: 0,
+            }}
+            whileInView={{
+              scale: 1,
+              opacity: 1,
+              transition: {
+                duration: 1,
+                type: "spring",
+                stiffness: 40,
+              },
+            }}
+            viewport={{ once: true }}
+          >
+            I love helping others, collaborating and pair programming to learn
+            and solve problems, and I am always looking for others to learn
+            from.
+          </motion.p>
+          <motion.p
+            initial={{
+              scale: 0.5,
+              opacity: 0,
+            }}
+            whileInView={{
+              scale: 1,
+              opacity: 1,
+              transition: {
+                duration: 1,
+                type: "spring",
+                stiffness: 40,
+              },
+            }}
+            viewport={{ once: true }}
+          >
+            Outside of programming, I love hiking, biking, playing pickleball,
+            and cooking. I love travelling and trying new food with my wife, and
+            working on projects in our first home!
+          </motion.p>
+        </div>
+        <div className="order-first flex w-full justify-center lg:order-last">
+          <motion.div
+            className="relative flex w-full max-w-lg items-center justify-center rounded-xl border-2 border-slate-600 bg-slate-500/20 py-5 px-10 shadow-xl sm:p-10"
+            initial={{
+              scale: 0.5,
+              opacity: 0,
+            }}
+            whileInView={{
+              scale: 1,
+              opacity: 1,
+              transition: {
+                duration: 1,
+                type: "spring",
+                stiffness: 40,
+              },
+            }}
+            viewport={{ once: true }}
+          >
+            <svg className="absolute h-full w-full">
+              <PatternLines
+                id="smallerlines"
+                stroke="rgb(255, 255, 255, 0.01)"
+                strokeWidth={2}
+                width={50}
+                height={50}
+                orientation={["vertical", "horizontal"]}
+              />
+              <Bar fill={`url(#smallerlines)`} width="100%" height="100%" />
+            </svg>
+            <img
+              className="max-h-80 rounded-lg object-cover shadow-xl"
+              src="/static/images/annika-and-matt.jpg"
+            />
+          </motion.div>
+        </div>
+      </div>
     </section>
   );
 };

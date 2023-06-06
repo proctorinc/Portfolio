@@ -89,7 +89,7 @@ export const About = (props: AboutSectionProps) => {
             }}
             viewport={{ once: true }}
           >
-            I'm a fullstack developer and I live in Beaverton, Oregon.
+            I'm a fullstack developer from Beaverton, Oregon.
           </motion.p>
           <motion.p
             initial={{

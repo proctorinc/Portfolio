@@ -15,7 +15,11 @@ export const Main = (props: MainSectionProps) => {
     offset: ["start start", "end start"],
   });
 
-  const scrollProgress = useTransform(scrollYProgress, [1, 0], ["0%", "100%"]);
+  const scrollProgress = useTransform(
+    scrollYProgress,
+    [1, 0.5, 0],
+    ["0%", "90%", "100%"]
+  );
 
   return (
     <section id="home" ref={innerRef} className="-mt-20 sm:-mt-[72px]">

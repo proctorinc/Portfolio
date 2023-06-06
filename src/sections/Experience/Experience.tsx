@@ -44,7 +44,7 @@ export const Experience = (props: MainSectionProps) => {
             ))}
           </div>
         </div>
-        <div className="flex w-4/5  max-w-[1000px] flex-col justify-around sm:w-3/4">
+        <div className="z-20 flex w-4/5 max-w-[1000px] flex-col justify-around sm:w-3/4">
           {JOBS.map((job, i) => (
             <motion.div
               key={i}
@@ -81,8 +81,8 @@ export const Experience = (props: MainSectionProps) => {
                     y: 0,
                   }}
                   whileHover={{
-                    scale: 1.3,
-                    y: -10,
+                    scale: 1.5,
+                    y: -15,
                     transition: {
                       duration: 0.2,
                       ease: "easeIn",
@@ -132,7 +132,7 @@ export const Experience = (props: MainSectionProps) => {
         style={{ height: boxHeight }}
       />
       <motion.svg
-        className="flex-no-shrink absolute bottom-0 -mt-2 w-full fill-current"
+        className="flex-no-shrink absolute bottom-0 z-10 -mt-2 w-full fill-current"
         viewBox="0 0 900 600"
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"

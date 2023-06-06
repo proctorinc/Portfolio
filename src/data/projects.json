@@ -2,7 +2,13 @@
   {
     "title": "Dink 2.0",
     "subtitle": "Fullstack financial budgeting app",
-    "image_url": "",
+    "image_urls": [
+      "dink2.0-1.png",
+      "dink2.0-2.png",
+      "dink2.0-3.png",
+      "dink2.0-4.png",
+      "dink2.0-5.png"
+    ],
     "git_url": "https://github.com/proctorinc/Dink",
     "app_url": "https://dink-proctorinc.vercel.app",
     "stack": [
@@ -21,7 +27,7 @@
   {
     "title": "Dink 1.0",
     "subtitle": "Personal financial budget tracker",
-    "image_url": "dink-image.png",
+    "image_urls": ["dink-1.png", "dink-2.png", "dink-3.png", "dink-4.png"],
     "git_url": "https://github.com/proctorinc/Dink1.0",
     "stack": [
       "React",
@@ -47,7 +53,7 @@
   {
     "title": "Bugfixpy",
     "subtitle": "Python command line tool for fixing bugs in Git repositories",
-    "image_url": "Bug Fix Project Image",
+    "image_urls": ["Image coming soon..."],
     "git_url": "https://github.com/proctorinc/bugfixpy",
     "stack": [
       "Python",
@@ -63,7 +69,7 @@
   {
     "title": "StudFinder",
     "subtitle": "A dating app for trade professionals",
-    "image_url": "studfinder-image.png",
+    "image_urls": ["studfinder-1.png", "studfinder-2.png"],
     "git_url": "https://github.com/proctorinc/StudFinder",
     "app_url": "https://findyourstud.web.app",
     "stack": [
@@ -81,7 +87,7 @@
   {
     "title": "The Daily Gerth",
     "subtitle": "Daily social media for a cat named 'Gerth'",
-    "image_url": "thedailygerth-image.png",
+    "image_urls": ["tdg-1.png"],
     "git_url": "https://github.com/proctorinc/TheDailyGerth",
     "app_url": "https://thedailygerth.web.app",
     "stack": [

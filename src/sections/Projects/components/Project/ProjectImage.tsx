@@ -49,6 +49,7 @@ export const ProjectImage = (props: ProjectImageProps) => {
           style={{ y: "40px" }}
           src={`/static/images/${src}`}
           alt={src}
+          onContextMenu={() => false}
         />
       </motion.div>
     </motion.div>

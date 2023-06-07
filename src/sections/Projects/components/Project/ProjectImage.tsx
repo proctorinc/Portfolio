@@ -9,7 +9,7 @@ export const ProjectImage = (props: ProjectImageProps) => {
   const { src } = props;
   return (
     <motion.div
-      className="relative flex h-96 w-full items-end justify-center overflow-clip"
+      className="relative flex h-96 w-full items-end justify-center overflow-y-clip"
       initial={{
         opacity: 0,
         scale: 0.8,

@@ -53,7 +53,7 @@
   {
     "title": "Bugfixpy",
     "subtitle": "Python command line tool for fixing bugs in Git repositories",
-    "image_urls": ["Image coming soon..."],
+    "image_urls": ["bugfixpy-1.png"],
     "git_url": "https://github.com/proctorinc/bugfixpy",
     "stack": [
       "Python",

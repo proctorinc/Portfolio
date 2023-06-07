@@ -1,13 +1,14 @@
 import { motion } from "framer-motion";
-import { ReactNode } from "react";
+import { MouseEventHandler, ReactNode } from "react";
 
 type TagProps = {
   children: ReactNode;
   className?: string;
+  onClick?: MouseEventHandler<HTMLDivElement>;
 };
 
 export const Tag = (props: TagProps) => {
-  const { children, className } = props;
+  const { children, className, onClick } = props;
 
   return (
     <motion.div
@@ -21,6 +22,7 @@ export const Tag = (props: TagProps) => {
           duration: 0.2,
         },
       }}
+      onClick={onClick}
     >
       {children}
     </motion.div>

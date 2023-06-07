@@ -57,7 +57,7 @@ export const ProjectImage = (props: ProjectImageProps) => {
           onContextMenu={() => false}
         />
       </motion.div>
-      <div className="absolute left-0 flex h-full w-12 items-center justify-between px-1.5 pt-28">
+      <div className="absolute left-0 flex h-full w-14 items-center justify-start px-1.5 pt-28">
         {imageIndex > 0 && (
           <Tag
             className="py-2"
@@ -67,7 +67,7 @@ export const ProjectImage = (props: ProjectImageProps) => {
           </Tag>
         )}
       </div>
-      <div className="absolute right-0 flex h-full w-12 items-center justify-between px-1.5 pt-28">
+      <div className="absolute right-0 flex h-full w-14 items-center justify-end px-1.5 pt-28">
         {imageIndex < images.length - 1 && (
           <Tag
             className="py-2"

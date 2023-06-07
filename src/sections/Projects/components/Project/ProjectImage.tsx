@@ -1,12 +1,17 @@
 import { Bar } from "@visx/shape";
 import { motion } from "framer-motion";
+import { Tag } from "../../../../components/Tag";
+import { ArrowLeft, ArrowRight } from "phosphor-react";
+import { useState } from "react";
 
 type ProjectImageProps = {
-  src: string;
+  images: string[];
 };
 
 export const ProjectImage = (props: ProjectImageProps) => {
-  const { src } = props;
+  const { images } = props;
+  const [imageIndex, setImageIndex] = useState(0);
+
   return (
     <motion.div
       className="relative flex h-96 w-full items-end justify-center overflow-y-clip"
@@ -45,13 +50,33 @@ export const ProjectImage = (props: ProjectImageProps) => {
         }}
       >
         <motion.img
-          className="absolute bottom-0 z-40 h-full w-full object-contain"
+          className="not-draggable absolute bottom-0 z-40 h-full w-full object-contain"
           style={{ y: "40px" }}
-          src={`/static/images/${src}`}
-          alt={src}
+          src={`/static/images/${images[imageIndex]}`}
+          alt={images[imageIndex]}
           onContextMenu={() => false}
         />
       </motion.div>
+      {imageIndex > 0 && (
+        <div className="absolute left-0 flex h-full items-center justify-between px-1.5 pt-28">
+          <Tag
+            className="py-2"
+            onClick={() => setImageIndex((prev) => prev - 1)}
+          >
+            <ArrowLeft size={25} />
+          </Tag>
+        </div>
+      )}
+      {imageIndex < images.length - 1 && (
+        <div className="absolute right-0 flex h-full items-center justify-between px-1.5 pt-28">
+          <Tag
+            className="py-2"
+            onClick={() => setImageIndex((prev) => prev + 1)}
+          >
+            <ArrowRight size={25} />
+          </Tag>
+        </div>
+      )}
     </motion.div>
   );
 };

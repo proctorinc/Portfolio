@@ -57,26 +57,26 @@ export const ProjectImage = (props: ProjectImageProps) => {
           onContextMenu={() => false}
         />
       </motion.div>
-      {imageIndex > 0 && (
-        <div className="absolute left-0 flex h-full items-center justify-between px-1.5 pt-28">
+      <div className="absolute left-0 flex h-full w-12 items-center justify-between px-1.5 pt-28">
+        {imageIndex > 0 && (
           <Tag
             className="py-2"
             onClick={() => setImageIndex((prev) => prev - 1)}
           >
             <ArrowLeft size={25} />
           </Tag>
-        </div>
-      )}
-      {imageIndex < images.length - 1 && (
-        <div className="absolute right-0 flex h-full items-center justify-between px-1.5 pt-28">
+        )}
+      </div>
+      <div className="absolute right-0 flex h-full w-12 items-center justify-between px-1.5 pt-28">
+        {imageIndex < images.length - 1 && (
           <Tag
             className="py-2"
             onClick={() => setImageIndex((prev) => prev + 1)}
           >
             <ArrowRight size={25} />
           </Tag>
-        </div>
-      )}
+        )}
+      </div>
     </motion.div>
   );
 };

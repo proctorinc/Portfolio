@@ -20,7 +20,7 @@ export const Skills = (props: SkillsSectionProps) => {
       <div className="shadow-b-2 absolute -top-[55vw] z-10 h-full w-full">
         <svg
           id="visual"
-          className="flex-no-shrink bottom-0 z-50 h-[80vw] w-full fill-current"
+          className="flex-no-shrink bottom-0 z-40 h-[80vw] w-full fill-current"
           viewBox="0 0 900 600"
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink"

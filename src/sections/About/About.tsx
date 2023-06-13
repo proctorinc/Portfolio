@@ -37,7 +37,7 @@ export const About = (props: AboutSectionProps) => {
       >
         <svg
           id="visual"
-          className="flex-no-shrink bottom-0 z-50 h-[80vw] w-full fill-current"
+          className="flex-no-shrink bottom-0 z-40 h-[80vw] w-full fill-current"
           viewBox="0 0 900 600"
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -71,7 +71,7 @@ export const About = (props: AboutSectionProps) => {
         </svg>
       </div>
       <h1 className="pt-32 text-6xl font-extrabold sm:pb-16">Hi, I'm Matt</h1>
-      <div className="grid w-full  max-w-[1000px] grid-cols-1 items-center gap-10 p-10 lg:w-3/4 lg:grid-cols-2 lg:gap-16">
+      <div className="lg:w-3/4 grid  w-full max-w-[1000px] grid-cols-1 items-center gap-10 p-10 lg:grid-cols-2 lg:gap-16">
         <div className="flex flex-col gap-5 text-lg font-light text-slate-300">
           <motion.p
             initial={{
@@ -155,7 +155,7 @@ export const About = (props: AboutSectionProps) => {
         </div>
         <div className="order-first flex w-full justify-center lg:order-last">
           <motion.div
-            className="relative flex w-full max-w-lg items-center justify-center rounded-xl border-2 border-slate-600 bg-slate-500/20 py-5 px-10 shadow-xl sm:p-10"
+            className="relative flex w-full max-w-lg items-center justify-center rounded-xl border-2 border-slate-600 bg-slate-500/20 px-10 py-5 shadow-xl sm:p-10"
             initial={{
               scale: 0.5,
               opacity: 0,

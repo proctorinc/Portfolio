@@ -28,13 +28,13 @@ export const Experience = (props: MainSectionProps) => {
     <section
       ref={contentRef}
       id="experience"
-      className="gradient-dark-to-light relative flex w-full flex-col items-center justify-center pt-64 pb-80 shadow-inner-2xl shadow-slate-900"
+      className="gradient-dark-to-light relative flex w-full flex-col items-center justify-center pb-80 pt-64 shadow-inner-2xl shadow-slate-900"
     >
       <h1 ref={innerRef} className="pt-28 text-6xl font-extrabold">
         Experience
       </h1>
-      <div className="flex w-full pt-20 pr-5 sm:pb-96">
-        <div className="flex w-1/5 items-end justify-end px-10 sm:w-1/4">
+      <div className="flex w-full pr-5 pt-20 sm:pb-96">
+        <div className="sm:w-1/4 flex w-1/5 items-end justify-end px-10">
           <div className="relative flex h-[1250px] w-3 flex-col items-center justify-around rounded-full border-2 border-slate-600 bg-slate-400/20 shadow-xl">
             {JOBS.map((_, i) => (
               <div
@@ -44,7 +44,7 @@ export const Experience = (props: MainSectionProps) => {
             ))}
           </div>
         </div>
-        <div className="z-20 flex w-4/5 max-w-[1000px] flex-col justify-around sm:w-3/4">
+        <div className="sm:w-3/4 z-20 flex w-4/5 max-w-[1000px] flex-col justify-around">
           {JOBS.map((job, i) => (
             <motion.div
               key={i}
@@ -128,7 +128,7 @@ export const Experience = (props: MainSectionProps) => {
         </div>
       </div>
       <motion.div
-        className="absolute bottom-0 z-50 -mt-2 w-full bg-[#121f39]"
+        className="absolute bottom-0 z-40 -mt-2 w-full bg-[#121f39]"
         style={{ height: boxHeight }}
       />
       <motion.svg

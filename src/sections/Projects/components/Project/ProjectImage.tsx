@@ -33,7 +33,7 @@ export const ProjectImage = (props: ProjectImageProps) => {
           <Bar fill={`url(#smallerlines)`} width="100%" height="100%" />
         </svg>
       </div>
-      <div className="absolute bottom-0 z-50 h-2 w-3/4 border-b-2 border-slate-600"></div>
+      <div className="absolute bottom-0 z-40 h-2 w-3/4 border-b-2 border-slate-600"></div>
       <motion.div
         className="relative flex h-80 w-full justify-center rounded-t-md"
         initial={{

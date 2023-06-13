@@ -11,7 +11,7 @@ export const SmallWaveTransition = (props: SmallWaveTransitionProps) => {
   return (
     <>
       <motion.div
-        className="absolute top-0 z-50 w-full bg-[#121f39]"
+        className="absolute top-0 z-40 w-full bg-[#121f39]"
         style={{ height: waveMotion }}
       />
       <motion.svg

@@ -16,7 +16,7 @@ export const WaveTransition = (props: WaveTransitionProps) => {
     waveFourSpeed,
     waveFiveSpeed,
   } = props;
-  return (
+return (
     <div className="absolute top-full z-40 w-full">
       <svg
         id="visual"

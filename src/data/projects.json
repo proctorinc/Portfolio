@@ -43,16 +43,16 @@
   {
     "title": "Cyber Guard",
     "subtitle": "#1 SaaS AI cloud security startup for enterprise businesses",
-    "image_urls": [""],
+    "image_urls": ["cyber-guard-preview.png"],
     "git_url": "https://github.com/proctorinc/cyberguard",
     "app_url": "https://cyberguard.vercel.app",
     "stack": ["Angular", "Java Spring", "Tailwind CSS", "Figma"],
-    "description": "Cyber Guard is an AI cloud security SaaS with the goal of changing the way of how security is viewed. With a clear, straightforward UI that shows its purpose and goals."
+    "description": "Cyber Guard is an AI cloud security SaaS with the goal of changing the way of how security is viewed. With a clear, straightforward UI, the Cyber Guard website makes a professional statement and emphasizes the company's values."
   },
   {
     "title": "Dink 1.0",
     "subtitle": "Personal financial budget tracker",
-    "image_urls": ["dink-1.png", "dink-2.png", "dink-3.png", "dink-4.png"],
+    "image_urls": [],
     "git_url": "https://github.com/proctorinc/Dink1.0",
     "stack": [
       "React",
@@ -78,7 +78,7 @@
   {
     "title": "Crumbl Cookie Mock",
     "subtitle": "Mock recreation of Crumbl Cookie website",
-    "image_urls": [""],
+    "image_urls": ["crumbl-preview.png"],
     "git_url": "https://github.com/proctorinc/crumbl",
     "app_url": "https://crumbl.vercel.app",
     "stack": ["Angular", "CSS"],
@@ -87,7 +87,7 @@
   {
     "title": "Web Tools",
     "subtitle": "A set of useful web tools I use for web design",
-    "image_urls": [""],
+    "image_urls": ["webtools-preview.png"],
     "git_url": "https://github.com/proctorinc/webtools",
     "app_url": "https://proctorinc-webtools.netlify.app",
     "stack": ["React", "Vite", "MUI"],
@@ -96,7 +96,7 @@
   {
     "title": "The Daily Gerth",
     "subtitle": "Daily social media for a cat named 'Gerth'",
-    "image_urls": ["tdg-1.png"],
+    "image_urls": [],
     "git_url": "https://github.com/proctorinc/TheDailyGerth",
     "app_url": "https://thedailygerth.web.app",
     "stack": [
@@ -113,7 +113,7 @@
   {
     "title": "StudFinder",
     "subtitle": "A dating app for trade professionals",
-    "image_urls": ["studfinder-1.png", "studfinder-2.png"],
+    "image_urls": ["studfinder-preview.png"],
     "git_url": "https://github.com/proctorinc/StudFinder",
     "app_url": "https://findyourstud.web.app",
     "stack": [
@@ -131,7 +131,7 @@
   {
     "title": "Notes App",
     "subtitle": "Copy of Google Keep notes app with improvements",
-    "image_urls": [""],
+    "image_urls": [],
     "git_url": "https://github.com/proctorinc/notesapp",
     "stack": ["React Native", "Expo", "SQLite"],
     "description": ""

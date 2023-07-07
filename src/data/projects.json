@@ -1,7 +1,7 @@
 [
   {
     "title": "Dink 2.0",
-    "subtitle": "Fullstack financial budgeting app",
+    "subtitle": "Fullstack budgeting app that revolutionizes how you save",
     "image_urls": [
       "dink2.0-1.png",
       "dink2.0-2.png",
@@ -23,6 +23,31 @@
       "Tailwind CSS"
     ],
     "description": "Dink is an all-in-one budgeting app that helps you keep track of your short term and long term financial goals. It synchronizes your bank account data live using the Plaid API to connect bank accounts and manage account transactions. You can create monthly budgets to track income and expenses. While also keeping track of your savings and allocating them to specific goals"
+  },
+  {
+    "title": "Bugfixpy",
+    "subtitle": "A Python command line tool that saved hundred of hours on fixing bugs in git repositories",
+    "image_urls": ["bugfixpy-1.png"],
+    "git_url": "https://github.com/proctorinc/bugfixpy",
+    "stack": [
+      "Python",
+      "Command Line",
+      "Git",
+      "GitHub",
+      "Jira API",
+      "CMS API",
+      "VS Code"
+    ],
+    "description": "Command line program that automates Github commands and Jira commands to automate a bug fixing process. This program clones repositories, opens VSCode and tracks changes in multiple branches, commits changes, and automatically cherry-picks commits if necessary. The program then transitions the related Jira ticket using the Jira API and comments commit message. This program improved the speed of bug fixes from 1 hour to 15 minutes on average."
+  },
+  {
+    "title": "Cyber Guard",
+    "subtitle": "#1 SaaS AI cloud security startup for enterprise businesses",
+    "image_urls": [""],
+    "git_url": "https://github.com/proctorinc/cyberguard",
+    "app_url": "https://cyberguard.vercel.app",
+    "stack": ["Angular", "Java Spring", "Tailwind CSS", "Figma"],
+    "description": "Cyber Guard is an AI cloud security SaaS with the goal of changing the way of how security is viewed. With a clear, straightforward UI that shows its purpose and goals."
   },
   {
     "title": "Dink 1.0",
@@ -51,20 +76,39 @@
     "description": "The original inspiration for Dink2.0, started as a personal budget tracker for myself. With the goal of tracking all spending with an emphasis on savings. Dink1.0 was a great learning ground for a large-scale application that helped teach organization and filestructure for a large app."
   },
   {
-    "title": "Bugfixpy",
-    "subtitle": "Python command line tool for fixing bugs in Git repositories",
-    "image_urls": ["bugfixpy-1.png"],
-    "git_url": "https://github.com/proctorinc/bugfixpy",
+    "title": "Crumbl Cookie Mock",
+    "subtitle": "Mock recreation of Crumbl Cookie website",
+    "image_urls": [""],
+    "git_url": "https://github.com/proctorinc/crumbl",
+    "app_url": "https://crumbl.vercel.app",
+    "stack": ["Angular", "CSS"],
+    "description": ""
+  },
+  {
+    "title": "Web Tools",
+    "subtitle": "A set of useful web tools I use for web design",
+    "image_urls": [""],
+    "git_url": "https://github.com/proctorinc/webtools",
+    "app_url": "https://proctorinc-webtools.netlify.app",
+    "stack": ["React", "Vite", "MUI"],
+    "description": ""
+  },
+  {
+    "title": "The Daily Gerth",
+    "subtitle": "Daily social media for a cat named 'Gerth'",
+    "image_urls": ["tdg-1.png"],
+    "git_url": "https://github.com/proctorinc/TheDailyGerth",
+    "app_url": "https://thedailygerth.web.app",
     "stack": [
-      "Python",
-      "Command Line",
-      "Git",
-      "GitHub",
-      "Jira API",
-      "CMS API",
-      "VS Code"
+      "React",
+      "Next JS",
+      "Tailwind CSS",
+      "DaisyUI",
+      "Phosphor Icons",
+      "Firebase",
+      "Firestore"
     ],
-    "description": "Command line program that automates Github commands and Jira commands to automate a bug fixing process. This program clones repositories, opens VSCode and tracks changes in multiple branches, commits changes, and automatically cherry-picks commits if necessary. The program then transitions the related Jira ticket using the Jira API and comments commit message. This program improved the speed of bug fixes from 1 hour to 15 minutes on average."
+    "description": "Social media app that posts one picture for all users to see and rate. Once you rate the daily image you can see what other users rated as well. Uses Firestore snapshots so that ratings and other data updates in realtime. Users can view each other's profiles and see their favorite pictures and top ratings."
   },
   {
     "title": "StudFinder",
@@ -85,20 +129,11 @@
     "description": "A simple, fun dating app that lets you rate other potential matches. Uses an API to randomly generate user profiles for you to rate with a random user image. Give each profile a rating from 1-5. Use the stud finder to try and find a stud!"
   },
   {
-    "title": "The Daily Gerth",
-    "subtitle": "Daily social media for a cat named 'Gerth'",
-    "image_urls": ["tdg-1.png"],
-    "git_url": "https://github.com/proctorinc/TheDailyGerth",
-    "app_url": "https://thedailygerth.web.app",
-    "stack": [
-      "React",
-      "Next JS",
-      "Tailwind CSS",
-      "DaisyUI",
-      "Phosphor Icons",
-      "Firebase",
-      "Firestore"
-    ],
-    "description": "Social media app that posts one picture for all users to see and rate. Once you rate the daily image you can see what other users rated as well. Uses Firestore snapshots so that ratings and other data updates in realtime. Users can view each other's profiles and see their favorite pictures and top ratings."
+    "title": "Notes App",
+    "subtitle": "Copy of Google Keep notes app with improvements",
+    "image_urls": [""],
+    "git_url": "https://github.com/proctorinc/notesapp",
+    "stack": ["React Native", "Expo", "SQLite"],
+    "description": ""
   }
 ]

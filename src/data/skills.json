@@ -7,14 +7,14 @@
       "JavaScript",
       "Python",
       "Java",
+      "SH/BSH/ZSH",
       "C++",
       "C",
       "PHP",
       "Groovy",
       "Scala",
       "CUDA",
-      "ARM Assembly",
-      "SH/BSH/ZSH"
+      "ARM Assembly"
     ]
   },
   {
@@ -22,8 +22,9 @@
     "icon": "desktop",
     "values": [
       "React",
-      "React Native",
+      "Angular",
       "Next JS",
+      "React Native",
       "Vite",
       "CRA",
       "React Query",
@@ -37,7 +38,15 @@
   {
     "type": "Backend",
     "icon": "hard-drives",
-    "values": ["Node JS", "Express JS", "tRPC", "Passport JS", "Django REST"]
+    "values": [
+      "Java Spring",
+      "Spring Boot",
+      "Node JS",
+      "Express JS",
+      "tRPC",
+      "Passport JS",
+      "Django REST"
+    ]
   },
   {
     "type": "Databases",

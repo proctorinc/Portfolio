@@ -50,7 +50,7 @@ export const ProjectImage = (props: ProjectImageProps) => {
         }}
       >
         <motion.img
-          className="not-draggable absolute bottom-0 z-40 h-full w-full object-contain"
+          className="not-draggable absolute bottom-0 z-40 h-full w-full max-w-md object-contain"
           style={{ y: "40px" }}
           src={`/static/images/${images[imageIndex]}`}
           alt={images[imageIndex]}

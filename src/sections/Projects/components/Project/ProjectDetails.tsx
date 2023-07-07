@@ -13,7 +13,7 @@ export const ProjectDetails = (props: ProjectDetailsProps) => {
 
   return (
     <motion.div
-      className="relative flex w-full flex-col gap-3 pt-5 sm:w-3/5 sm:pt-24"
+      className="relative flex w-full flex-col gap-5 pt-5 sm:w-3/5 sm:pt-24"
       initial={{
         opacity: 0,
         y: 20,
@@ -28,14 +28,16 @@ export const ProjectDetails = (props: ProjectDetailsProps) => {
       }}
       viewport={{ once: true }}
     >
-      <div className="flex flex-col">
+      <div className="flex flex-col gap-3">
         <h2 className="text-3xl font-bold sm:text-5xl">{project.title}</h2>
-        <h3 className="py-1 text-xl font-extralight text-slate-400 sm:text-3xl">
+        <h3 className="py-1 text-lg font-extralight text-slate-400 sm:text-2xl">
           {project.subtitle}
         </h3>
       </div>
       <ProjectStack stack={project.stack} />
-      <p className="text-md font-light text-slate-200">{project.description}</p>
+      <p className="text-md font-light leading-7 text-slate-200">
+        {project.description}
+      </p>
       <div className="flex gap-3">
         {project?.app_url && (
           <Button

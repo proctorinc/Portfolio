@@ -71,8 +71,8 @@ export const About = (props: AboutSectionProps) => {
         </svg>
       </div>
       <h1 className="pt-32 text-6xl font-extrabold sm:pb-16">Hi, I'm Matt</h1>
-      <div className="lg:w-3/4 grid  w-full max-w-[1000px] grid-cols-1 items-center gap-10 p-10 lg:grid-cols-2 lg:gap-16">
-        <div className="flex flex-col gap-5 text-lg font-light text-slate-300">
+      <div className="grid w-full  max-w-[1000px] grid-cols-1 items-center justify-center gap-10 p-10 lg:w-3/4 lg:grid-cols-2 lg:gap-16">
+        <div className="flex flex-col items-center gap-8 text-center text-lg font-light text-slate-300 lg:text-left">
           <motion.p
             initial={{
               scale: 0.5,
@@ -88,6 +88,7 @@ export const About = (props: AboutSectionProps) => {
               },
             }}
             viewport={{ once: true }}
+            className="max-w-sm leading-8"
           >
             I'm a fullstack developer from Beaverton, Oregon.
           </motion.p>
@@ -106,6 +107,7 @@ export const About = (props: AboutSectionProps) => {
               },
             }}
             viewport={{ once: true }}
+            className="max-w-sm leading-8"
           >
             In my freetime I love developing web applications, exploring UI
             design, and writing clean code. I enjoy building useful tools to
@@ -127,6 +129,7 @@ export const About = (props: AboutSectionProps) => {
               },
             }}
             viewport={{ once: true }}
+            className="max-w-sm leading-8"
           >
             I love helping others, collaborating and pair programming to learn
             and solve problems, and I am always looking for others to learn
@@ -147,6 +150,7 @@ export const About = (props: AboutSectionProps) => {
               },
             }}
             viewport={{ once: true }}
+            className="max-w-sm leading-8"
           >
             Outside of programming, I love hiking, biking, playing pickleball,
             and cooking. I love travelling and trying new food with my wife, and

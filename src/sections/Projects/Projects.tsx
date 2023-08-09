@@ -30,8 +30,8 @@ export const Projects = (props: ProjectsSectionProps) => {
           Checkout my other projects
         </h2>
         <div className="flex flex-col items-center justify-center gap-5 sm:flex-row">
-          <h3 className="py-1 text-xl font-extralight text-slate-400 sm:text-2xl">
-            See my everything I'm working on here:
+          <h3 className="max-w-xs py-1 text-xl font-extralight text-slate-400 sm:max-w-5xl sm:text-2xl">
+            Visit my GitHub to see everything I'm working on:
           </h3>
           <Button
             onClick={() =>
@@ -43,7 +43,7 @@ export const Projects = (props: ProjectsSectionProps) => {
           </Button>
         </div>
       </div>
-      <div className="grid w-full max-w-3xl grid-cols-1 gap-5 px-3 pb-20 text-center sm:grid-cols-2 sm:px-10 lg:max-w-5xl lg:grid-cols-3">
+      <div className="grid w-full max-w-xl grid-cols-2 gap-3 px-5 pb-20 text-center sm:grid-cols-3 sm:gap-5 sm:px-10 lg:max-w-5xl lg:grid-cols-4">
         {PROJECTS.slice(3).map((project) => (
           <div
             key={project.title}
@@ -55,18 +55,15 @@ export const Projects = (props: ProjectsSectionProps) => {
               </svg>
             </div>
             <div className="group relative flex aspect-square w-full flex-col rounded-xl bg-contain">
-              <div className="absolute z-10 hidden h-full w-full flex-col items-center justify-center gap-5 rounded-xl bg-gray-900/50 p-3 backdrop-blur-md group-hover:flex">
-                <div className="flex flex-col gap-3 pt-5">
+              <div className="absolute z-20 hidden h-full w-full flex-col items-center justify-center gap-2 rounded-xl border-2 border-slate-800 bg-gray-900/70 p-3 backdrop-blur-md group-hover:flex sm:gap-5">
+                <div className="flex flex-col gap-1 sm:gap-3">
                   <h3 className="text-xl font-bold">{project.title}</h3>
-                  <p>{project.subtitle}</p>
+                  <p className="text-sm text-gray-300">{project.subtitle}</p>
                 </div>
-                <ProjectStack
-                  className="justify-center"
-                  stack={project.stack}
-                />
-                <div className="float-end flex justify-center gap-3">
+                <div className="float-end flex justify-center gap-1 sm:gap-3">
                   {project?.app_url && (
                     <Button
+                      className="bg-gray-800/50"
                       onClick={() =>
                         project.app_url
                           ? (window.location.href = project.app_url)
@@ -79,6 +76,7 @@ export const Projects = (props: ProjectsSectionProps) => {
                   )}
                   {project?.git_url && (
                     <Button
+                      className="hidden bg-gray-800/50 sm:flex"
                       onClick={() => (window.location.href = project.git_url)}
                     >
                       <Code weight="fill" size={15} />

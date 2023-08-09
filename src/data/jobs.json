@@ -4,18 +4,32 @@
     "subtitle": "Cyber Security Concentration",
     "company": "George Fox University",
     "dateRange": "August 2017-May 2021",
-    "image": "gfu-logo.png"
+    "image": "gfu-logo.png",
+    "description": []
   },
   {
     "title": "Cyber Security Intern",
     "company": "Swan Island Networks",
     "dateRange": "May 2021-July 2021",
-    "image": "swan-logo.png"
+    "image": "swan-logo.png",
+    "description": [
+      "Conducted extensive research on vulnerability categories relevant to different business sectors, with a focus on the OWASP top 10 most common vulnerabilities.",
+      "Analyzed workplace trends of vulnerabilities, evaluating their potential impact on businesses and developing effective countermeasures.",
+      "Collaborated with InfraGuard to build alerting RSS streams within Swan Island's TX360 security alerting software, enabling companies to receive timely cybersecurity news updates and enhance their situational awareness.",
+      "Contributed to the development of actionable cybersecurity solutions for organizations by providing in-depth research and critical analysis focused on proactive threat response."
+    ]
   },
   {
     "title": "Technical Support Engineer",
     "company": "Secure Code Warrior",
     "dateRange": "September 2021-Current",
-    "image": "scw-logo.png"
+    "image": "scw-logo.png",
+    "description": [
+      "Provided technical support for customers with over 96% satisfaction rating while handling tier 1 support tickets and effectively communicating with unhappy customers to solve complex problems.",
+      "Specialized in identifying and fixing vulnerability-related bugs in security training content written in 64 different programming languages. Totalling over 400 bugs fixed in under 2 years.",
+      "Developed a bug fixing program that reduced the average resolution time per bug from 1 hour to just 15 minutes, resulting in a 60% increase of the number of bugs fixed over a 1 year period of its use.",
+      "Led a team of two professionals in the U.S. division, providing guidance, training, and fostering a collaborative work environment.",
+      "Successfully led weekly SSO, LMS, API troubleshooting and setup calls for large organizations with up to 30,000 platform users, while ensuring seamless integration and satisfaction for the client’s needs."
+    ]
   }
 ]

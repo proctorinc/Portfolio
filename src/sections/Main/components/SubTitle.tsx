@@ -10,8 +10,8 @@ export const SubTitle = () => {
     "Security minded, full stack developer",
     "Curious, enthusiastic learner",
     "Scripter, automator, and improver",
-    "Clean code enthusiast",
-    "Guy who loves to code",
+    "Creative problem solver",
+    "Polyglot programmer",
   ];
 
   useEffect(() => {

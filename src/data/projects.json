@@ -41,6 +41,20 @@
     "description": "Command line program that automates Github commands and Jira commands to automate a bug fixing process. This program clones repositories, opens VSCode and tracks changes in multiple branches, commits changes, and automatically cherry-picks commits if necessary. The program then transitions the related Jira ticket using the Jira API and comments commit message. This program improved the speed of bug fixes from 1 hour to 15 minutes on average."
   },
   {
+    "title": "Visualize",
+    "subtitle": "Full stack web SaaS application for visualizing data",
+    "image_urls": ["visualize.png"],
+    "git_url": "https://github.com/proctorinc/DataVisualizer",
+    "stack": [
+      "Angular",
+      "Java Spring Boot",
+      "Tailwind CSS",
+      "Postgresql",
+      "Supabase"
+    ],
+    "description": "Vizualize is a simple SaaS platform that allows users to upload data and create dashboards to visualize their data. It includes a paid tier with that includes advanced features to visualize your data."
+  },
+  {
     "title": "Cyber Guard",
     "subtitle": "#1 SaaS AI cloud security startup for enterprise businesses",
     "image_urls": ["cyber-guard-preview.png"],
@@ -76,7 +90,7 @@
     "description": "The original inspiration for Dink2.0, started as a personal budget tracker for myself. With the goal of tracking all spending with an emphasis on savings. Dink1.0 was a great learning ground for a large-scale application that helped teach organization and filestructure for a large app."
   },
   {
-    "title": "Crumbl Cookie Mock",
+    "title": "Crumbl Cookie",
     "subtitle": "Mock recreation of Crumbl Cookie website",
     "image_urls": ["crumbl-preview.png"],
     "git_url": "https://github.com/proctorinc/crumbl",

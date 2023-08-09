@@ -5,7 +5,7 @@ import JOBS from "../../data/jobs.json";
 import { Button } from "../../components";
 import { PatternLines } from "@visx/pattern";
 import { Bar } from "@visx/shape";
-import { Question } from "phosphor-react";
+import { CaretDown, Question } from "phosphor-react";
 
 type MainSectionProps = {
   innerRef: RefObject<HTMLDivElement>;
@@ -34,7 +34,7 @@ export const Experience = (props: MainSectionProps) => {
         Experience
       </h1>
       <div className="flex w-full pr-5 pt-20 sm:pb-96">
-        <div className="sm:w-1/4 flex w-1/5 items-end justify-end px-10">
+        <div className="flex w-1/5 items-end justify-end px-10 sm:w-1/4">
           <div className="relative flex h-[1250px] w-3 flex-col items-center justify-around rounded-full border-2 border-slate-600 bg-slate-400/20 shadow-xl">
             {JOBS.map((_, i) => (
               <div
@@ -44,7 +44,7 @@ export const Experience = (props: MainSectionProps) => {
             ))}
           </div>
         </div>
-        <div className="sm:w-3/4 z-20 flex w-4/5 max-w-[1000px] flex-col justify-around">
+        <div className="z-20 flex w-4/5 max-w-[1000px] flex-col justify-around sm:w-3/4">
           {JOBS.map((job, i) => (
             <motion.div
               key={i}
@@ -108,20 +108,12 @@ export const Experience = (props: MainSectionProps) => {
                 <p className="text-md font-semibold text-slate-500">
                   {job.dateRange}
                 </p>
-                <Button
-                  className="mt-3"
-                  onClick={() => {
-                    if (contactRef.current) {
-                      contactRef.current.scrollIntoView({
-                        behavior: "smooth",
-                        block: "end",
-                      });
-                    }
-                  }}
-                >
-                  <Question weight="fill" size={15} />
-                  <span>View Resume</span>
-                </Button>
+                {/* {job.description.length > 0 && (
+                  <Button className="mt-3">
+                    <CaretDown weight="fill" size={15} />
+                    <span>more</span>
+                  </Button>
+                )} */}
               </div>
             </motion.div>
           ))}

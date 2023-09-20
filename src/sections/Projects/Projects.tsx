@@ -35,7 +35,7 @@ export const Projects = (props: ProjectsSectionProps) => {
           </h3>
           <Button
             onClick={() =>
-              (window.location.href = "https:/github.com/proctorinc")
+              (window.location.href = "https://github.com/proctorinc")
             }
           >
             <ArrowSquareOut weight="fill" size={15} />

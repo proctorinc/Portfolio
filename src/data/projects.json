@@ -41,9 +41,26 @@
     "description": "Command line program that automates Github commands and Jira commands to automate a bug fixing process. This program clones repositories, opens VSCode and tracks changes in multiple branches, commits changes, and automatically cherry-picks commits if necessary. The program then transitions the related Jira ticket using the Jira API and comments commit message. This program improved the speed of bug fixes from 1 hour to 15 minutes on average."
   },
   {
+    "title": "The Daily Gerth",
+    "subtitle": "Daily social media for a cat named 'Gerth'",
+    "image_urls": ["tdg-1.png"],
+    "git_url": "https://github.com/proctorinc/TheDailyGerth",
+    "app_url": "https://thedailygerth.web.app",
+    "stack": [
+      "React",
+      "Next JS",
+      "Tailwind CSS",
+      "DaisyUI",
+      "Phosphor Icons",
+      "Firebase",
+      "Firestore"
+    ],
+    "description": "Social media app that posts one cat picture per day for all users to see and rate. Once you rate the daily image you can checkout what other users have rated. Uses Firestore snapshots so that ratings and other data updates in realtime. Users can view each other's profiles and see their favorite pictures and top ratings."
+  },
+  {
     "title": "Visualize",
     "subtitle": "Full stack web SaaS application for visualizing data",
-    "image_urls": ["visualize.png"],
+    "image_urls": [],
     "git_url": "https://github.com/proctorinc/DataVisualizer",
     "stack": [
       "Angular",
@@ -66,7 +83,7 @@
   {
     "title": "Dink 1.0",
     "subtitle": "Personal financial budget tracker",
-    "image_urls": [],
+    "image_urls": ["dink-basic.png"],
     "git_url": "https://github.com/proctorinc/Dink1.0",
     "stack": [
       "React",
@@ -106,23 +123,6 @@
     "app_url": "https://proctorinc-webtools.netlify.app",
     "stack": ["React", "Vite", "MUI"],
     "description": ""
-  },
-  {
-    "title": "The Daily Gerth",
-    "subtitle": "Daily social media for a cat named 'Gerth'",
-    "image_urls": [],
-    "git_url": "https://github.com/proctorinc/TheDailyGerth",
-    "app_url": "https://thedailygerth.web.app",
-    "stack": [
-      "React",
-      "Next JS",
-      "Tailwind CSS",
-      "DaisyUI",
-      "Phosphor Icons",
-      "Firebase",
-      "Firestore"
-    ],
-    "description": "Social media app that posts one picture for all users to see and rate. Once you rate the daily image you can see what other users rated as well. Uses Firestore snapshots so that ratings and other data updates in realtime. Users can view each other's profiles and see their favorite pictures and top ratings."
   },
   {
     "title": "StudFinder",

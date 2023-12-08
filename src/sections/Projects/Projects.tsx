@@ -94,7 +94,7 @@ export const Projects = (props: ProjectsSectionProps) => {
               {project.image_urls.length === 0 && (
                 <div className="flex h-full w-full items-center justify-center">
                   <h3 className="px-2 text-xl font-extrabold">
-                    Image Coming Soon...
+                    {project.title}
                   </h3>
                 </div>
               )}

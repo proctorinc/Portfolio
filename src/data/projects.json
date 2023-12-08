@@ -143,11 +143,25 @@
     "description": "A simple, fun dating app that lets you rate other potential matches. Uses an API to randomly generate user profiles for you to rate with a random user image. Give each profile a rating from 1-5. Use the stud finder to try and find a stud!"
   },
   {
-    "title": "Notes App",
+    "title": "React Native Notes App",
     "subtitle": "Copy of Google Keep notes app with improvements",
     "image_urls": [],
     "git_url": "https://github.com/proctorinc/notesapp",
     "stack": ["React Native", "Expo", "SQLite"],
-    "description": ""
+    "description": "A react native copy of the Google Keep notes app with my own personal twist of features that I prefer."
+  },
+  {
+    "title": "React Native Social Media App",
+    "subtitle": "Copy of Google Keep notes app with improvements",
+    "image_urls": [],
+    "git_url": "https://github.com/proctorinc/ReactNative-SocialMedia",
+    "stack": [
+      "React Native",
+      "React Native Elements UI",
+      "Firebase",
+      "Firestore",
+      "Phosphor Icons"
+    ],
+    "description": "A React native social media app that allows users to post images and give ratings."
   }
 ]

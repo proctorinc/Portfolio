@@ -70,7 +70,9 @@ export const About = (props: AboutSectionProps) => {
           ></motion.path>
         </svg>
       </div>
-      <h1 className="pt-32 text-6xl font-extrabold sm:pb-16">Hi, I'm Matt</h1>
+      <h1 className="pb-5 pt-32 text-6xl font-extrabold sm:pb-10">
+        Hi, I'm Matt
+      </h1>
       <motion.p
         initial={{
           scale: 0.5,
@@ -86,17 +88,13 @@ export const About = (props: AboutSectionProps) => {
           },
         }}
         viewport={{ once: true }}
-        className="pb-10 pt-10 text-center text-xl md:pt-0 md:text-left"
+        className="pb-10 text-center text-xl text-slate-300 md:pt-0 md:text-left"
       >
-        I'm a{" "}
-        <span className="px-1 text-2xl font-bold text-white">
-          fullstack developer
-        </span>{" "}
-        from Beaverton, Oregon.
+        I'm a fullstack developer from Beaverton, Oregon.
       </motion.p>
       <div className="grid w-full  max-w-[1000px] grid-cols-1 items-center justify-center gap-10 p-10 lg:w-3/4 lg:grid-cols-2 lg:gap-16">
         <div className="flex flex-col items-center gap-8 text-center text-lg font-light text-slate-300 lg:text-left">
-          <motion.p
+          <motion.div
             initial={{
               scale: 0.5,
               opacity: 0,
@@ -113,22 +111,14 @@ export const About = (props: AboutSectionProps) => {
             viewport={{ once: true }}
             className="max-w-sm leading-8"
           >
-            In my freetime I love{" "}
-            <span className="px-1 text-2xl font-bold text-white">
-              developing fullstack applications
-            </span>
-            to build useful tools and learn new frameworks.{" "}
-            <span className="px-1 text-2xl font-bold text-white">
-              Exploring UI design
-            </span>
-            and challenging myself to copy popular designs. Rewriting old
-            projects to learn how to{" "}
-            <span className="px-1 text-2xl font-bold text-white">
-              write cleaner code
-            </span>
-            to test my abilities and grow my knowledge.
-          </motion.p>
-          <motion.p
+            <h6 className="pb-3 text-3xl font-bold text-white">I love...</h6>
+            <p>
+              helping others and using my mistakes to teach others, and pair
+              programming to learn how other people solve problems to grow my
+              experience.
+            </p>
+          </motion.div>
+          <motion.div
             initial={{
               scale: 0.5,
               opacity: 0,
@@ -145,53 +135,16 @@ export const About = (props: AboutSectionProps) => {
             viewport={{ once: true }}
             className="max-w-sm leading-8"
           >
-            I love{" "}
-            <span className="px-1 text-2xl font-bold text-white">
-              helping others
-            </span>
-            and using my mistakes to teach others, and{" "}
-            <span className="px-1 text-2xl font-bold text-white">
-              pair programming
-            </span>{" "}
-            to learn how other people solve problems to grow my experience.
-          </motion.p>
-          <motion.p
-            initial={{
-              scale: 0.5,
-              opacity: 0,
-            }}
-            whileInView={{
-              scale: 1,
-              opacity: 1,
-              transition: {
-                duration: 1,
-                type: "spring",
-                stiffness: 40,
-              },
-            }}
-            viewport={{ once: true }}
-            className="max-w-sm leading-8"
-          >
-            Outside of programming, I'm an active{" "}
-            <span className="px-1 text-2xl font-bold text-white">hiker</span>{" "}
-            and{" "}
-            <span className="px-1 text-2xl font-bold text-white">biker</span>{" "}
-            exploring the Northwest. I love playing{" "}
-            <span className="px-1 text-2xl font-bold text-white">
-              pickelball
-            </span>
-            with friends and family,{" "}
-            <span className="px-1 text-2xl font-bold text-white">cooking</span>{" "}
-            different kinds of food every week, and{" "}
-            <span className="px-1 text-2xl font-bold text-white">
-              travelling
-            </span>{" "}
-            and{" "}
-            <span className="px-1 text-2xl font-bold text-white">
-              trying new food
-            </span>{" "}
-            with my wife.
-          </motion.p>
+            <h6 className="pb-3 text-3xl font-bold text-white">
+              Outside of programming...
+            </h6>
+            <p>
+              I'm an active hiker and biker exploring the Northwest. I love
+              playing pickleball with friends and family, cooking different
+              kinds of food every week, and travelling and trying new food with
+              my wife.
+            </p>
+          </motion.div>
         </div>
         <div className="order-first flex w-full justify-center lg:order-last">
           <motion.div

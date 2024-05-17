@@ -42,12 +42,21 @@
   },
   {
     "title": "Live Chat App",
-    "subtitle": "",
-    "image_urls": [],
+    "subtitle": "A live room-based messaging application",
+    "image_urls": ["live-app-1.png", "live-app-2.png"],
     "git_url": "https://github.com/proctorinc/LiveApp",
     "app_url": "",
-    "stack": [],
-    "description": ""
+    "stack": [
+      "TypeScript",
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "Express",
+      "Socket IO",
+      "Prisma",
+      "Postgresql"
+    ],
+    "description": "Full stack live chat application with live updating websockets for messages and users joining and leaving rooms."
   },
   {
     "title": "Go Weather App",

@@ -59,22 +59,22 @@
     "description": "Full stack live chat application with live updating websockets for messages and users joining and leaving rooms."
   },
   {
-    "title": "Go Weather App",
-    "subtitle": "Backend SSR weather app",
+    "title": "Cross Sweeper Game",
+    "subtitle": "Full stack game of minesweeper mixed with cross word puzzles",
     "image_urls": ["cross-sweeper-1.png"],
     "git_url": "https://github.com/proctorinc/CrossSweeper",
     "app_url": "",
     "stack": [],
-    "description": "This app queries public Geolocation API and a Weather API to serve you weekly and daily forecasts for a location of your choice."
+    "description": "The game is  state machine run on t"
   },
   {
-    "title": "Cross Sweeper Game",
-    "subtitle": "Full stack game of minesweeper mixed with cross word puzzles",
+    "title": "Go Weather App",
+    "subtitle": "Backend SSR weather app",
     "image_urls": [],
-    "git_url": "https://github.com/proctorinc/CrossSweeper",
+    "git_url": "https://github.com/proctorinc/GoWeather",
     "app_url": "",
     "stack": [],
-    "description": "The game is  state machine run on t"
+    "description": "This app queries public Geolocation API and a Weather API to serve you weekly and daily forecasts for a location of your choice."
   },
   {
     "title": "Visualize",

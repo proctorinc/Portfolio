@@ -111,11 +111,16 @@ export const About = (props: AboutSectionProps) => {
             viewport={{ once: true }}
             className="max-w-sm leading-8"
           >
-            <h6 className="pb-3 text-3xl font-bold text-white">I love...</h6>
+            <h6 className="pb-3 text-3xl font-bold text-white">
+              My passion is
+            </h6>
             <p>
-              helping others and using my mistakes to teach others, and pair
-              programming to learn how other people solve problems to grow my
-              experience.
+              Building full-stack web applications to learn new languages and
+              frameworks.
+            </p>
+            <p>
+              Pair programming and working with teammates to create
+              quality-crafted and functional tools that get results.
             </p>
           </motion.div>
           <motion.div
@@ -136,13 +141,13 @@ export const About = (props: AboutSectionProps) => {
             className="max-w-sm leading-8"
           >
             <h6 className="pb-3 text-3xl font-bold text-white">
-              Outside of programming...
+              Outside of programming
             </h6>
             <p>
-              I'm an active hiker and biker exploring the Northwest. I love
-              playing pickleball with friends and family, cooking different
-              kinds of food every week, and travelling and trying new food with
-              my wife.
+              You'll find me always working on house projects and renovating my
+              home. I love playing board games with friends and family, cooking
+              different kinds of food every week, and travelling and trying new
+              food with my wife.
             </p>
           </motion.div>
         </div>
@@ -176,7 +181,7 @@ export const About = (props: AboutSectionProps) => {
               <Bar fill={`url(#smallerlines)`} width="100%" height="100%" />
             </svg>
             <img
-              className="max-h-80 rounded-lg object-cover shadow-xl"
+              className="max-h-90 rounded-lg object-cover shadow-xl"
               src="/static/images/annika-and-matt.jpg"
             />
           </motion.div>

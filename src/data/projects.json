@@ -65,7 +65,7 @@
     "git_url": "https://github.com/proctorinc/CrossSweeper",
     "app_url": "",
     "stack": [],
-    "description": "The game is  state machine run on t"
+    "description": "State machine express js backend powered by a react frontend for game UI."
   },
   {
     "title": "Go Weather App",

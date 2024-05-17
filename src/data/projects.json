@@ -61,7 +61,7 @@
   {
     "title": "Go Weather App",
     "subtitle": "Backend SSR weather app",
-    "image_urls": [],
+    "image_urls": ["cross-sweeper-1.png"],
     "git_url": "https://github.com/proctorinc/CrossSweeper",
     "app_url": "",
     "stack": [],

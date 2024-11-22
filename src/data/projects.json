@@ -1,5 +1,45 @@
 [
   {
+    "title": "Scrabble",
+    "subtitle": "Scrabble game built in TypeScript React on the front-end and Golang on the back-end",
+    "image_urls": ["scrabble.png"],
+    "git_url": "https://github.com/proctorinc/scrabble",
+    "stack": [
+      "TypeScript",
+      "React",
+      "Vite",
+      "react-dnd",
+      "Go",
+      "gin-gonic",
+      "TailwindCSS"
+    ],
+    "description": "Play scrabble locally or online. This scrabble game runs on a Golang state-machine that handles the entire game state."
+  },
+  {
+    "title": "Bugfixpy",
+    "subtitle": "A Python command line tool that saved hundred of hours on fixing bugs in git repositories",
+    "image_urls": ["bugfixpy-1.png"],
+    "git_url": "https://github.com/proctorinc/bugfixpy",
+    "stack": [
+      "Python",
+      "Command Line",
+      "Git",
+      "GitHub",
+      "Jira API",
+      "CMS API",
+      "VS Code"
+    ],
+    "description": "Command line program that automates Github commands and Jira commands to automate a bug fixing process. This program clones repositories, opens VSCode and tracks changes in multiple branches, commits changes, and automatically cherry-picks commits if necessary. The program then transitions the related Jira ticket using the Jira API and comments commit message. This program improved the speed of bug fixes from 1 hour to 15 minutes on average."
+  },
+  {
+    "title": "GraphQL Financial API",
+    "subtitle": "Financial budget tracking API built with GraphQL",
+    "image_urls": ["banker.png"],
+    "git_url": "https://github.com/proctorinc/Banker-API",
+    "stack": ["Go", "gin-gonic", "sqlc", "gql-gen", "dataloaden", "go-jwt"],
+    "description": "Upload transactions using OFX files to manage and get stats about your spending."
+  },
+  {
     "title": "Dink 2.0",
     "subtitle": "Fullstack budgeting app that revolutionizes how you save",
     "image_urls": [
@@ -23,22 +63,6 @@
       "Tailwind CSS"
     ],
     "description": "Dink is an all-in-one budgeting app that helps you keep track of your short term and long term financial goals. It synchronizes your bank account data live using the Plaid API to connect bank accounts and manage account transactions. You can create monthly budgets to track income and expenses. While also keeping track of your savings and allocating them to specific goals"
-  },
-  {
-    "title": "Bugfixpy",
-    "subtitle": "A Python command line tool that saved hundred of hours on fixing bugs in git repositories",
-    "image_urls": ["bugfixpy-1.png"],
-    "git_url": "https://github.com/proctorinc/bugfixpy",
-    "stack": [
-      "Python",
-      "Command Line",
-      "Git",
-      "GitHub",
-      "Jira API",
-      "CMS API",
-      "VS Code"
-    ],
-    "description": "Command line program that automates Github commands and Jira commands to automate a bug fixing process. This program clones repositories, opens VSCode and tracks changes in multiple branches, commits changes, and automatically cherry-picks commits if necessary. The program then transitions the related Jira ticket using the Jira API and comments commit message. This program improved the speed of bug fixes from 1 hour to 15 minutes on average."
   },
   {
     "title": "Live Chat App",

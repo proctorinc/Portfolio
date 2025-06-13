@@ -10,6 +10,7 @@ interface MobileMenuProps {
 const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
   const menuItems = [
     { to: '/#about', label: 'About' },
+    { to: '/#skills', label: 'Skills' },
     { to: '/#experience', label: 'Experience' },
     { to: '/#projects', label: 'Projects' },
     { to: '/#contact', label: 'Contact' },
@@ -34,13 +35,13 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'spring', damping: 20, stiffness: 300 }}
-            className="fixed top-0 right-0 bottom-0 w-64 bg-black/90 backdrop-blur-lg border-l border-white/10 z-50"
+            className="fixed top-0 right-0 bottom-0 w-64 bg-white/90 dark:bg-black/90 backdrop-blur-lg border-l border-gray-200 dark:border-white/10 z-50"
           >
             <div className="flex flex-col h-full">
               {/* Close button */}
               <button
                 onClick={onClose}
-                className="p-4 self-end text-gray-400 hover:text-white transition-colors duration-200"
+                className="p-4 self-end text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors duration-200"
               >
                 <svg
                   className="h-6 w-6"
@@ -70,7 +71,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                       <Link
                         to={item.to}
                         onClick={onClose}
-                        className="text-xl text-gray-300 hover:text-white transition-colors duration-200 block py-2"
+                        className="text-xl text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors duration-200 block py-2"
                       >
                         {item.label}
                       </Link>
@@ -80,13 +81,13 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
               </nav>
 
               {/* Social links */}
-              <div className="p-4 border-t border-white/10">
+              <div className="p-4 border-t border-gray-200 dark:border-white/10">
                 <div className="flex justify-center space-x-6">
                   <a
                     href="https://github.com/proctorinc"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-white transition-colors duration-200"
+                    className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors duration-200"
                   >
                     GitHub
                   </a>
@@ -94,7 +95,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                     href="https://linkedin.com/in/matthew-proctor"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-white transition-colors duration-200"
+                    className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors duration-200"
                   >
                     LinkedIn
                   </a>

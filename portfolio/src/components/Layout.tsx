@@ -17,18 +17,18 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const location = useLocation();
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-white text-gray-800 dark:bg-black dark:text-white">
       <CustomCursor />
       <ScrollProgress />
       
       {/* Background Elements */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-dark via-secondary to-primary-dark opacity-50" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent_50%)]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-100 via-gray-200 to-gray-100 dark:from-primary-dark dark:via-secondary dark:to-primary-dark opacity-50" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,0,0,0.1),transparent_50%)] dark:bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent_50%)]" />
       </div>
 
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-40 backdrop-blur-lg bg-black/20 border-b border-white/10">
+      <nav className="fixed top-0 left-0 right-0 z-40 backdrop-blur-lg bg-white/80 dark:bg-black/20 border-b border-gray-200 dark:border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <Link to="/" className="text-xl font-bold gradient-text">
@@ -36,6 +36,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             </Link>
             <div className="hidden md:flex items-center space-x-8">
               <NavLink to="/#about">About</NavLink>
+              <NavLink to="/#skills">Skills</NavLink>
               <NavLink to="/#experience">Experience</NavLink>
               <NavLink to="/#projects">Projects</NavLink>
               <NavLink to="/#contact">Contact</NavLink>
@@ -45,7 +46,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               <ThemeToggle />
               <button
                 onClick={() => setIsMobileMenuOpen(true)}
-                className="p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/10 focus:outline-none"
+                className="p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-white/10 focus:outline-none"
               >
                 <svg
                   className="h-6 w-6"
@@ -91,7 +92,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400">
-              © {new Date().getFullYear()} Matt Proctor. All rights reserved.
+              © {new Date().getFullYear()} Matt Proctor
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a
@@ -127,10 +128,10 @@ const NavLink: React.FC<NavLinkProps> = ({ to, children }) => {
   return (
     <Link
       to={to}
-      className="text-gray-300 hover:text-white transition-colors duration-200 relative group"
+      className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors duration-200 relative group"
     >
       {children}
-      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full" />
+      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-800 dark:bg-white transition-all duration-300 group-hover:w-full" />
     </Link>
   );
 };

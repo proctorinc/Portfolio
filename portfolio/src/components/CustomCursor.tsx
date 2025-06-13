@@ -8,7 +8,7 @@ const CustomCursor: React.FC = () => {
   return (
     <>
       <motion.div
-        className="fixed top-0 left-0 w-4 h-4 bg-white rounded-full pointer-events-none z-50 mix-blend-difference"
+        className="fixed top-0 left-0 w-4 h-4 bg-gray-900 dark:bg-white rounded-full pointer-events-none z-50 mix-blend-difference"
         animate={{
           x: position.x - 8,
           y: position.y - 8,
@@ -22,7 +22,7 @@ const CustomCursor: React.FC = () => {
         }}
       />
       <motion.div
-        className="fixed top-0 left-0 w-8 h-8 border-2 border-white rounded-full pointer-events-none z-50"
+        className="fixed top-0 left-0 w-8 h-8 border-2 border-gray-900 dark:border-white rounded-full pointer-events-none z-50"
         animate={{
           x: position.x - 16,
           y: position.y - 16,

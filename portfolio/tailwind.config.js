@@ -1,0 +1,68 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/pages/**/*.{js,jsx,ts,tsx}",
+    "./src/components/**/*.{js,jsx,ts,tsx}",
+  ],
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          DEFAULT: '#ffffff',
+          dark: '#1a1a1a',
+        },
+        secondary: {
+          DEFAULT: '#2d2d2d',
+          light: '#3d3d3d',
+        },
+        accent: {
+          DEFAULT: '#3b82f6',
+          light: '#60a5fa',
+        },
+        dark: {
+          bg: '#000000',
+          surface: '#1a1a1a',
+          border: 'rgba(255, 255, 255, 0.1)',
+        },
+        light: {
+          bg: '#ffffff',
+          surface: '#f3f4f6',
+          border: 'rgba(0, 0, 0, 0.1)',
+        },
+      },
+      fontFamily: {
+        sans: [
+          '-apple-system',
+          'BlinkMacSystemFont',
+          'Segoe UI',
+          'Roboto',
+          'Oxygen',
+          'Ubuntu',
+          'Cantarell',
+          'Open Sans',
+          'Helvetica Neue',
+          'sans-serif',
+        ],
+      },
+      animation: {
+        'float': 'float 3s ease-in-out infinite',
+        'bounce-slow': 'bounce 3s infinite',
+      },
+      backdropBlur: {
+        xs: '2px',
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      },
+      keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+      },
+    },
+  },
+  plugins: [],
+}

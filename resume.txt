@@ -1,0 +1,80 @@
+Matt Proctor
++1-425-295-4143 | matthewalanproctor@gmail.com
+ï linkedin.com/in/matthew-proctor | § github.com/proctorinc
+Beaverton, Oregon - USA
+PERSONAL STATEMENT
+I’m a technical support engineer with experience in software development, troubleshooting technical bugs, and
+working in code every day. With over 3 years of experience in technical support and software development, I have
+used my passion for troubleshooting in my work. From vulnerability remediation in full-stack web application code to
+providing tier 3 support for a SaaS application. I have contributed to full-stack new production features in a TypeScript
+React front-end and a Spring Boot back-end. I participated in the entire bug lifecycle, from working directly with
+customers to troubleshoot and identify production bugs to implementing and pushing the fix to production. I have
+excelled in my role as a US team lead where I constantly sought to improve and automate processes. I thrive in an
+environment where I can grow and be challenged and find ways to solve difficult problems with creative solutions.
+EXPERIENCE
+• Secure Code Warrior September 2021 - Present
+Technical Support Engineer / Software Developer Portland, OR
+◦ Developed new production features in a React TypeScript front-end with a Java Spring back-end as a part of an
+agile software development team.
+◦ Implemented localization with 8 supported languages for a production admin dashboard using i18next in a
+TypeScript React front-end.
+◦ Resolved 700+ security-related bugs in security training web application code in 65+ different languages and
+frameworks
+◦ Wrote a bug-fixing script that improved the average time to fix a bug by 75% from 1 hour to 15 minutes and saved
+over 300 hours of work in the last 2 years.
+◦ Reduced the user reported code issues by 50% by improving the quality and consistency of the web application
+code.
+◦ Led technical calls with clients for the setup and troubleshooting of platform integrations for user management
+including SSO, SCIM, SCORM, and REST/GraphQL APIs.
+• Swan Island Networks May 2021 - Jun 2021
+Information Security Analyst Intern Portland, OR
+◦ Conducted extensive research on vulnerability categories and connected them to relevant business sectors.
+◦ Promoted developer secure coding guidelines based on the OWASP top 10 most common vulnerabilities to
+improve web application security within the organization.
+◦ Collaborated with InfraGuard to build alerting RSS streams within Swan Island’s TX360 security alerting software,
+enabling companies to receive timely security news updates to improve security awareness.
+EDUCATION
+• George Fox University Aug 2017 - May 2021
+Bachelor of Science in Computer Science, Cybersecurity Concentration Newberg, OR
+PROJECTS
+• Process Efficiency Command Line Tool Dec 2021 - Current
+Python, GitPython, web scraping, Beautiful Soup, Jira API, keyring
+◦ Authored an internal tool that decreased the average time to fix vulnerabilities in web applications by 75% from 1
+hour to 15 minutes per bug. It has saved more than 300 hours in the last two years.
+◦ The tool leverages internal and external APIs as well as web scraping to automate complex issue transitioning,
+merge conflict resolution, and cherry picking commits across repositories with hundreds of branches.
+• Full-stack Daily Drawing App May 2025 - Current
+Golang, gin-gonic, React, Vite, TypeScript, TailwindCSS, Google Cloud Run, AWS S3, Turso, SQLite, Docker
+◦ Engineered and deployed a full-stack daily drawing application in production, demonstrating expertise in
+end-to-end software development and live system maintenance.
+◦ Developed a robust RESTful API in Go using the Gin-gonic framework, featuring custom password-less
+authentication with HTTP-only cookies and email verification for enhanced user security and convenience.
+◦ Implemented a performant and responsive frontend with TypeScript, React (utilizing Tanstack Router, React Query,
+and TailwindCSS), achieving near-instant load times through strategic caching and optimized data fetching.
+◦ Architected and integrated a secure image storage solution leveraging AWS S3 for drawing uploads, ensuring
+robust permissions and public accessibility while maintaining data integrity.
+◦ Managed scalable and cost-efficient deployment on Google Cloud Run, implementing a continuous deployment
+pipeline with GitHub Actions for automated updates and rapid iteration.
+◦ Successfully managed live database migrations (SQLite via Turso) and resolved critical production bugs (e.g.,
+submission failures, system crashes) through proactive logging and monitoring, ensuring continuous application
+availability for daily users.
+◦ Enhanced production observability by implementing OWASP-recommended logging which enabled rapid
+identification, troubleshooting, and resolution of complex issues in a live environment.
+• Golang Financial GraphQL API Aug 2024
+Golang, gin-gonic, sqlc, gqlgen, dataloaden, go-jwt
+◦ Architected a GraphQL API in Golang using codegen tools: gqlgen, sqlc, and dataloaden
+◦ Added OFX file upload to parse account and transaction data.
+◦ Improved linking of transactions to Merchants accuracy by transaction description of natural language processing
+(NLP), transaction description patterns, and other identifiers.
+◦ Implemented JWT authentication using go-jwt to authenticate users using a secure HTTP-only cookie.
+◦ Created and tested authentication, authorization, and other security access controls in GraphQL to confirm financial
+data will not be accessible by other users along with implementing other OWASP API-related recommendations.
+SKILLS
+• Languages: TypeScript, JavaScript, Python, Golang, Java, Groovy, C++, C, SH/BSH/ZSH
+• Front-end technologies: React, Next JS, Vite, React Query, React Native, JQuery, Tailwind CSS
+• Back-end technologies: REST, Graphql, gin-gonic, gqlgen, Socket IO, Express JS, Java Spring Boot, tRPC, Firebase,
+Django
+• Database: MySQL, PostgreSQL, SQLite, Turso, Prisma, Firestore, MongoDB Atlas, PlanetScale, JDBC
+• Security Tools: Burp Suite, Metasploit, ZAP, Nmap, Wireshark, DirBuster, Autopsy, Foxy Proxy, HashCat
+• Other Tools & Technologies: AWS S3, Google cloud run, Jira, Zendesk, Jest, Storybook, Vercel, NextAuth, Github,
+GitLab, SSO, SAML, LaunchDarkly, Windows Active Directory, Docker, Orchestrator, Figma

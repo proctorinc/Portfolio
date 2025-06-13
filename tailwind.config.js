@@ -8,9 +8,18 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        border: "var(--border)",
+        input: "var(--input)",
+        ring: "var(--ring)",
+        background: "var(--background)",
+        foreground: "var(--foreground)",
         primary: {
-          DEFAULT: '#ffffff',
-          dark: '#1a1a1a',
+          DEFAULT: "var(--primary)",
+          dark: "var(--primary-dark)",
+        },
+        card: {
+          DEFAULT: "var(--card)",
+          foreground: "var(--card-foreground)",
         },
         secondary: {
           DEFAULT: '#2d2d2d',
@@ -31,6 +40,11 @@ module.exports = {
           border: 'rgba(0, 0, 0, 0.1)',
         },
       },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
       fontFamily: {
         sans: [
           '-apple-system',
@@ -48,6 +62,7 @@ module.exports = {
       animation: {
         'float': 'float 3s ease-in-out infinite',
         'bounce-slow': 'bounce 3s infinite',
+        blob: "blob 7s infinite",
       },
       backdropBlur: {
         xs: '2px',
@@ -60,6 +75,20 @@ module.exports = {
         float: {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-10px)' },
+        },
+        blob: {
+          "0%": {
+            transform: "translate(0px, 0px) scale(1)",
+          },
+          "33%": {
+            transform: "translate(30px, -50px) scale(1.1)",
+          },
+          "66%": {
+            transform: "translate(-20px, 20px) scale(0.9)",
+          },
+          "100%": {
+            transform: "translate(0px, 0px) scale(1)",
+          },
         },
       },
     },

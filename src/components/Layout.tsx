@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'gatsby';
 import { useLocation } from '@reach/router';
 import CustomCursor from './CustomCursor';
-import MobileMenu from './MobileMenu';
 import ScrollProgress from './ScrollProgress';
 import ThemeToggle from './ThemeToggle';
 import { pageVariants } from '../hooks/usePageTransition';
@@ -23,29 +22,30 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <Background />
       
       {/* Navigation */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg">
         <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link to="/" className="text-2xl font-bold gradient-text">
+          <h1 className="text-foreground dark:text-white text-2xl font-bold gradient-text">
             MP
-          </Link>
+          </h1>
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-foreground hover:text-primary transition-colors">
+            <Link to="/" className="text-foreground hover:text-foreground hover:scale-105 transition-all duration-300">
               Home
             </Link>
-            <Link to="/projects" className="text-foreground hover:text-primary transition-colors">
-              Projects
-            </Link>
-            <Link to="/about" className="text-foreground hover:text-primary transition-colors">
+            <Link to="#about" className="text-foreground hover:text-foreground transition-colors hover:scale-110">
               About
             </Link>
-            <Link to="/contact" className="text-foreground hover:text-primary transition-colors">
+            <Link to="#projects" className="text-foreground hover:text-foreground transition-colors hover:scale-110">
+              Projects
+            </Link>
+            <Link to="#contact" className="text-foreground hover:text-foreground transition-colors hover:scale-110">
               Contact
             </Link>
-            <ThemeToggle />
           </div>
-          <div className="md:hidden">
+          <ThemeToggle />
+
+          {/* <div className="md:hidden">
             <MobileMenu isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
-          </div>
+          </div> */}
         </nav>
       <ScrollProgress />
 
@@ -68,7 +68,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       {/* Footer */}
       <footer className="bg-background border-t border-border">
         <div className="container mx-auto px-4 py-8 text-center text-foreground/60">
-          <p>© {new Date().getFullYear()} Matt P. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Matt Proctor</p>
         </div>
       </footer>
     </div>

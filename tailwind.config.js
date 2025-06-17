@@ -1,14 +1,17 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/pages/**/*.{js,jsx,ts,tsx}",
-    "./src/components/**/*.{js,jsx,ts,tsx}",
+    './src/pages/**/*.{js,jsx,ts,tsx}',
+    './src/components/**/*.{js,jsx,ts,tsx}',
   ],
   darkMode: 'class',
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+      },
       colors: {
-        border: "var(--border)",
+        border: 'rgba(255, 255, 255, 0.1)',
         input: "var(--input)",
         ring: "var(--ring)",
         background: "var(--background)",
@@ -32,12 +35,10 @@ module.exports = {
         dark: {
           bg: '#000000',
           surface: '#1a1a1a',
-          border: 'rgba(255, 255, 255, 0.1)',
         },
         light: {
           bg: '#ffffff',
           surface: '#f3f4f6',
-          border: 'rgba(0, 0, 0, 0.1)',
         },
       },
       borderRadius: {
@@ -45,24 +46,11 @@ module.exports = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
-      fontFamily: {
-        sans: [
-          '-apple-system',
-          'BlinkMacSystemFont',
-          'Segoe UI',
-          'Roboto',
-          'Oxygen',
-          'Ubuntu',
-          'Cantarell',
-          'Open Sans',
-          'Helvetica Neue',
-          'sans-serif',
-        ],
-      },
       animation: {
         'float': 'float 3s ease-in-out infinite',
         'bounce-slow': 'bounce 3s infinite',
         blob: "blob 7s infinite",
+        'gradient-shift': 'gradient-shift 12s linear infinite',
       },
       backdropBlur: {
         xs: '2px',
@@ -89,6 +77,11 @@ module.exports = {
           "100%": {
             transform: "translate(0px, 0px) scale(1)",
           },
+        },
+        'gradient-shift': {
+          '0%': { backgroundPosition: '0% 100%' },
+          '50%': { backgroundPosition: '100% 0%' },
+          '100%': { backgroundPosition: '0% 100%' },
         },
       },
     },

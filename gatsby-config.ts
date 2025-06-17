@@ -2,7 +2,7 @@ import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `portfolio`,
+    title: `Portfolio`,
     siteUrl: `https://www.yourdomain.tld`
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
@@ -10,13 +10,18 @@ const config: GatsbyConfig = {
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
   plugins: [
+    "gatsby-plugin-sass",
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-postcss",
     {
-      resolve: 'gatsby-plugin-postcss',
+      resolve: 'gatsby-plugin-google-fonts',
       options: {
-        postCssPlugins: [
-          require('tailwindcss'),
-          require('autoprefixer'),
+        fonts: [
+          'Inter:300,400,500,600,700',
         ],
+        display: 'swap',
       },
     },
   ]

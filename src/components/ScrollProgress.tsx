@@ -11,11 +11,11 @@ const ScrollProgress: React.FC = () => {
 
   return (
     <motion.div
-      className="h-1 bg-gray-200 dark:bg-white/20 z-50 origin-left"
+      className="h-1 bg-gray-200/50 dark:bg-white/20 z-50 origin-left"
       style={{ scaleX }}
     >
       <motion.div
-        className="h-full bg-gradient-to-r from-accent to-accent-light"
+        className="h-full bg-gradient-to-r from-accent-light/80 to-accent/80"
         style={{ scaleX }}
       />
     </motion.div>

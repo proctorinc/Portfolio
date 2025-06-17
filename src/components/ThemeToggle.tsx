@@ -10,7 +10,7 @@ const ThemeToggle: React.FC = () => {
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
       onClick={toggleTheme}
-      className="p-2 rounded-full bg-gray-200 dark:bg-white/10 backdrop-blur-lg text-gray-900 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200"
+      className="p-2 rounded-full backdrop-blur-lg text-gray-900 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200"
       aria-label="Toggle theme"
     >
       {theme === 'light' ? (

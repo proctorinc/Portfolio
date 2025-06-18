@@ -12,12 +12,12 @@ const HomePage: React.FC = () => {
     <Layout>
       {/* Hero Section */}
       <section className="min-h-screen flex flex-col items-center justify-center relative">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="w-full md:max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-800 to-gray-600 dark:from-white dark:to-gray-300"
+            className="text-4xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-800 to-gray-600 dark:from-white dark:to-gray-300"
           >
             Matt Proctor
           </motion.h1>
@@ -33,13 +33,13 @@ const HomePage: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex justify-center space-x-4"
+            className="flex flex-col sm:flex-row justify-center gap-4 items-center"
           >
             <a
               href="https://github.com/proctorinc"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 bg-white/20 backdrop-blur-lg rounded-full text-gray-800 dark:text-white hover:text-white hover:bg-transparent dark:hover:bg-white/20 transition-all duration-300 border border-gray-200/50 dark:border-white/10 shadow-[0_4px_12px_rgba(0,0,0,0.05)] dark:shadow-none flex items-center gap-2"
+              className="px-6 py-3 bg-white/20 backdrop-blur-lg rounded-full text-gray-800 dark:text-white hover:text-white hover:bg-transparent dark:hover:bg-white/20 transition-all duration-300 border border-gray-200/50 dark:border-white/10 shadow-[0_4px_12px_rgba(0,0,0,0.05)] dark:shadow-none flex items-center gap-2 w-fit"
             >
               <FaGithub className="w-5 h-5" />
               GitHub
@@ -48,7 +48,7 @@ const HomePage: React.FC = () => {
               href="https://linkedin.com/in/matthew-proctor"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 bg-white/20 backdrop-blur-lg rounded-full text-gray-800 dark:text-white hover:text-white hover:bg-transparent dark:hover:bg-white/20 transition-all duration-300 border border-gray-200/50 dark:border-white/10 shadow-[0_4px_12px_rgba(0,0,0,0.05)] dark:shadow-none flex items-center gap-2"
+              className="px-6 py-3 bg-white/20 backdrop-blur-lg rounded-full text-gray-800 dark:text-white hover:text-white hover:bg-transparent dark:hover:bg-white/20 transition-all duration-300 border border-gray-200/50 dark:border-white/10 shadow-[0_4px_12px_rgba(0,0,0,0.05)] dark:shadow-none flex items-center gap-2 w-fit"
             >
               <FaLinkedin className="w-5 h-5" />
               LinkedIn
@@ -56,7 +56,7 @@ const HomePage: React.FC = () => {
             <a
               href="/files/Resume.pdf"
               download
-              className="px-6 py-3 bg-white/20 backdrop-blur-lg rounded-full text-gray-800 dark:text-white hover:text-white hover:bg-transparent dark:hover:bg-white/20 transition-all duration-300 border border-gray-200/50 dark:border-white/10 shadow-[0_4px_12px_rgba(0,0,0,0.05)] dark:shadow-none flex items-center gap-2"
+              className="px-6 py-3 bg-white/20 backdrop-blur-lg rounded-full text-gray-800 dark:text-white hover:text-white hover:bg-transparent dark:hover:bg-white/20 transition-all duration-300 border border-gray-200/50 dark:border-white/10 shadow-[0_4px_12px_rgba(0,0,0,0.05)] dark:shadow-none flex items-center gap-2 w-fit"
             >
               <FaFileAlt className="w-5 h-5" />
               Resume

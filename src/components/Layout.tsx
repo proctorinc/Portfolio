@@ -17,7 +17,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const location = useLocation();
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-hidden">
       <CustomCursor />
       <Background />
       

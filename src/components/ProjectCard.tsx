@@ -26,7 +26,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className="bg-white/20 dark:bg-white/5 backdrop-blur-lg rounded-2xl p-8 h-full flex items-center border border-gray-200/50 dark:border-white/10 shadow-[0_8px_24px_rgba(0,0,0,0.08)] dark:shadow-none"
+      className="bg-white/20 dark:bg-white/5 backdrop-blur-lg rounded-2xl p-8 h-full flex flex-col sm:flex-row items-center border border-gray-200/50 dark:border-white/10 shadow-[0_8px_24px_rgba(0,0,0,0.08)] dark:shadow-none"
     >
       <div className="flex flex-col w-full pr-6">
         <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-4">{title}</h3>
@@ -71,7 +71,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         </div>
       </div>
       {imageUrl && (
-        <div className='flex justify-center w-1/2'>
+        <div className="order-first pb-6 sm:pb-0 sm:order-last flex justify-center sm:w-1/2">
           <img src={imageUrl} className='rounded-lg max-h-[450px]' />
         </div>
       )}

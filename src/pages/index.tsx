@@ -342,7 +342,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
         )}
         <div className="flex-grow">
           <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2">{title}</h3>
-          <div className="flex justify-between items-start">
+          <div className="flex flex-col sm:flex-row justify-between items-start">
             <div>
               <p className="text-gray-700 dark:text-gray-300">{company}</p>
               <p className="text-gray-600 dark:text-gray-400 text-sm">{location}</p>

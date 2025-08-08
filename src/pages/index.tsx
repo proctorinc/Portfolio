@@ -164,7 +164,7 @@ const HomePage: React.FC = () => {
               description="My first production daily drawing app with multiple daily users. Uses password-less authentication and real-time features."
               technologies={["Golang", "gin-gonic", "React", "Vite", "TypeScript", "TailwindCSS", "Google Cloud Run", "AWS S3", "Turso", "SQLite", "Docker"]}
               link="https://github.com/proctorinc/drawer"
-              liveLink="https://drawer-1084176098994.us-west1.run.app/app"
+              liveLink="https://daily-doodle.app"
               imageUrl='/images/daily-doodle-1.png'
               learnings={[
                 "First production deployment and CI/CD setup with daily active users",

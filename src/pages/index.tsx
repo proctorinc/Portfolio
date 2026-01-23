@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import Layout from '../components/Layout';
-import { ArrowDownIcon } from '@heroicons/react/24/outline';
-import { FaFileAlt, FaGithub, FaLinkedin } from 'react-icons/fa';
-import { ProjectCard } from '../components/ProjectCard';
-import { SubProjectCard } from '../components/SubProjectCard';
-import M from 'minimatch';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import Layout from "../components/Layout";
+import { ArrowDownIcon } from "@heroicons/react/24/outline";
+import { FaFileAlt, FaGithub, FaLinkedin } from "react-icons/fa";
+import { ProjectCard } from "../components/ProjectCard";
+import { SubProjectCard } from "../components/SubProjectCard";
+import M from "minimatch";
 
 const HomePage: React.FC = () => {
   return (
@@ -78,24 +78,24 @@ const HomePage: React.FC = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, scale: "50%" }}
-            whileInView={{ 
-              opacity: 1, 
+            whileInView={{
+              opacity: 1,
               scale: "100%",
             }}
             viewport={{ once: true, margin: "-100px" }}
             className="flex justify-center pb-10 perspective-1000"
           >
-            <motion.img 
-              src="/images/profile-pic.png" 
+            <motion.img
+              src="/images/profile-pic.png"
               className="w-full opacity-80 max-w-[300px] transform-gpu"
               style={{
                 transformStyle: "preserve-3d",
-                transformOrigin: "center center"
+                transformOrigin: "center center",
               }}
-              whileHover={{ 
+              whileHover={{
                 scale: 1.05,
                 rotateY: 5,
-                transition: { duration: 0.3 }
+                transition: { duration: 0.3 },
               }}
             />
           </motion.div>
@@ -110,8 +110,16 @@ const HomePage: React.FC = () => {
               About Me
             </h2>
             <p className="text-gray-700 dark:text-gray-300 leading-8">
-              I'm a technical support engineer with over 3 years experience in software development, troubleshooting technical bugs in SaaS applications, and
-              writing code in 65+ different languages and frameworks each day. From vulnerability remediation in full-stack web application code to developing production features in TypeScript React front-ends, I've grown a passion for writing quality and secure code. I've found a love hard technical challenges and seeking to learn and grow every day.
+              I'm a Junior Software Developer with 1 year experience in software
+              development and 3 years of experience in tier 3 technical support.
+              My expertise includes troubleshooting and resolving technical bugs
+              from customer feedback in SaaS applications, developing new
+              features in React TypeScript frontend, and writing code in 65+
+              different languages and frameworks each day. From vulnerability
+              remediation in full-stack web application code to developing
+              production features in TypeScript React front-ends, I've grown a
+              passion for writing quality and secure code. I've found a love
+              hard technical challenges and seeking to learn and grow every day.
             </p>
           </motion.div>
         </div>
@@ -125,16 +133,25 @@ const HomePage: React.FC = () => {
           </h2>
           <div className="space-y-8">
             <ExperienceCard
-              title="Technical Support Engineer"
+              title="Junior Software Engineer"
               company="Secure Code Warrior"
-              period="September 2021 - Present"
+              period="March 2025 - Present"
               location="Portland, OR"
               achievements={[
-                "Developed new production features in a React TypeScript front-end with a Java Spring back-end",
-                "Implemented localization with 8 supported languages for a production admin dashboard",
-                "Resolved 700+ security-related bugs in security training web application code",
-                "Wrote a bug-fixing script that improved average fix time by 75%",
-                "Reduced user reported code issues by 50%"
+                "Developed AI application to bring insights and common solutions for the Support team's ticketing system. Created chained LLM queries to bring accurate, context-aware insights on customer tickets to help connect common issues and resolve issues faster.",
+                "Developed production features in a React TypeScript front-end with a Java Spring back-end as a part of an agile software development team.",
+                "Implemented localization with 8 supported languages for a production admin dashboard using i18next in a TypeScript React front-end.",
+              ]}
+            />
+            <ExperienceCard
+              title="Technical Support Engineer"
+              company="Secure Code Warrior"
+              period="September 2021 - March 2025"
+              location="Portland, OR"
+              achievements={[
+                "Resolved over 800 security-related bugs in web application code across 65+ different languages and frameworks",
+                "Wrote a bug-fixing script that improved the average time to fix a security bugs by 75% from 1 hour to 15 minutes and saved over 300 hours of work in the last 2 years.",
+                "Reduced the total number of user-reported code issues by 35% by reviewing and improving the quality of web application code used for training.",
               ]}
             />
             <ExperienceCard
@@ -145,7 +162,7 @@ const HomePage: React.FC = () => {
               achievements={[
                 "Conducted extensive research on vulnerability categories",
                 "Promoted developer secure coding guidelines based on OWASP top 10",
-                "Collaborated with InfraGuard to build alerting RSS streams"
+                "Collaborated with InfraGuard to build alerting RSS streams",
               ]}
             />
           </div>
@@ -162,10 +179,22 @@ const HomePage: React.FC = () => {
             <ProjectCard
               title="Full-stack Daily Drawing App"
               description="My first production daily drawing app with multiple daily users. Uses password-less authentication and real-time features."
-              technologies={["Golang", "gin-gonic", "React", "Vite", "TypeScript", "TailwindCSS", "Google Cloud Run", "AWS S3", "Turso", "SQLite", "Docker"]}
+              technologies={[
+                "Golang",
+                "gin-gonic",
+                "React",
+                "Vite",
+                "TypeScript",
+                "TailwindCSS",
+                "Google Cloud Run",
+                "AWS S3",
+                "Turso",
+                "SQLite",
+                "Docker",
+              ]}
               link="https://github.com/proctorinc/drawer"
               liveLink="https://drawer-1084176098994.us-west1.run.app/app"
-              imageUrl='/images/daily-doodle-1.png'
+              imageUrl="/images/daily-doodle-1.png"
               learnings={[
                 "First production deployment and CI/CD setup with daily active users",
                 "Hosting images in AWS S3 bucket and handling bucket permissions",
@@ -176,22 +205,35 @@ const HomePage: React.FC = () => {
             <ProjectCard
               title="Golang Financial GraphQL API"
               description="A secure GraphQL API for financial data with OFX file parsing and JWT authentication."
-              technologies={["Golang", "gin-gonic", "sqlc", "gqlgen", "dataloaden", "go-jwt"]}
+              technologies={[
+                "Golang",
+                "gin-gonic",
+                "sqlc",
+                "gqlgen",
+                "dataloaden",
+                "go-jwt",
+              ]}
               link="https://github.com/proctorinc/Banker-API"
               imageUrl="/images/banker.png"
               learnings={[
                 "Deepening my knowledge with GraphQL and the strengths and weaknesses",
                 "Using dataloaders to handle N+1 problem with nested GraphQL queries",
                 "Managing server resources and and query limits to balance performance and efficiency",
-                "Programming APIs to be front-end friendly and reusable"
+                "Programming APIs to be front-end friendly and reusable",
               ]}
             />
             <ProjectCard
               title="Open Source Vulnerability Fixing Command Line Tool"
               description="An internal Secure Code Warrior tool that reduced bug fix time by 75% through automation of complex workflows."
-              technologies={["Python", "GitPython", "Beautiful Soup", "Jira API", "keyring"]}
+              technologies={[
+                "Python",
+                "GitPython",
+                "Beautiful Soup",
+                "Jira API",
+                "keyring",
+              ]}
               link="https://github.com/proctorinc/bugfixpy"
-              imageUrl='/images/bugfixpy-1.png'
+              imageUrl="/images/bugfixpy-1.png"
               learnings={[
                 "Finding ways to improve the speed of processes and push the boundaries of my job",
                 "Maintaining an application used across my company by multiple teams",
@@ -210,7 +252,15 @@ const HomePage: React.FC = () => {
               <SubProjectCard
                 title="Online Scrabble"
                 description="Scrabble powered by a REST state machine back-end with live user chat, dictionary, and valid move checking."
-                technologies={["React", "TypeScript", "react-dnd", "headless-ui",  "Golang", "gin-gonic", "websockets"]}
+                technologies={[
+                  "React",
+                  "TypeScript",
+                  "react-dnd",
+                  "headless-ui",
+                  "Golang",
+                  "gin-gonic",
+                  "websockets",
+                ]}
                 link="https://github.com/proctorinc/Scrabble"
                 imageUrl="/images/scrabble.png"
               />
@@ -235,12 +285,20 @@ const HomePage: React.FC = () => {
                 description="A front-end application that manages API connections and gives a visual UI to map API response data to datasheets for easy report automation."
                 technologies={["React", "TypeScript", "Tailwind CSS"]}
                 link="https://github.com/proctorinc/DynamicAnalyzer"
-                imageUrl='/images/dynamic-analyzer.png'
+                imageUrl="/images/dynamic-analyzer.png"
               />
               <SubProjectCard
                 title="Crossword + Minesweeper Game"
                 description="State machine REST API backend powered game with a fun concept."
-                technologies={["React", "TypeScript", "react-dnd", "headless-ui",  "Golang", "gin-gonic", "websockets"]}
+                technologies={[
+                  "React",
+                  "TypeScript",
+                  "react-dnd",
+                  "headless-ui",
+                  "Golang",
+                  "gin-gonic",
+                  "websockets",
+                ]}
                 link="https://github.com/proctorinc/CrossSweeper"
                 imageUrl="/images/cross-sweeper-1.png"
               />
@@ -249,16 +307,23 @@ const HomePage: React.FC = () => {
               <SubProjectCard
                 title="Live Chatroom + Video calling"
                 description="A live websocket-based chatroom and video calling app with Zoom-like functionality."
-                technologies={["React", "TypeScript", "Express JS", "Mongo DB", "socket-io", "WebRTC"]}
+                technologies={[
+                  "React",
+                  "TypeScript",
+                  "Express JS",
+                  "Mongo DB",
+                  "socket-io",
+                  "WebRTC",
+                ]}
                 link="https://github.com/proctorinc/LiveApp"
-                imageUrl='/images/live-app-1.png'
+                imageUrl="/images/live-app-1.png"
               />
               <SubProjectCard
                 title="Dev and UI Webtools"
                 description="A collection of useful dev and UI tools that I often use everyday in one dashboard"
                 technologies={["React", "TypeScript", "MUI components"]}
                 link="https://github.com/proctorinc/WebTools"
-                imageUrl='/images/webtools-preview.png'
+                imageUrl="/images/webtools-preview.png"
               />
             </div>
           </div>
@@ -279,7 +344,8 @@ const HomePage: React.FC = () => {
               Get in Touch
             </h2>
             <p className="text-gray-700 dark:text-gray-300 mb-8">
-              I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+              I'm always open to discussing new projects, creative ideas, or
+              opportunities to be part of your vision.
             </p>
             <a
               href="mailto:matthewalanproctor@gmail.com"
@@ -311,10 +377,10 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
 }) => {
   const getCompanyLogo = (companyName: string) => {
     switch (companyName.toLowerCase()) {
-      case 'secure code warrior':
-        return '/images/scw-logo.png';
-      case 'swan island networks':
-        return '/images/sin-logo.jpeg';
+      case "secure code warrior":
+        return "/images/scw-logo.png";
+      case "swan island networks":
+        return "/images/sin-logo.jpeg";
       default:
         return null;
     }
@@ -341,11 +407,15 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
           </div>
         )}
         <div className="flex-grow">
-          <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2">{title}</h3>
+          <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2">
+            {title}
+          </h3>
           <div className="flex flex-col sm:flex-row justify-between items-start">
             <div>
               <p className="text-gray-700 dark:text-gray-300">{company}</p>
-              <p className="text-gray-600 dark:text-gray-400 text-sm">{location}</p>
+              <p className="text-gray-600 dark:text-gray-400 text-sm">
+                {location}
+              </p>
             </div>
             <p className="text-gray-600 dark:text-gray-400 text-sm">{period}</p>
           </div>

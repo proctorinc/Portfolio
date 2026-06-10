@@ -228,7 +228,7 @@ export default function PortfolioCarousel() {
         </div>
         <a
           href="mailto:matthewalanproctor@gmail.com"
-          className="text-zinc-300 border border-zinc-500 rounded-xl px-4 py-3 font-mono text-xs"
+          className="hidden sm:flex text-zinc-300 border border-zinc-500 rounded-xl px-4 py-3 font-mono text-xs"
         >
           Get in touch
         </a>
@@ -260,7 +260,7 @@ export default function PortfolioCarousel() {
       </div>
 
       {/* Navigation Controls & Pagination Indicators */}
-      <footer className="w-full max-w-xl mx-auto flex flex-col items-center gap-6 z-10 pb-4">
+      <footer className="w-full max-w-xl pb-20 sm:pb-0 mx-auto flex flex-col items-center gap-6 z-10 pb-4">
         {/* Dynamic Width Dot Sliders */}
         <div className="flex items-center gap-4 h-4 relative">
           {PROJECTS.map((_, index) => {

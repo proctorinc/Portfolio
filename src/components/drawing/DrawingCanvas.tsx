@@ -20,7 +20,7 @@ const DrawingCanvas: FC<Props> = ({ colors, className }) => {
       )}
     >
       <div
-        className="absolute -top-8 -left-8 flex flex-col items-center justify-center h-24 w-24 bg-gradient-to-tr from-[#FF3B87] via-[#FF6EA7] to-[#FFE3EC] shadow-xl text-black font-black -rotate-12 dropping-shadow-md"
+        className="absolute -top-4 -left-8 flex flex-col items-center justify-center h-24 w-24 bg-gradient-to-tr from-[#FF3B87] via-[#FF6EA7] to-[#FFE3EC] shadow-xl text-black font-black -rotate-12 dropping-shadow-md"
         style={{
           clipPath:
             "polygon(50% 0%, 61% 12%, 78% 6%, 82% 23%, 98% 22%, 93% 39%, 100% 50%, 93% 61%, 98% 78%, 82% 77%, 78% 94%, 61% 88%, 50% 100%, 39% 88%, 22% 94%, 18% 77%, 2% 78%, 7% 61%, 0% 50%, 7% 39%, 2% 22%, 18% 23%, 22% 6%, 39% 12%)",

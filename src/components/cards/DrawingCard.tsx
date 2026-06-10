@@ -17,31 +17,30 @@ function Front({ project }: { project: ProjectCardData }) {
       <div
         className={cn("text-left w-full pt-1 rounded-2xl", project.fontClass)}
       >
-        <h2 className="text-3xl tracking-tight leading-none text-slate-900">
+        <h2 className="text-2xl md:text-3xl tracking-tight leading-none text-slate-900">
           {project.frontTitle}
         </h2>
-        <p className="font-normal text-slate-900/40">
+        <p className="text-sm md:text-lg font-normal text-slate-900/40">
           A daily drawing app with friends
         </p>
       </div>
 
       <DrawingCanvas
-        className="scale-75"
+        className="absolute scale-75 top-10 left-1/2 -translate-x-1/2"
         colors={["#FF6EA7", "#FF7B54", "#2BE3D5"]}
       />
-      <p className="absolute left-1/2 -translate-x-1/2 bottom-4 text-xs text-slate-900/40">
-        Demo of the real app
+      <p className="absolute left-1/2 -translate-x-1/2 bottom-0 md:bottom-2 text-xs text-slate-900/40">
+        daily-doodle.app
       </p>
 
       <div className="absolute top-4 right-4 w-fit flex-1 flex items-center justify-center mt-2">
-        <div className="relative w-16 h-16 bg-white border-2 border-black/70 rounded-2xl rotate-6 flex flex-col items-center justify-center p-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.3)]">
-          <div className="w-12 h-12 shrink-0 rounded-full overflow-clip flex items-center justify-center text-xl">
+        <div className="relative w-16 h-16 overflow-clip bg-white border-2 border-black/70 rounded-2xl rotate-6 flex flex-col items-center justify-center shadow-[4px_4px_0px_0px_rgba(0,0,0,0.3)]">
+          <div className="h-full w-full rounded-full flex items-center justify-center text-xl">
             <Image
               alt="Daily Doodle"
               src="/daily-doodle.png"
               width={1000}
               height={1000}
-              className="size-10"
             />
           </div>
         </div>
@@ -110,17 +109,6 @@ export function DrawingCard({
         }}
       >
         <Front project={project} />
-
-        <div className="flex flex-wrap gap-1.5 pt-4">
-          {project.badges.map((badge) => (
-            <span
-              key={badge}
-              className="text-[10px] font-mono tracking-wide px-2 py-0.5 rounded bg-black/10 text-black/80 font-bold border border-black/10"
-            >
-              {badge}
-            </span>
-          ))}
-        </div>
       </div>
     </DrawingProvider>
   );

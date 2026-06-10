@@ -15,6 +15,7 @@ import { ScoreLoserCard } from "./cards/ScoreLoserCard";
 import { WordGameCard } from "./cards/WordGameCard";
 import { RecipePickerCard } from "./cards/RecipePickerCard";
 import { DinkCard } from "./cards/DinkCard";
+import { cn } from "../utils";
 
 interface PortfolioCardProps {
   project: ProjectCardData;
@@ -100,7 +101,10 @@ export function PortfolioCard({
       className="absolute w-[320px] h-[420px] md:h-[55vh] md:w-[calc(55vh*16/21)] cursor-pointer select-none rounded-xl"
     >
       <motion.div
-        className="relative w-full h-full shadow-2xl rounded-2xl shadow-white/30"
+        className={cn(
+          "relative w-full h-full shadow-2xl rounded-2xl shadow-transparent transition-all duration-700",
+          isActive && "shadow-white/30",
+        )}
         style={{ transformStyle: "preserve-3d" }}
         animate={{ rotateY: isFlipped ? 180 : 0 }}
         transition={{ duration: 0.45, ease: [0.23, 1, 0.32, 1] }}

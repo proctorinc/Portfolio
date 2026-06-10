@@ -13,8 +13,8 @@ export const Toolbar: FC<Props> = ({ colors }) => {
 
   return (
     <div className="flex flex-col gap-4 overflow-clip bg-[#f5f4f0] border-3 border-border rounded-2xl w-full shadow-[6px_6px_0px_0px_rgba(0,0,0,0.3)]">
-      <div className="flex gap-4 p-4 flex-row justify-between items-center w-full">
-        <div className="flex gap-4 flex-wrap">
+      <div className="flex gap-2 sm:gap-4 p-4 flex-row justify-between items-center w-full">
+        <div className="flex gap-2 sm:gap-4 flex-wrap">
           {colors.map((color, index) => (
             <button
               key={`toolbar-color-${index}`}

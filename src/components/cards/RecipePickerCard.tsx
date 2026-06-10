@@ -214,7 +214,7 @@ const col3Heights = ["h-52", "h-56", "h-72", "h-44", "h-40"];
 
 function MasonryGridBlock() {
   return (
-    <div className="grid grid-cols-6 gap-3 w-full shrink-0 opacity-10">
+    <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 w-full shrink-0 opacity-10">
       {/* Column 1 */}
       <div className="flex flex-col gap-3">
         {col1Heights.map((height, i) => (
@@ -242,29 +242,29 @@ function MasonryGridBlock() {
           />
         ))}
       </div>
-      {/* Column 1 */}
+      {/* Column 4 (Originally labeled Column 1) */}
       <div className="flex flex-col gap-3">
         {col1Heights.map((height, i) => (
           <div
-            key={`col1-${i}`}
+            key={`col4-${i}`} // Fixed key to ensure uniqueness
             className={`w-full ${height} rounded-2xl bg-zinc-100/40 border border-zinc-200/50 shadow-xs`}
           />
         ))}
       </div>
-      {/* Column 2 */}
+      {/* Column 5 (Originally labeled Column 2) */}
       <div className="flex flex-col gap-3">
         {col2Heights.map((height, i) => (
           <div
-            key={`col2-${i}`}
+            key={`col5-${i}`} // Fixed key to ensure uniqueness
             className={`w-full ${height} rounded-2xl bg-zinc-100/40 border border-zinc-200/50 shadow-xs`}
           />
         ))}
       </div>
-      {/* Column 3 */}
+      {/* Column 6 (Originally labeled Column 3) */}
       <div className="flex flex-col gap-3">
         {col3Heights.map((height, i) => (
           <div
-            key={`col3-${i}`}
+            key={`col6-${i}`} // Fixed key to ensure uniqueness
             className={`w-full ${height} rounded-2xl bg-zinc-100/40 border border-zinc-200/50 shadow-xs`}
           />
         ))}

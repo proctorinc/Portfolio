@@ -1,0 +1,14 @@
+{
+    "name": "Matt Proctor",
+    "short_name": "Matt Proctor",
+    "icons": [
+        {
+            "src": "/android-chrome-72x72.png",
+            "sizes": "72x72",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#121f39",
+    "background_color": "#121f39",
+    "display": "standalone"
+}
